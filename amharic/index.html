@@ -1,0 +1,1032 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Tinish Tinish: daily Amharic</title>
+<meta name="description" content="Learn a little Amharic every day: short lessons, reviews, and real-life conversations.">
+<meta name="theme-color" content="#2E6A4E">
+<link rel="manifest" href="manifest.json">
+<link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32.png">
+<link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="apple-mobile-web-app-title" content="Tinish Tinish">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600&family=Noto+Serif+Ethiopic:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#F2F4EF;--surface:#FFFFFF;--ink:#1C2826;--muted:#5D6B67;--line:#D9DED7;
+  --green:#2E6A4E;--green-soft:#DCEBE2;--gold:#C9961E;--gold-soft:#F6EBC9;
+  --red:#A83846;--red-soft:#F5DDE0;--on-green:#FFFFFF;
+  --am:'Noto Serif Ethiopic','Abyssinica SIL','Nyala','Kefa',serif;
+  --ui:'Lexend',system-ui,-apple-system,'Segoe UI',sans-serif;
+  color-scheme:light;
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px);
+  padding-bottom:env(safe-area-inset-bottom,0px);
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --bg:#121A19;--surface:#1A2523;--ink:#E7EDE9;--muted:#9AABA5;--line:#2C3A37;
+    --green:#5FB38A;--green-soft:#1F3A2E;--gold:#E8BE4F;--gold-soft:#3A3220;
+    --red:#E07A86;--red-soft:#3D2227;--on-green:#0E1715;color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#121A19;--surface:#1A2523;--ink:#E7EDE9;--muted:#9AABA5;--line:#2C3A37;
+  --green:#5FB38A;--green-soft:#1F3A2E;--gold:#E8BE4F;--gold-soft:#3A3220;
+  --red:#E07A86;--red-soft:#3D2227;--on-green:#0E1715;color-scheme:dark;
+}
+*,*::before,*::after{box-sizing:inherit}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--ui);font-weight:400;font-size:16px;line-height:1.5;-webkit-font-smoothing:antialiased;padding-bottom:88px}
+body.in-session{padding-bottom:24px}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:10;background:var(--bg)}
+button{font:inherit;color:inherit}
+:focus-visible{outline:3px solid var(--gold);outline-offset:2px;border-radius:6px}
+.am{font-family:var(--am)}
+.wrap{max-width:560px;margin:0 auto;padding:0 20px}
+
+/* Tibeb band: the woven border of a habesha kemis */
+.tibeb{height:14px;background:
+  linear-gradient(135deg,var(--bg) 25%,transparent 25%) -7px 0/14px 14px,
+  linear-gradient(225deg,var(--bg) 25%,transparent 25%) -7px 0/14px 14px,
+  linear-gradient(315deg,var(--bg) 25%,transparent 25%) 0 0/14px 14px,
+  linear-gradient(45deg,var(--bg) 25%,transparent 25%) 0 0/14px 14px,
+  repeating-linear-gradient(90deg,var(--green) 0 28px,var(--gold) 28px 42px,var(--red) 42px 56px,var(--gold) 56px 70px)}
+
+header.top{padding:18px 0 6px;display:flex;align-items:baseline;justify-content:space-between;gap:12px}
+.brand{font-weight:600;font-size:17px;letter-spacing:.01em}
+.brand .am{font-weight:600;margin-right:6px;color:var(--green)}
+.streak-chip{font-size:14px;color:var(--muted)}
+.streak-chip b{color:var(--ink);font-weight:600}
+
+/* Today */
+.hero{padding:28px 0 8px}
+.hero .glyph{font-family:var(--am);font-weight:700;font-size:clamp(76px,22vw,120px);line-height:1.05;color:var(--ink);margin:0}
+.hero .gloss{margin:6px 0 0;color:var(--muted);font-size:17px}
+.hero .gloss b{color:var(--ink);font-weight:500}
+.lesson{margin-top:28px;background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:22px}
+.lesson h2{margin:0 0 4px;font-size:21px;font-weight:600}
+.lesson p{margin:0;color:var(--muted)}
+.counts{display:flex;gap:22px;margin:18px 0 20px}
+.counts div{font-size:14px;color:var(--muted)}
+.counts strong{display:block;font-size:30px;font-weight:500;color:var(--ink);line-height:1.1}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;border:0;border-radius:12px;padding:14px 20px;font-weight:500;font-size:16px;cursor:pointer;min-height:50px}
+.btn.primary{background:var(--green);color:var(--on-green);width:100%}
+.btn.primary:hover{filter:brightness(1.07)}
+.btn.ghost{background:transparent;border:1px solid var(--line);width:100%}
+.btn.ghost:hover{background:var(--green-soft)}
+.btn+.btn{margin-top:10px}
+.upnext{margin-top:22px;color:var(--muted);font-size:15px}
+.upnext .am{color:var(--ink)}
+
+/* Nav */
+nav.tabs{position:fixed;left:0;right:0;bottom:0;z-index:20;background:var(--surface);border-top:1px solid var(--line);padding-bottom:env(safe-area-inset-bottom,0px)}
+nav.tabs .wrap{display:flex}
+nav.tabs button{flex:1;background:none;border:0;padding:12px 4px 14px;font-size:13px;color:var(--muted);cursor:pointer;display:flex;flex-direction:column;align-items:center;gap:2px}
+nav.tabs button .am{font-size:19px;line-height:1.2}
+nav.tabs button[aria-current="page"]{color:var(--green);font-weight:500}
+
+/* Session */
+.sess-top{display:flex;align-items:center;gap:14px;padding:18px 0 4px}
+.close{background:none;border:0;font-size:26px;line-height:1;padding:4px 8px;color:var(--muted);cursor:pointer}
+.bar{flex:1;height:8px;background:var(--line);border-radius:8px;overflow:hidden}
+.bar i{display:block;height:100%;background:var(--green);border-radius:8px;transition:width .3s ease}
+.stage{padding:26px 0 0}
+.kicker{color:var(--muted);font-size:14px;margin:0 0 14px}
+.kicker .am{color:var(--ink)}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:22px;padding:34px 22px 26px;text-align:center}
+.card .big{font-family:var(--am);font-weight:600;font-size:clamp(38px,11vw,56px);line-height:1.25;margin:0;word-break:break-word}
+.card .tr{margin:10px 0 0;font-size:19px;color:var(--green);font-weight:500}
+.card .en{margin:18px 0 0;font-size:20px}
+.reveal{margin-top:10px;background:none;border:1px dashed var(--line);border-radius:10px;padding:8px 14px;color:var(--muted);cursor:pointer;font-size:15px}
+.note{margin:18px 0 0;padding:14px 16px;background:var(--gold-soft);border-radius:12px;text-align:left;font-size:15px;line-height:1.55}
+.note .am{font-size:16px}
+.play{margin-top:16px;background:var(--green-soft);color:var(--green);border:0;border-radius:999px;padding:8px 16px;cursor:pointer;font-size:15px;font-weight:500}
+.actions{margin-top:22px}
+.prompt-q{font-size:15px;color:var(--muted);margin:0 0 6px}
+.opts{display:grid;gap:10px;margin-top:20px}
+.opt{display:flex;align-items:center;gap:14px;text-align:left;background:var(--surface);border:1.5px solid var(--line);border-radius:14px;padding:14px 16px;cursor:pointer;min-height:58px;font-size:17px}
+.opt:hover:not([disabled]){border-color:var(--green)}
+.opt .k{flex:none;width:26px;height:26px;border-radius:7px;border:1px solid var(--line);display:grid;place-items:center;font-size:13px;color:var(--muted)}
+.opt .am{font-size:21px}
+.opt small{display:block;color:var(--muted);font-size:14px}
+.opt.right{border-color:var(--green);background:var(--green-soft)}
+.opt.wrong{border-color:var(--red);background:var(--red-soft)}
+.opt[disabled]{cursor:default}
+.feedback{margin-top:18px;font-weight:500}
+.feedback.ok{color:var(--green)}
+.feedback.no{color:var(--red)}
+
+.done{text-align:center;padding-top:40px}
+.done .glyph{font-family:var(--am);font-weight:700;font-size:96px;line-height:1.1;margin:0}
+.done .gloss{color:var(--muted);margin:4px 0 26px}
+.done-stats{display:flex;justify-content:center;gap:30px;margin:0 0 30px}
+.done-stats div{font-size:14px;color:var(--muted)}
+.done-stats strong{display:block;font-size:30px;font-weight:500;color:var(--ink)}
+
+/* Phrasebook */
+h1.page{font-size:26px;font-weight:600;margin:22px 0 4px}
+.sub{color:var(--muted);margin:0 0 18px}
+.search{width:100%;padding:13px 16px;border-radius:12px;border:1px solid var(--line);background:var(--surface);color:var(--ink);font:inherit}
+details.sounds{margin:14px 0 6px;background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:12px 16px}
+details.sounds summary{cursor:pointer;font-weight:500}
+details.sounds dl{margin:10px 0 0;display:grid;grid-template-columns:auto 1fr;gap:6px 14px;font-size:15px}
+details.sounds dt{font-weight:600;color:var(--green)}
+details.sounds dd{margin:0;color:var(--muted)}
+.unit{margin-top:30px}
+.unit-h{display:flex;align-items:baseline;justify-content:space-between;gap:12px;border-bottom:1px solid var(--line);padding-bottom:8px}
+.unit-h h3{margin:0;font-size:18px;font-weight:600}
+.unit-h h3 .am{font-weight:600;margin-right:8px;color:var(--green)}
+.unit-h span{font-size:14px;color:var(--muted);white-space:nowrap}
+.row{display:grid;grid-template-columns:12px 1fr auto;align-items:center;gap:12px;padding:12px 0;border-bottom:1px solid var(--line)}
+.row .dot{width:10px;height:10px;border-radius:50%;border:1.5px solid var(--line)}
+.row .dot.s1,.row .dot.s2,.row .dot.s3{background:var(--gold);border-color:var(--gold)}
+.row .dot.s4,.row .dot.s5{background:var(--green);border-color:var(--green)}
+.row .am{font-size:20px;line-height:1.35}
+.row .tr{color:var(--green);font-size:14px}
+.row .en{color:var(--muted);font-size:15px}
+.row .play{margin:0;padding:6px 12px;font-size:13px}
+.legend{display:flex;gap:16px;flex-wrap:wrap;font-size:13px;color:var(--muted);margin-top:14px}
+.legend span{display:inline-flex;align-items:center;gap:6px}
+.legend i{width:9px;height:9px;border-radius:50%;display:inline-block;border:1.5px solid var(--line)}
+.empty{color:var(--muted);padding:24px 0}
+
+/* Progress */
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:6px}
+.stat{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:14px}
+.stat strong{display:block;font-size:28px;font-weight:500;line-height:1.15}
+.stat span{font-size:13px;color:var(--muted)}
+h2.sec{font-size:17px;font-weight:600;margin:30px 0 12px}
+.cal{display:grid;grid-template-columns:repeat(7,1fr);gap:6px}
+.cal div{aspect-ratio:1;border-radius:7px;background:var(--line);opacity:.55}
+.cal div.on{background:var(--green);opacity:1}
+.cal div.today{outline:2px solid var(--gold);outline-offset:1px}
+.cal-days{display:grid;grid-template-columns:repeat(7,1fr);gap:6px;font-size:12px;color:var(--muted);text-align:center;margin-bottom:6px}
+.ubar{margin-bottom:14px}
+.ubar .lbl{display:flex;justify-content:space-between;font-size:15px;margin-bottom:5px}
+.ubar .lbl span{color:var(--muted);font-size:14px}
+.ubar .bar{height:7px}
+.seg{display:flex;background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:4px;gap:4px}
+.seg button{flex:1;border:0;background:none;border-radius:9px;padding:10px 6px;cursor:pointer;font-size:15px;color:var(--muted)}
+.seg button[aria-pressed="true"]{background:var(--green);color:var(--on-green);font-weight:500}
+.setting{margin-bottom:18px}
+.setting label{display:block;font-size:15px;margin-bottom:8px}
+.danger{background:none;border:1px solid var(--red);color:var(--red);border-radius:12px;padding:12px 16px;cursor:pointer;width:100%;margin-top:8px}
+.danger.armed{background:var(--red);color:var(--surface)}
+.sync{font-size:13px;color:var(--muted);margin-top:22px}
+
+/* Conversations */
+.talk-card{margin-top:16px;background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:20px 22px}
+.talk-card .kick{font-size:14px;color:var(--muted);margin:0}
+.talk-card .kick .am{color:var(--green);font-weight:600;margin-right:6px}
+.talk-card h2{margin:4px 0 4px;font-size:18px;font-weight:600}
+.talk-card p.set{margin:0 0 16px;color:var(--muted)}
+.scene{display:block;width:100%;text-align:left;background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:18px 20px;cursor:pointer;margin-top:12px}
+.scene:hover:not([disabled]){border-color:var(--green)}
+.scene[disabled]{opacity:.55;cursor:not-allowed}
+.scene .place{font-size:14px;color:var(--muted)}
+.scene .place .am{color:var(--green);font-weight:600;margin-right:6px}
+.scene h3{margin:4px 0 6px;font-size:18px;font-weight:600}
+.scene p{margin:0;color:var(--muted);font-size:15px}
+.scene .meta{margin-top:10px;font-size:14px;color:var(--muted);display:flex;gap:16px;flex-wrap:wrap}
+.scene .meta b{color:var(--green);font-weight:500}
+.addr{background:var(--gold-soft);border-radius:14px;padding:16px 18px;margin:6px 0 8px}
+.addr p{margin:0 0 12px}
+.chat{display:flex;flex-direction:column;gap:12px;padding-top:18px}
+.scene-intro{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:14px 16px;font-size:15px}
+.scene-intro .am{color:var(--green);font-weight:600;margin-right:6px}
+.scene-intro b{font-weight:600}
+.narr{font-size:14px;color:var(--muted);font-style:italic;text-align:center;margin:4px 12px}
+.bub{max-width:88%;border-radius:18px;padding:12px 16px}
+.bub.them{align-self:flex-start;background:var(--surface);border:1px solid var(--line);border-bottom-left-radius:6px}
+.bub.me{align-self:flex-end;background:var(--green-soft);border-bottom-right-radius:6px;text-align:right}
+.bub .who{font-size:13px;color:var(--muted);margin-bottom:2px}
+.bub .am{font-size:22px;line-height:1.4;display:block}
+.bub .tr{color:var(--green);font-size:15px}
+.bub .en{color:var(--muted);font-size:15px;margin-top:4px}
+.bub .tools{display:flex;gap:8px;margin-top:8px;flex-wrap:wrap}
+.bub .tools:empty{display:none}
+.mini{background:none;border:1px solid var(--line);border-radius:999px;padding:4px 12px;font-size:13px;color:var(--muted);cursor:pointer}
+.mini:hover{border-color:var(--green);color:var(--green)}
+.your-turn{font-size:15px;color:var(--muted);margin:22px 0 0;font-weight:500}
+.opt small+small{margin-top:2px}
+
+/* Install tip and backup */
+.tip{margin-top:20px;background:var(--gold-soft);border-radius:14px;padding:14px 16px;font-size:15px;display:flex;gap:12px;align-items:flex-start}
+.tip p{margin:0;flex:1}
+.tip .x{background:none;border:0;font-size:22px;line-height:1;color:var(--muted);cursor:pointer;padding:0 4px}
+.backup-msg{font-size:14px;margin:10px 0 0;color:var(--green)}
+.backup-msg.err{color:var(--red)}
+details.code{margin-top:10px;background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:12px 16px}
+details.code summary{cursor:pointer;font-weight:500}
+details.code textarea{width:100%;min-height:90px;margin-top:10px;border:1px solid var(--line);border-radius:10px;padding:10px;background:var(--bg);color:var(--ink);font:13px/1.4 ui-monospace,Menlo,monospace;resize:vertical}
+
+@media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
+.pop{animation:pop .35s ease}
+@keyframes pop{0%{transform:scale(.96);opacity:.4}100%{transform:none;opacity:1}}
+</style>
+</head>
+<body>
+<div class="tibeb" aria-hidden="true"></div>
+<main id="app" class="wrap"></main>
+<nav class="tabs" id="tabs" aria-label="Sections">
+  <div class="wrap">
+    <button data-tab="today"><span class="am" aria-hidden="true">ዛሬ</span>Today</button>
+    <button data-tab="talk"><span class="am" aria-hidden="true">ውይይት</span>Talk</button>
+    <button data-tab="phrases"><span class="am" aria-hidden="true">ቃላት</span>Phrasebook</button>
+    <button data-tab="progress"><span class="am" aria-hidden="true">እድገት</span>Progress</button>
+  </div>
+</nav>
+
+<script>
+/* ---------- Content: [id, Amharic, transliteration, English, note] ---------- */
+const UNITS = [
+ {id:'greet', am:'ሰላምታ', title:'Greetings', items:[
+  ['g1','ሰላም','selam','Hello','Literally “peace.” Works with anyone, any time of day.'],
+  ['g2','ጤና ይስጥልኝ','tena yistilign','Hello (respectful)','Literally “may God give you health.” Good for elders and people you’ve just met.'],
+  ['g3','እንደምን አደርክ?','indemin aderk?','Good morning (to a man)','To a woman: <span class="am">እንደምን አደርሽ?</span> (indemin adersh). To an elder: <span class="am">አደሩ</span> (aderu). Literally “how did you spend the night?”'],
+  ['g4','እንዴት ነህ?','indet neh?','How are you? (to a man)','To a woman: <span class="am">እንዴት ነሽ?</span> (indet nesh). Respectful: <span class="am">እንዴት ነዎት?</span> (indet newot).'],
+  ['g5','ደህና ነኝ','dehna negn','I’m fine',''],
+  ['g6','እግዚአብሔር ይመስገን','igziabher yimesgen','Thank God (I’m well)','The most common reply to “how are you?”, even among people who aren’t religious.'],
+  ['g7','እንደምን ዋልክ?','indemin walk?','Good afternoon (to a man)','To a woman: <span class="am">እንደምን ዋልሽ?</span> (indemin walsh). Literally “how did you spend the day?”'],
+  ['g8','ደህና እደር','dehna eder','Good night (to a man)','To a woman: <span class="am">ደህና እደሪ</span> (dehna ederi).'],
+  ['g9','ደህና ሁን','dehna hun','Goodbye (to a man)','To a woman: <span class="am">ደህና ሁኚ</span> (dehna hunyi).'],
+  ['g10','ቻው','chaw','Bye','Casual, borrowed from Italian “ciao.”']
+ ]},
+ {id:'polite', am:'ጨዋነት', title:'Being polite', items:[
+  ['p1','አመሰግናለሁ','ameseginalehu','Thank you',''],
+  ['p2','እባክህ','ibakih','Please (to a man)','To a woman: <span class="am">እባክሽ</span> (ibakish). Respectful: <span class="am">እባክዎ</span> (ibakwo).'],
+  ['p3','ይቅርታ','yiqirta','Sorry / excuse me','Also how you get someone’s attention.'],
+  ['p4','አዎ','awo','Yes',''],
+  ['p5','አይደለም','aydelem','No, it isn’t','A quick, casual “no” is just <span class="am">አይ</span> (ay).'],
+  ['p6','እሺ','ishi','Okay','You’ll hear this constantly.'],
+  ['p7','ምንም አይደለም','minim aydelem','No problem / it’s nothing','A kind reply to “sorry” or “thank you.”'],
+  ['p8','እንኳን ደህና መጣህ','inkwan dehna metah','Welcome (to a man)','To a woman: <span class="am">መጣሽ</span> (metash). To a group or an elder: <span class="am">መጡ</span> (metu).']
+ ]},
+ {id:'intro', am:'መተዋወቅ', title:'Introducing yourself', items:[
+  ['i1','ስሜ ... ነው','simé ... new','My name is …','Your name goes in the middle: <span class="am">ስሜ ሳራ ነው</span> (simé Sara new).'],
+  ['i2','ስምህ ማን ነው?','simih man new?','What’s your name? (to a man)','To a woman: <span class="am">ስምሽ ማን ነው?</span> (simish man new).'],
+  ['i3','ከየት ነህ?','keyet neh?','Where are you from? (to a man)','To a woman: <span class="am">ከየት ነሽ?</span> (keyet nesh).'],
+  ['i4','ከ... ነኝ','ke … negn','I’m from …','<span class="am">ከአሜሪካ ነኝ</span> (ke-Amerika negn) means “I’m from America.”'],
+  ['i5','በመተዋወቃችን ደስ ብሎኛል','bemetewawoqachin des bilognal','Nice to meet you','Literally “I’m glad we got to know each other.” Long, but people love hearing it.'],
+  ['i6','ትንሽ አማርኛ እናገራለሁ','tinish amarigna inageralehu','I speak a little Amharic',''],
+  ['i7','አልገባኝም','algebagnim','I don’t understand',''],
+  ['i8','እንደገና በል','indegena bel','Say it again (to a man)','To a woman: <span class="am">እንደገና በይ</span> (indegena bey). Add <span class="am">እባክህ</span> for “please.”'],
+  ['i9','ቀስ ብለህ ተናገር','qes bileh tenager','Speak slowly (to a man)','To a woman: <span class="am">ቀስ ብለሽ ተናገሪ</span> (qes bilesh tenageri).'],
+  ['i10','እንግሊዝኛ ትችላለህ?','inglizigna tichilaleh?','Do you speak English? (to a man)','To a woman: <span class="am">ትችያለሽ?</span> (tichiyalesh). Literally “can you do English?”']
+ ]},
+ {id:'num', am:'ቁጥሮች', title:'Numbers and money', items:[
+  ['n1','አንድ','and','One (1)',''],['n2','ሁለት','hulet','Two (2)',''],['n3','ሶስት','sost','Three (3)',''],
+  ['n4','አራት','arat','Four (4)',''],['n5','አምስት','amist','Five (5)',''],['n6','ስድስት','sidist','Six (6)',''],
+  ['n7','ሰባት','sebat','Seven (7)',''],['n8','ስምንት','simint','Eight (8)',''],['n9','ዘጠኝ','zetegn','Nine (9)',''],
+  ['n10','አስር','asir','Ten (10)',''],['n11','ሃያ','haya','Twenty (20)',''],['n12','መቶ','meto','One hundred (100)',''],
+  ['n13','ብር','birr','Birr (Ethiopian money)','<span class="am">አስር ብር</span> (asir birr) is ten birr.']
+ ]},
+ {id:'food', am:'ምግብ', title:'Food and coffee', items:[
+  ['f1','ቡና','buna','Coffee','Coffee is offered often. Accepting a cup is a warm gesture.'],
+  ['f2','ሻይ','shai','Tea',''],
+  ['f3','ውሃ','wiha','Water',''],
+  ['f4','እንጀራ','injera','Injera','The spongy flatbread served with most meals.'],
+  ['f5','ዳቦ','dabo','Bread',''],
+  ['f6','... እፈልጋለሁ','… ifeligalehu','I want …','<span class="am">ቡና እፈልጋለሁ</span> (buna ifeligalehu) means “I’d like coffee.”'],
+  ['f7','ርቦኛል','rabognal','I’m hungry',''],
+  ['f8','ጠምቶኛል','temtognal','I’m thirsty',''],
+  ['f9','በጣም ጣፋጭ ነው','betam tafach new','It’s really delicious','A compliment every host wants to hear.'],
+  ['f10','ጠግቤያለሁ','tegbiyalehu','I’m full','Useful when your host keeps offering more.'],
+  ['f11','ሂሳብ','hisab','The bill','<span class="am">ሂሳብ እባክህ</span> (hisab ibakih) means “the bill, please.”']
+ ]},
+ {id:'shop', am:'ገበያ', title:'At the market', items:[
+  ['s1','ስንት ነው?','sint new?','How much is it?',''],
+  ['s2','ውድ ነው','wid new','It’s expensive',''],
+  ['s3','ይሄ','yihe','This',''],
+  ['s4','ያ','ya','That',''],
+  ['s5','ይሄ ምንድን ነው?','yihe mindin new?','What is this?',''],
+  ['s6','አለ?','ale?','Do you have …? / Is there …?','The reply is <span class="am">አለ</span> (ale), “there is,” or <span class="am">የለም</span> (yelem), “there isn’t.”'],
+  ['s7','የለም','yelem','There isn’t any',''],
+  ['s8','ቀንስልኝ','qenisilign','Lower the price for me (to a man)','To a woman: <span class="am">ቀንሺልኝ</span> (qenshilign). Bargaining is normal at markets.']
+ ]},
+ {id:'ask', am:'ጥያቄ', title:'Question words', items:[
+  ['q1','ምን?','min?','What?',''],['q2','ማን?','man?','Who?',''],['q3','የት?','yet?','Where?',''],
+  ['q4','መቼ?','meche?','When?',''],['q5','ለምን?','lemin?','Why?',''],['q6','እንዴት?','indet?','How?','']
+ ]},
+ {id:'around', am:'መንገድ', title:'Getting around', items:[
+  ['a1','... የት ነው?','… yet new?','Where is …?',''],
+  ['a2','ሽንት ቤት የት ነው?','shint bet yet new?','Where is the toilet?',''],
+  ['a3','ቀኝ','qegn','Right',''],
+  ['a4','ግራ','gira','Left',''],
+  ['a5','ቀጥታ','qetita','Straight ahead',''],
+  ['a6','እዚህ','izih','Here',''],
+  ['a7','እዚያ','iziya','There',''],
+  ['a8','ሩቅ ነው?','ruq new?','Is it far?',''],
+  ['a9','ቅርብ ነው','qirb new','It’s close',''],
+  ['a10','ወራጅ አለ','werraj ale','Stop here, please (on a minibus)','Literally “someone’s getting off.” Call it out to the driver.']
+ ]},
+ {id:'family', am:'ቤተሰብ', title:'Family and friends', items:[
+  ['fa1','ቤተሰብ','beteseb','Family',''],
+  ['fa2','እናት','inat','Mother','“My mother” is <span class="am">እናቴ</span> (inaté). Adding -é means “my.”'],
+  ['fa3','አባት','abat','Father',''],
+  ['fa4','ወንድም','wendim','Brother',''],
+  ['fa5','እህት','ihit','Sister',''],
+  ['fa6','ልጅ','lij','Child',''],
+  ['fa7','ጓደኛ','gwadegna','Friend',''],
+  ['fa8','ባል','bal','Husband',''],
+  ['fa9','ሚስት','mist','Wife','']
+ ]},
+ {id:'daily', am:'ዕለታዊ', title:'Everyday words', items:[
+  ['e1','ዛሬ','zaré','Today',''],['e2','ነገ','nege','Tomorrow',''],['e3','ትናንት','tinant','Yesterday',''],
+  ['e4','ጥሩ','tiru','Good',''],
+  ['e5','በጣም','betam','Very','<span class="am">በጣም ጥሩ</span> (betam tiru) means “very good.”'],
+  ['e6','ደስ ብሎኛል','des bilognal','I’m happy / I’m pleased',''],
+  ['e7','ደክሞኛል','dekmognal','I’m tired',''],
+  ['e8','ወድጄዋለሁ','wedijewalehu','I like it',''],
+  ['e9','ቆይ','qoy','Wait (to a man)','To a woman: <span class="am">ቆዪ</span> (qoyi).'],
+  ['e10','በቃ','beqa','That’s enough / that’s it','']
+ ]},
+ {id:'cafe', am:'ካፌ', title:'At the café', items:[
+  ['c1','ማኪያቶ','makiyato','Macchiato','The everyday café drink in Ethiopia, a leftover from Italian influence.'],
+  ['c2','ምን ትጠጣለህ?','min titetaleh?','What will you drink? (to a man)','To a woman: <span class="am">ምን ትጠጫለሽ?</span> (min titechalesh).'],
+  ['c3','ሌላ ነገር?','lela neger?','Anything else?','Waiters and shopkeepers ask this a lot.'],
+  ['c4','አንተስ?','antes?','And you? (to a man)','To a woman: <span class="am">አንቺስ?</span> (anchis). Adding -ስ (-s) means “and what about…?”'],
+  ['c5','ስራ እንዴት ነው?','sira indet new?','How’s work?',''],
+  ['c6','ግን','gin','But','<span class="am">ጥሩ ነው፣ ግን ደክሞኛል</span> (tiru new, gin dekmognal) means “it’s good, but I’m tired.”'],
+  ['c7','ልክፈል','likfel','Let me pay','Friends take turns treating each other.'],
+  ['c8','ነገ እንገናኝ','nege ingenagn','See you tomorrow','Literally “let’s meet tomorrow.”']
+ ]},
+ {id:'guest', am:'እንግድነት', title:'Visiting a home', items:[
+  ['h1','ግባ','giba','Come in (to a man)','To a woman: <span class="am">ግቢ</span> (gibi).'],
+  ['h2','ተቀመጥ','teqemet','Sit down (to a man)','To a woman: <span class="am">ተቀመጪ</span> (teqemechi).'],
+  ['h3','ብላ','bila','Eat! (to a man)','To a woman: <span class="am">ብዪ</span> (biyi). Hosts say it again and again. It’s hospitality, not pressure.'],
+  ['h4','ደስ ይለኛል','des yilenyal','I’d like that / I like it','Literally “it pleases me.”'],
+  ['h5','ደህና ይሁኑ','dehna yihunu','Goodbye (respectful)','Use it with elders and your friends’ parents.'],
+  ['h6','እንደገና ና','indegena na','Come again (to a man)','To a woman: <span class="am">እንደገና ነይ</span> (indegena neyi).']
+ ]},
+ {id:'city', am:'ከተማ', title:'Out in the city', items:[
+  ['o1','ይኸው','yihew','Here you go','Say it as you hand over money or anything else.'],
+  ['o2','መልስ','mels','Change (money back)',''],
+  ['o3','አቤት?','abet?','Yes? (when someone calls you)','The polite way to answer when someone calls out to you.'],
+  ['o4','ሂድ','hid','Go (to a man)','To a woman: <span class="am">ሂጂ</span> (hiji).'],
+  ['o5','ወደ ግራ','wede gira','To the left','<span class="am">ወደ</span> (wede) means “toward.”'],
+  ['o6','ደቂቃ','deqiqa','Minute',''],
+  ['o7','ኪሎ','kilo','Kilo','Produce at markets is sold by the kilo.'],
+  ['o8','ሙዝ','muz','Banana',''],
+  ['o9','ሰባ','seba','Seventy (70)',''],
+  ['o10','ሰማንያ','semanya','Eighty (80)',''],
+  ['o11','ትንሽ ትንሽ','tinish tinish','A little bit','Doubling ትንሽ (“small”) gives “a little bit.” It’s also this app’s name.']
+ ]}
+];
+const ALL=[];UNITS.forEach(u=>u.items.forEach(([id,am,tr,en,note])=>ALL.push({id,am,tr,en,note,unit:u})));
+const BY_ID=Object.fromEntries(ALL.map(x=>[x.id,x]));
+const INTERVALS=[0,1,3,7,14,30];
+
+/* ---------- Conversations ---------- */
+const R=(am,tr,en,why)=>({am,tr,en,why,ok:false});
+const Y=(am,tr,en,why)=>({am,tr,en,why,ok:true});
+const L=(f,m)=>({f,m});            // line that changes with how the speaker addresses you
+const C=(en,why,ok)=>({en,why,ok:!!ok});
+const SCENES=[
+ {id:'cafe',am:'ካፌ',place:'Café',title:'Coffee with a friend',who:'Selam',
+  setting:'A café in Addis Ababa. Your friend Selam invited you for a macchiato.',
+  turns:[
+   {narr:'Selam waves as you walk in.',npc:{am:L('ሰላም! እንዴት ነሽ?','ሰላም! እንዴት ነህ?'),tr:L('selam! indet nesh?','selam! indet neh?'),en:'Hi! How are you?'},
+    opts:[Y('ደህና ነኝ፣ አንቺስ?','dehna negn, anchis?','I’m fine, and you?','Adding -ስ (-s) to “you” makes “and you?” Selam is a woman, so it’s <span class="am">አንቺስ</span> (anchis).'),
+          R('ደህና እደሪ','dehna ederi','Good night','That’s a goodnight, not an answer to “how are you?”'),
+          R('ስንት ነው?','sint new?','How much is it?','That’s for shopping. She asked how you are.')]},
+   {npc:{am:L('ደህና ነኝ፣ እግዚአብሔር ይመስገን። ምን ትጠጫለሽ?','ደህና ነኝ፣ እግዚአብሔር ይመስገን። ምን ትጠጣለህ?'),tr:L('dehna negn, igziabher yimesgen. min titechalesh?','dehna negn, igziabher yimesgen. min titetaleh?'),en:'I’m fine, thank God. What will you drink?'},
+    opts:[Y('ማኪያቶ እፈልጋለሁ','makiyato ifeligalehu','I’d like a macchiato','Anything + <span class="am">እፈልጋለሁ</span> (ifeligalehu) is the easiest way to order.'),
+          R('ጠግቤያለሁ','tegbiyalehu','I’m full','That turns down food. She asked what you’ll drink.'),
+          R('ከአሜሪካ ነኝ','ke-Amerika negn','I’m from America','A good sentence, but not an answer to her question.')]},
+   {narr:'The waiter brings two macchiatos.',who:'Waiter',npc:{am:'ሌላ ነገር?',tr:'lela neger?',en:'Anything else?'},
+    opts:[Y('አይ፣ በቃ። አመሰግናለሁ','ay, beqa. ameseginalehu','No, that’s all. Thank you.','<span class="am">በቃ</span> (beqa) means “that’s enough.” With a thank-you it’s polite.'),
+          R('ውድ ነው','wid new','It’s expensive','Save that for the market. Café prices aren’t bargained.'),
+          R('ወራጅ አለ','werraj ale','Getting off here!','That’s what you call out on a minibus.')]},
+   {npc:{am:'ስራ እንዴት ነው?',tr:'sira indet new?',en:'How’s work?'},
+    opts:[Y('ጥሩ ነው፣ ግን ደክሞኛል','tiru new, gin dekmognal','It’s good, but I’m tired','<span class="am">ግን</span> (gin) means “but.” Short, honest, and natural.'),
+          R('ደህና ሁኚ','dehna hunyi','Goodbye','You’d be leaving in the middle of your coffee.'),
+          R('የት ነው?','yet new?','Where is it?','She asked how work is, not where.')]},
+   {npc:{am:'ቡናው እንዴት ነው?',tr:'bunaw indet new?',en:'How’s the coffee?'},
+    opts:[Y('በጣም ጣፋጭ ነው','betam tafach new','It’s really good','<span class="am">ጣፋጭ</span> (tafach) works for any food or drink you enjoy.'),
+          R('የለም','yelem','There isn’t any','The coffee is right in front of you.'),
+          R('ነገ','nege','Tomorrow','That’s a time, not an opinion.')]},
+   {narr:'The bill arrives. Selam reaches for it.',npc:{am:'እኔ ልክፈል',tr:'ine likfel',en:'Let me pay.'},
+    opts:[Y('እሺ፣ አመሰግናለሁ! በሚቀጥለው እኔ','ishi, ameseginalehu! bemiqetilew ine','Okay, thanks! Next time it’s me.','Friends take turns treating each other. Accepting and promising the next round is the gracious move.'),
+          R('ቀንሺልኝ','qenshilign','Lower the price for me','Bargaining with your friend won’t land well.'),
+          R('ስሜ ... ነው','simé … new','My name is …','She already knows your name.')]},
+   {npc:{am:L('በይ፣ ቻው! ነገ እንገናኝ','በል፣ ቻው! ነገ እንገናኝ'),tr:L('bey, chaw! nege ingenagn','bel, chaw! nege ingenagn'),en:'Alright, bye! See you tomorrow.'},
+    opts:[Y('እሺ፣ ቻው! ነገ እንገናኝ','ishi, chaw! nege ingenagn','Okay, bye! See you tomorrow.','Echoing the other person’s goodbye is completely natural.'),
+          R('እንደምን ዋልሽ?','indemin walsh?','Good afternoon','That’s a greeting for arriving, not leaving.'),
+          R('ርቦኛል','rabognal','I’m hungry','Not the moment. You’re heading out.')]}
+  ]},
+ {id:'taxi',am:'ታክሲ',place:'Minibus',title:'Catching a minibus',who:'Conductor',
+  setting:'A busy roadside in Addis. Blue-and-white minibuses stop to pick people up. You want to go to Piassa.',
+  turns:[
+   {narr:'A conductor leans out of a minibus, calling out its route.',npc:{am:'ፒያሳ! ፒያሳ!',tr:'piyassa! piyassa!',en:'Piassa! Piassa!'},
+    opts:[Y('ፒያሳ ነው?','piyassa new?','Going to Piassa?','Name the place and add <span class="am">ነው?</span> (new?) to check the route.'),
+          R('ስምህ ማን ነው?','simih man new?','What’s your name?','Friendly, but he has a minibus to fill.'),
+          R('ደህና እደር','dehna eder','Good night','That’s a goodnight.')]},
+   {npc:{am:L('አዎ፣ ግቢ!','አዎ፣ ግባ!'),tr:L('awo, gibi!','awo, giba!'),en:'Yes, get in!'},
+    opts:[Y('ስንት ነው?','sint new?','How much is it?','Good to ask before you sit down.'),
+          R('ተቀመጥ','teqemet','Sit down','That’s telling him to sit, not you.'),
+          R('ሻይ','shai','Tea','Wrong place for tea.')]},
+   {npc:{am:'አስር ብር',tr:'asir birr',en:'Ten birr.'},
+    opts:[Y('እሺ፣ ይኸው','ishi, yihew','Okay, here you go','<span class="am">ይኸው</span> (yihew) is what you say as you hand something over.'),
+          R('ውድ ነው! ቀንስልኝ','wid new! qenisilign','That’s expensive! Lower it.','Minibus fares are fixed, so bargaining here gets you funny looks.'),
+          R('ቅርብ ነው','qirb new','It’s close','That doesn’t answer the price.')]},
+   {narr:'The minibus nears Piassa. You need to get off.',
+    opts:[Y('ወራጅ አለ!','werraj ale!','Getting off here!','Literally “someone’s getting off.” Call it out and the driver pulls over.'),
+          R('ቀጥታ','qetita','Straight ahead','He’d keep driving.'),
+          R('ሰላም','selam','Hello','A greeting won’t stop the minibus.')]},
+   {narr:'The conductor hands you your change.',npc:{am:'መልስ ይኸው',tr:'mels yihew',en:'Here’s your change.'},
+    opts:[Y('አመሰግናለሁ','ameseginalehu','Thank you','Simple and right.'),
+          R('ደህና ነኝ','dehna negn','I’m fine','He didn’t ask how you are.'),
+          R('እንጀራ','injera','Injera','That’s food, not a reply.')]}
+  ]},
+ {id:'home',am:'እንግድነት',place:'Family home',title:'Lunch at a friend’s home',who:'Hana’s mother',
+  setting:'Your friend Hana invited you to her family’s home for lunch. Her mother opens the door.',
+  turns:[
+   {npc:{am:L('እንኳን ደህና መጣሽ! ግቢ','እንኳን ደህና መጣህ! ግባ'),tr:L('inkwan dehna metash! gibi','inkwan dehna metah! giba'),en:'Welcome! Come in.'},
+    opts:[Y('አመሰግናለሁ። እንዴት ነዎት?','ameseginalehu. indet newot?','Thank you. How are you?','<span class="am">ነዎት</span> (newot) is the respectful form. Use it with elders and your friends’ parents.'),
+          R('አመሰግናለሁ። እንዴት ነሽ?','ameseginalehu. indet nesh?','Thank you. How are you? (casual)','The right question, but too casual for a friend’s mother.'),
+          R('ቻው','chaw','Bye','You just arrived.')]},
+   {npc:{am:L('ደህና ነኝ፣ እግዚአብሔር ይመስገን። ተቀመጪ','ደህና ነኝ፣ እግዚአብሔር ይመስገን። ተቀመጥ'),tr:L('dehna negn, igziabher yimesgen. teqemechi','dehna negn, igziabher yimesgen. teqemet'),en:'I’m well, thank God. Sit down.'},
+    opts:[Y('እሺ፣ አመሰግናለሁ','ishi, ameseginalehu','Okay, thank you','Gracious and simple.'),
+          R('ቆይ','qoy','Wait','Telling your host to wait is abrupt.'),
+          R('ሩቅ ነው?','ruq new?','Is it far?','The chair is right there.')]},
+   {narr:'She sets down a big tray of injera and stews.',npc:{am:L('ብዪ! ብዪ!','ብላ! ብላ!'),tr:L('biyi! biyi!','bila! bila!'),en:'Eat! Eat!'},
+    opts:[Y('በጣም ጣፋጭ ነው','betam tafach new','It’s delicious','Complimenting the food is the best thing a guest can say.'),
+          R('ስንት ነው?','sint new?','How much is it?','Never ask the price of a meal in someone’s home.'),
+          R('ማኪያቶ እፈልጋለሁ','makiyato ifeligalehu','I’d like a macchiato','That’s ordering like you’re at a café.')]},
+   {narr:'You’ve eaten plenty, but she keeps adding more to your side of the tray.',npc:{am:L('ብዪ እንጂ! ገና ነው','ብላ እንጂ! ገና ነው'),tr:L('biyi inji! gena new','bila inji! gena new'),en:'Come on, eat! You’ve barely started.'},
+    opts:[Y('ጠግቤያለሁ፣ አመሰግናለሁ','tegbiyalehu, ameseginalehu','I’m full, thank you','Hosts insist several times. A warm, repeated <span class="am">ጠግቤያለሁ</span> is the polite way out.'),
+          R('በቃ!','beqa!','Enough!','On its own it sounds sharp. Say you’re full and thank her.'),
+          R('ርቦኛል','rabognal','I’m hungry','She’ll happily pile on more.')]},
+   {npc:{am:L('ቡና ትጠጫለሽ?','ቡና ትጠጣለህ?'),tr:L('buna titechalesh?','buna titetaleh?'),en:'Will you have coffee?'},
+    opts:[Y('አዎ፣ ደስ ይለኛል','awo, des yilenyal','Yes, I’d love to','A home coffee ceremony is a big part of a visit. Saying yes is part of being a good guest.'),
+          R('የለም','yelem','There isn’t any','That means “there isn’t,” not “no thanks.”'),
+          R('ሽንት ቤት የት ነው?','shint bet yet new?','Where’s the toilet?','A fair question, but not an answer to hers.')]},
+   {narr:'After coffee, it’s time to go.',npc:{am:L('በይ፣ እንደገና ነይ!','በል፣ እንደገና ና!'),tr:L('bey, indegena neyi!','bel, indegena na!'),en:'Alright, come again!'},
+    opts:[Y('እሺ፣ ደህና ይሁኑ','ishi, dehna yihunu','I will. Goodbye.','<span class="am">ደህና ይሁኑ</span> (dehna yihunu) is the respectful goodbye for elders.'),
+          R('ቻው!','chaw!','Bye!','Fine with friends, but too casual for her.'),
+          R('እንኳን ደህና መጡ','inkwan dehna metu','Welcome','That’s for greeting someone who’s arriving.')]}
+  ]},
+ {id:'market',am:'ገበያ',place:'Market',title:'Buying bananas',who:'Fruit seller',
+  setting:'A fruit stall at Shola market. You want a kilo of bananas. The seller is a woman.',
+  turns:[
+   {npc:{am:L('ምን ልስጥሽ?','ምን ልስጥህ?'),tr:L('min listish?','min listih?'),en:'What can I get you?'},
+    opts:[Y('ሙዝ አለ?','muz ale?','Do you have bananas?','Put <span class="am">አለ?</span> (ale?) after a thing to ask “do you have…?”'),
+          R('ስምሽ ማን ነው?','simish man new?','What’s your name?','Friendly, but she’s asking what you want to buy.'),
+          R('ጠግቤያለሁ','tegbiyalehu','I’m full','You came to buy food.')]},
+   {npc:{am:'አዎ፣ አለ። ስንት ኪሎ?',tr:'awo, ale. sint kilo?',en:'Yes, I do. How many kilos?'},
+    opts:[Y('አንድ ኪሎ','and kilo','One kilo','Number + <span class="am">ኪሎ</span> (kilo).'),
+          R('አስር ደቂቃ','asir deqiqa','Ten minutes','That’s time, not weight.'),
+          R('ለምን?','lemin?','Why?','She’s just asking how much you want.')]},
+   {narr:'She weighs the bananas and hands them over.',npc:{am:'ይኸው',tr:'yihew',en:'Here you go.'},
+    opts:[Y('ስንት ነው?','sint new?','How much is it?','Always ask the price before paying at a market.'),
+          R('ደህና እደሪ','dehna ederi','Good night','You haven’t paid yet.'),
+          R('ቀጥታ','qetita','Straight ahead','That’s a direction.')]},
+   {npc:{am:'ሰማንያ ብር',tr:'semanya birr',en:'Eighty birr.'},
+    opts:[Y('ውድ ነው! ቀንሺልኝ','wid new! qenshilign','That’s expensive! Lower it for me.','Bargaining is expected at markets. She’s a woman, so it’s <span class="am">ቀንሺልኝ</span> (qenshilign).'),
+          R('ጥሩ ነው','tiru new','It’s good','That’s not a reply to a price.'),
+          R('መቼ?','meche?','When?','She told you a price, not a time.')]},
+   {npc:{am:'እሺ፣ ሰባ ብር',tr:'ishi, seba birr',en:'Okay, seventy birr.'},
+    opts:[Y('እሺ፣ ይኸው','ishi, yihew','Okay, here you go','Deal done. Hand it over with <span class="am">ይኸው</span>.'),
+          R('ሙዝ አለ?','muz ale?','Do you have bananas?','They’re already in your hands.'),
+          R('ደህና ሁን','dehna hun','Goodbye (to a man)','Leaving without paying, and she’s a woman.')]},
+   {npc:{am:L('አመሰግናለሁ። ደህና ሁኚ','አመሰግናለሁ። ደህና ሁን'),tr:L('ameseginalehu. dehna hunyi','ameseginalehu. dehna hun'),en:'Thank you. Goodbye.'},
+    opts:[Y('ደህና ሁኚ','dehna hunyi','Goodbye (to a woman)','She’s a woman, so it’s <span class="am">ሁኚ</span> (hunyi).'),
+          R('ደህና ሁን','dehna hun','Goodbye (to a man)','That’s the form for a man.'),
+          R('ሌላ ነገር?','lela neger?','Anything else?','That’s the seller’s line, not yours.')]}
+  ]},
+ {id:'party',am:'ግብዣ',place:'Party',title:'Meeting someone new',who:'Dawit',
+  setting:'A friend’s birthday party. A guy you don’t know sits down next to you.',
+  turns:[
+   {npc:{am:L('ሰላም፣ ስሜ ዳዊት ነው። ስምሽ ማን ነው?','ሰላም፣ ስሜ ዳዊት ነው። ስምህ ማን ነው?'),tr:L('selam, simé Dawit new. simish man new?','selam, simé Dawit new. simih man new?'),en:'Hi, I’m Dawit. What’s your name?'},
+    opts:[Y('ስሜ ... ነው። በመተዋወቃችን ደስ ብሎኛል','simé … new. bemetewawoqachin des bilognal','My name is … Nice to meet you.','Your name, then “nice to meet you.” He’ll be impressed.'),
+          R('ደህና ሁን','dehna hun','Goodbye','You just met.'),
+          R('ስንት ኪሎ?','sint kilo?','How many kilos?','That’s a market question.')]},
+   {npc:{am:L('ከየት ነሽ?','ከየት ነህ?'),tr:L('keyet nesh?','keyet neh?'),en:'Where are you from?'},
+    opts:[Y('ከአሜሪካ ነኝ','ke-Amerika negn','I’m from America','Swap in your own place: <span class="am">ከ</span> (ke) + place + <span class="am">ነኝ</span> (negn).'),
+          R('ቀኝ','qegn','Right','That’s a direction.'),
+          R('ዛሬ','zaré','Today','He asked where, not when.')]},
+   {npc:{am:L('አማርኛ ትችያለሽ?','አማርኛ ትችላለህ?'),tr:L('amarigna tichiyalesh?','amarigna tichilaleh?'),en:'Can you speak Amharic?'},
+    opts:[Y('ትንሽ ትንሽ','tinish tinish','A little bit','Doubled, <span class="am">ትንሽ</span> means “a little bit.”'),
+          R('ሶስት','sost','Three','A number doesn’t answer the question.'),
+          R('ሂሳብ','hisab','The bill','You’re at a party, not a café.')]},
+   {narr:'Dawit gets excited and talks fast.',npc:{am:L('ኢትዮጵያ ደስ ይልሻል? አዲስ አበባን አይተሻል? ምግቡስ?','ኢትዮጵያ ደስ ይልሃል? አዲስ አበባን አይተሃል? ምግቡስ?'),tr:L('Ityopiya des yilishal? Addis Abeban ayteshal? migbus?','Ityopiya des yilihal? Addis Abeban aytehal? migbus?'),en:'Do you like Ethiopia? Have you seen Addis Ababa? And the food?'},
+    opts:[Y('አልገባኝም። እባክህ ቀስ ብለህ ተናገር','algebagnim. ibakih qes bileh tenager','I didn’t understand. Please speak slowly.','Your most useful phrase as a learner. People are happy to slow down.'),
+          R('አዎ፣ ሶስት','awo, sost','Yes, three','Guessing rarely works out.'),
+          R('ቻው','chaw','Bye','Escaping works, but he’ll feel bad.')]},
+   {npc:{am:L('ይቅርታ! ኢትዮጵያ… ደስ… ይልሻል?','ይቅርታ! ኢትዮጵያ… ደስ… ይልሃል?'),tr:L('yiqirta! Ityopiya… des… yilishal?','yiqirta! Ityopiya… des… yilihal?'),en:'Sorry! Do… you… like… Ethiopia?'},
+    opts:[Y('አዎ፣ በጣም ደስ ይለኛል','awo, betam des yilenyal','Yes, I like it a lot','<span class="am">ደስ ይለኛል</span> (des yilenyal), “it pleases me,” is how you say you like something.'),
+          R('አይደለም፣ ርቦኛል','aydelem, rabognal','No, I’m hungry','Probably not the impression you want.'),
+          R('አዎ፣ ጠምቶኛል','awo, temtognal','Yes, I’m thirsty','He asked about Ethiopia, not drinks.')]},
+   {npc:{am:L('ጎበዝ! አማርኛሽ ጥሩ ነው','ጎበዝ! አማርኛህ ጥሩ ነው'),tr:L('gobez! amarignash tiru new','gobez! amarignah tiru new'),en:'Great! Your Amharic is good.'},
+    opts:[Y('አመሰግናለሁ!','ameseginalehu!','Thank you!','Take the compliment.'),
+          R('ውድ ነው','wid new','It’s expensive','Compliments are free.'),
+          R('ወራጅ አለ','werraj ale','Getting off here!','That’s for minibuses.')]}
+  ]},
+ {id:'directions',am:'መንገድ',place:'Street',title:'Finding the bank',who:'Passerby',
+  setting:'You’re near Meskel Square looking for a bank.',
+  turns:[
+   {narr:'A man is walking past. Get his attention.',
+    opts:[Y('ይቅርታ!','yiqirta!','Excuse me!','<span class="am">ይቅርታ</span> is both “sorry” and “excuse me.”'),
+          R('እሺ','ishi','Okay','That agrees to something. Nobody asked you anything.'),
+          R('በቃ!','beqa!','Enough!','He’d wonder what he did.')]},
+   {npc:{am:'አቤት?',tr:'abet?',en:'Yes?'},
+    opts:[Y('ባንክ የት ነው?','bank yet new?','Where’s the bank?','Place + <span class="am">የት ነው?</span> (yet new?) works for anywhere.'),
+          R('ደህና እደር','dehna eder','Good night','You still need directions.'),
+          R('ሌላ ነገር?','lela neger?','Anything else?','You haven’t asked anything yet.')]},
+   {type:'check',q:'Which way did he send you?',npc:{am:L('ቀጥታ ሂጂ፣ ከዚያ ወደ ግራ','ቀጥታ ሂድ፣ ከዚያ ወደ ግራ'),tr:L('qetita hiji, keziya wede gira','qetita hid, keziya wede gira'),en:'Go straight, then to the left.'},
+    opts:[C('Straight, then left','<span class="am">ቀጥታ</span> (qetita) is straight and <span class="am">ግራ</span> (gira) is left.',true),
+          C('Straight, then right','Right would be <span class="am">ቀኝ</span> (qegn).'),
+          C('Left, then straight','Listen for the order: straight comes first.')]},
+   {narr:'You want to know if you can walk there.',
+    opts:[Y('ሩቅ ነው?','ruq new?','Is it far?','A quick way to decide between walking and a ride.'),
+          R('ስንት ነው?','sint new?','How much is it?','Directions are free.'),
+          R('ቅርብ ነው','qirb new','It’s close','That’s a statement. You need the question.')]},
+   {npc:{am:'አይ፣ ቅርብ ነው። አምስት ደቂቃ',tr:'ay, qirb new. amist deqiqa',en:'No, it’s close. Five minutes.'},
+    opts:[Y('አመሰግናለሁ!','ameseginalehu!','Thank you!','Always thank people who help.'),
+          R('ደህና ነኝ','dehna negn','I’m fine','He didn’t ask how you are.'),
+          R('አምስት ብር','amist birr','Five birr','Minutes, not money.')]}
+  ]}
+];
+
+/* ---------- State ---------- */
+const KEY='tinish-progress-v1';
+function blank(){return{v:1,items:{},days:{},newPerDay:5,display:'both',newDate:'',newCount:0,convos:{},addressAs:'',updatedAt:0}}
+function load(){try{const r=localStorage.getItem(KEY);if(r)return Object.assign(blank(),JSON.parse(r))}catch(e){}return blank()}
+let S=load();
+let remoteRef=null,chain=Promise.resolve(),synced=false;
+function saveLocal(){try{localStorage.setItem(KEY,JSON.stringify(S))}catch(e){}}
+function saveRemote(){
+  if(!remoteRef)return;
+  const body=JSON.parse(JSON.stringify(S));
+  const r=remoteRef;
+  chain=chain.then(()=>r.set(body)).then(()=>{if(!synced){synced=true;if(view==='progress'&&!sess&&!convo)render()}}).catch(e=>{if(e&&(e.code==='invalid_argument'||e.code==='revoked')){remoteRef=null;if(synced){synced=false;if(view==='progress'&&!sess&&!convo)render()}}});
+}
+function commit(){S.updatedAt=Date.now();saveLocal();saveRemote()}
+async function connect(){
+  try{
+    if(!window.claude||typeof window.claude.use!=='function')return;
+    const [user,db]=await Promise.all([window.claude.use('user'),window.claude.use('db')]);
+    if(!user||!db)return;
+    const uid=await user.id();
+    if(!uid)return;
+    const ref=db.doc('data/users/'+uid+'/progress');
+    const snap=await ref.get();
+    remoteRef=ref;
+    if(snap.exists){
+      synced=true;
+      const r=snap.data()||{};
+      if((r.updatedAt||0)>(S.updatedAt||0)){
+        S=Object.assign(blank(),JSON.parse(JSON.stringify(r)));saveLocal();
+        if(!sess&&!convo)render();
+      }else if((S.updatedAt||0)>(r.updatedAt||0))saveRemote();
+    }else if(S.updatedAt)saveRemote();
+    if((view==='progress'||view==='talk')&&!sess&&!convo)render();
+  }catch(e){remoteRef=null}
+}
+
+/* ---------- Dates & scheduling ---------- */
+function dstr(d){return d.getFullYear()+'-'+String(d.getMonth()+1).padStart(2,'0')+'-'+String(d.getDate()).padStart(2,'0')}
+function today(){return dstr(new Date())}
+function addDays(n){const d=new Date();d.setDate(d.getDate()+n);return dstr(d)}
+function streak(){let n=0;const d=new Date();if(!S.days[dstr(d)])d.setDate(d.getDate()-1);while(S.days[dstr(d)]){n++;d.setDate(d.getDate()-1)}return n}
+function newLeft(){return S.newDate===today()?Math.max(0,S.newPerDay-S.newCount):S.newPerDay}
+function nextNew(){return ALL.filter(x=>!S.items[x.id]).slice(0,newLeft())}
+function dueItems(){const t=today();return ALL.filter(x=>S.items[x.id]&&S.items[x.id].due<=t)}
+function learnedCount(){return Object.keys(S.items).length}
+function masteredCount(){return Object.values(S.items).filter(i=>i.box>=4).length}
+function shuffle(a){a=a.slice();for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]]}return a}
+function esc(s){return String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]))}
+
+/* ---------- Voice (only if the device has an Amharic voice) ---------- */
+let voice=null;
+function pickVoice(){try{voice=speechSynthesis.getVoices().find(v=>/^am(-|_|$)/i.test(v.lang))||null}catch(e){voice=null}}
+if('speechSynthesis' in window){pickVoice();speechSynthesis.onvoiceschanged=()=>{const had=!!voice;pickVoice();if(!!voice!==had)render()}}
+function speak(t){if(!voice)return;try{const u=new SpeechSynthesisUtterance(t.replace(/\.\.\./g,' '));u.voice=voice;u.lang=voice.lang;u.rate=.8;speechSynthesis.cancel();speechSynthesis.speak(u)}catch(e){}}
+function playBtn(id,cls='play'){return voice?`<button class="${cls}" data-act="speak" data-id="${id}">▶ Listen</button>`:''}
+
+/* ---------- Session ---------- */
+let sess=null;
+let view=['today','talk','phrases','progress'].includes(location.hash.slice(1))?location.hash.slice(1):'today';
+
+function startSession(extra){
+  const fresh=extra?[]:nextNew();
+  const review=extra?shuffle(ALL.filter(x=>S.items[x.id])).slice(0,8):shuffle(dueItems()).slice(0,20);
+  if(!fresh.length&&!review.length)return;
+  const first=[...fresh.map(x=>({item:x,dir:'am'})),...review.map(x=>({item:x,dir:Math.random()<.5?'am':'en'}))];
+  const queue=[...shuffle(first),...shuffle(fresh).map(x=>({item:x,dir:'en'}))];
+  sess={fresh,learnIdx:0,queue,qIdx:0,wrong:new Set(),requeued:new Set(),correct:0,total:0,extra:!!extra,phase:fresh.length?'learn':'quiz',answered:null,revealed:false};
+  render();
+}
+function optionsFor(q){
+  const pool=q.item.unit.items.length>=4?ALL.filter(x=>x.unit===q.item.unit):ALL;
+  const others=shuffle(pool.filter(x=>x.id!==q.item.id&&x.en!==q.item.en)).slice(0,3);
+  return shuffle([q.item,...others]);
+}
+function answer(id){
+  const q=sess.queue[sess.qIdx];if(sess.answered)return;
+  const ok=id===q.item.id;
+  sess.answered={choice:id,ok};sess.total++;
+  if(ok)sess.correct++;
+  else{
+    sess.wrong.add(q.item.id);
+    const k=q.item.id+q.dir;
+    if(!sess.requeued.has(k)){sess.requeued.add(k);sess.queue.push({item:q.item,dir:q.dir})}
+  }
+  if(ok&&q.dir==='en')speak(q.item.am);
+  render();
+}
+function nextQ(){sess.qIdx++;sess.answered=null;if(sess.qIdx>=sess.queue.length)finish();else render()}
+function finish(){
+  const t=today();
+  if(!sess.extra){
+    const ids=new Set(sess.queue.map(q=>q.item.id));
+    ids.forEach(id=>{
+      const cur=S.items[id]||{box:0};
+      const box=sess.wrong.has(id)?1:Math.min(5,(cur.box||0)+1);
+      S.items[id]={box,due:addDays(INTERVALS[box])};
+    });
+    if(S.newDate!==t){S.newDate=t;S.newCount=0}
+    S.newCount+=sess.fresh.length;
+  }
+  S.days[t]=true;
+  commit();
+  sess.phase='done';render();
+}
+
+/* ---------- Views ---------- */
+const app=document.getElementById('app');
+function header(){const s=streak();return `<header class="top"><div class="brand"><span class="am">ትንሽ ትንሽ</span>Tinish Tinish</div><div class="streak-chip">${s?`<b>${s}</b>-day streak`:'Start your streak today'}</div></header>`}
+
+function greeting(){
+  const h=new Date().getHours();
+  if(h<12)return{am:'ሰላም',tr:'selam',en:'Hello. Little by little, every morning.'};
+  if(h<18)return{am:'ሰላም',tr:'selam',en:'Hello. A few minutes this afternoon is enough.'};
+  return{am:'ሰላም',tr:'selam',en:'Hello. One short lesson before the day ends.'};
+}
+
+function viewToday(){
+  const g=greeting();
+  const fresh=nextNew(),due=dueItems(),doneToday=!!S.days[today()];
+  const learned=learnedCount();
+  let box;
+  if(fresh.length||due.length){
+    box=`<section class="lesson" aria-labelledby="lh">
+      <h2 id="lh">${doneToday?'There’s a little more for today':'Today’s lesson'}</h2>
+      <p>About ${Math.max(3,Math.round((fresh.length*2+due.length)*.25))} minutes.</p>
+      <div class="counts"><div><strong>${fresh.length}</strong>new phrases</div><div><strong>${due.length}</strong>to review</div></div>
+      <button class="btn primary" data-act="start">${learned?'Start today’s lesson':'Start your first lesson'}</button>
+    </section>`;
+  }else{
+    const all=learned===ALL.length;
+    box=`<section class="lesson">
+      <h2><span class="am">ጎበዝ!</span> ${all?'You’ve learned every phrase':'You’re done for today'}</h2>
+      <p>${all?'Keep reviewing to lock them in. New reviews appear as phrases come due.':'Come back tomorrow for new phrases and reviews. Short and daily beats long and rare.'}</p>
+      <div class="actions">${learned?'<button class="btn ghost" data-act="extra">Practice a few more</button>':''}</div>
+    </section>`;
+  }
+  const nxt=ALL.find(x=>!S.items[x.id]);
+  const sc=SCENES.find(s=>!S.convos[s.id]);
+  const talk=sc?`<section class="talk-card">
+      <p class="kick"><span class="am">${sc.am}</span>Try a conversation</p>
+      <h2>${esc(sc.title)}</h2>
+      <p class="set">${esc(sc.setting)}</p>
+      <button class="btn ghost" data-act="convo" data-id="${sc.id}">Start conversation</button>
+    </section>`:`<section class="talk-card"><h2>Every conversation done</h2><p class="set">Replay them to make the replies come faster.</p><button class="btn ghost" data-act="go-talk">See conversations</button></section>`;
+  return header()+`<section class="hero">
+    <p class="glyph" lang="am">${g.am}</p>
+    <p class="gloss"><b>${g.tr}</b>. ${g.en}</p>
+  </section>${installTip()}${box}${talk}
+  ${nxt?`<p class="upnext">Up next: <span class="am">${nxt.unit.am}</span> ${esc(nxt.unit.title)}</p>`:''}`;
+}
+
+function viewSession(){
+  const steps=sess.fresh.length+sess.queue.length;
+  const pos=(sess.phase==='learn'?sess.learnIdx:sess.fresh.length+sess.qIdx);
+  const pct=sess.phase==='done'?100:Math.round(pos/steps*100);
+  const top=`<div class="sess-top"><button class="close" data-act="quit" aria-label="Leave lesson">×</button><div class="bar" role="progressbar" aria-valuenow="${pct}" aria-valuemin="0" aria-valuemax="100"><i style="width:${pct}%"></i></div></div>`;
+
+  if(sess.phase==='learn'){
+    const x=sess.fresh[sess.learnIdx];
+    const last=sess.learnIdx===sess.fresh.length-1;
+    const showTr=S.display==='both'||sess.revealed;
+    return top+`<div class="stage">
+      <p class="kicker">New phrase ${sess.learnIdx+1} of ${sess.fresh.length}: <span class="am">${x.unit.am}</span> ${esc(x.unit.title)}</p>
+      <div class="card pop">
+        <p class="big" lang="am">${esc(x.am)}</p>
+        ${showTr?`<p class="tr">${esc(x.tr)}</p>`:`<button class="reveal" data-act="reveal">Show pronunciation</button>`}
+        <p class="en">${esc(x.en)}</p>
+        ${playBtn(x.id)}
+        ${x.note?`<p class="note">${x.note}</p>`:''}
+      </div>
+      <div class="actions"><button class="btn primary" data-act="learn-next">${last?'Start practice':'Next phrase'}</button></div>
+    </div>`;
+  }
+
+  if(sess.phase==='quiz'){
+    const q=sess.queue[sess.qIdx];
+    if(!q.opts)q.opts=optionsFor(q);
+    const a=sess.answered;
+    const prompt=q.dir==='am'
+      ?`<p class="prompt-q">What does this mean?</p><p class="big" lang="am">${esc(q.item.am)}</p>${S.display==='both'?`<p class="tr">${esc(q.item.tr)}</p>`:''}${playBtn(q.item.id)}`
+      :`<p class="prompt-q">How do you say this?</p><p class="en" style="margin-top:6px;font-size:24px;font-weight:500">${esc(q.item.en)}</p>`;
+    const opts=q.opts.map((o,i)=>{
+      let cls='opt';
+      if(a){if(o.id===q.item.id)cls+=' right';else if(o.id===a.choice)cls+=' wrong'}
+      const label=q.dir==='am'?esc(o.en):`<span><span class="am" lang="am">${esc(o.am)}</span>${S.display==='both'?`<small>${esc(o.tr)}</small>`:''}</span>`;
+      return `<button class="${cls}" data-act="answer" data-id="${o.id}" ${a?'disabled':''}><span class="k">${i+1}</span>${label}</button>`;
+    }).join('');
+    let fb='';
+    if(a){
+      fb=a.ok
+        ?`<p class="feedback ok" role="status">Correct. <span class="am">${esc(q.item.am)}</span> (${esc(q.item.tr)})</p>`
+        :`<p class="feedback no" role="status">Not quite. It’s <span class="am">${esc(q.item.am)}</span> (${esc(q.item.tr)}), “${esc(q.item.en)}.” You’ll see it again.</p>`;
+      if(q.item.note)fb+=`<p class="note">${q.item.note}</p>`;
+      fb+=`<div class="actions"><button class="btn primary" data-act="next" id="cont">Continue</button></div>`;
+    }
+    return top+`<div class="stage"><div class="card">${prompt}</div><div class="opts">${opts}</div>${fb}</div>`;
+  }
+
+  // done
+  return `<div class="done pop">
+    <p class="glyph" lang="am">ጎበዝ!</p>
+    <p class="gloss">gobez. Well done.</p>
+    <div class="done-stats">
+      <div><strong>${sess.correct}/${sess.total}</strong>correct</div>
+      <div><strong>${streak()}</strong>day streak</div>
+      <div><strong>${learnedCount()}</strong>phrases learned</div>
+    </div>
+    <button class="btn primary" data-act="home">Back to today</button>
+  </div><div class="tibeb" style="margin-top:40px" aria-hidden="true"></div>`;
+}
+
+let searchTerm='';
+function phraseRows(){
+  const t=searchTerm.trim().toLowerCase();
+  const out=UNITS.map(u=>{
+    const items=u.items.map(([id])=>BY_ID[id]).filter(x=>!t||x.en.toLowerCase().includes(t)||x.tr.toLowerCase().includes(t)||x.am.includes(searchTerm.trim()));
+    if(!items.length)return'';
+    const done=u.items.filter(([id])=>S.items[id]).length;
+    return `<section class="unit"><div class="unit-h"><h3><span class="am">${u.am}</span>${esc(u.title)}</h3><span>${done} of ${u.items.length} learned</span></div>
+      ${items.map(x=>{const it=S.items[x.id];return `<div class="row"><span class="dot ${it?'s'+it.box:''}" aria-label="${it?(it.box>=4?'Strong':'Learning'):'Not learned yet'}"></span>
+        <div><div class="am" lang="am">${esc(x.am)}</div><div class="tr">${esc(x.tr)}</div><div class="en">${esc(x.en)}</div></div>
+        ${playBtn(x.id)}</div>`}).join('')}</section>`;
+  }).join('');
+  return out||`<p class="empty">No phrases match “${esc(searchTerm)}.” Try an English word like “water” or “thank.”</p>`;
+}
+function viewPhrases(){
+  return header()+`<h1 class="page">Phrasebook</h1>
+  <p class="sub">Every phrase in the course. Lessons introduce them in this order.</p>
+  <input class="search" id="search" type="search" placeholder="Search in English or Amharic" value="${esc(searchTerm)}" aria-label="Search phrases">
+  <details class="sounds"><summary>How to read the pronunciation</summary>
+    <dl>
+      <dt>q</dt><dd>A k sound made deep in the throat with a little pop.</dd>
+      <dt>gn</dt><dd>Like the “ny” in canyon.</dd>
+      <dt>é</dt><dd>Like the “e” in café.</dd>
+      <dt>i</dt><dd>Often a light, quick “ih.” Don’t stress it.</dd>
+      <dt>t, ch, ts</dt><dd>Some of these are popped too, like q. Listen to native speakers and copy them.</dd>
+    </dl>
+  </details>
+  <div class="legend"><span><i></i>Not learned</span><span><i style="background:var(--gold);border-color:var(--gold)"></i>Learning</span><span><i style="background:var(--green);border-color:var(--green)"></i>Strong</span></div>
+  <div id="rows">${phraseRows()}</div>`;
+}
+
+let resetArmed=false,resetTimer=null;
+function viewProgress(){
+  const days=[];const d=new Date();d.setDate(d.getDate()-27);
+  // align so the grid starts on Monday
+  const offset=(d.getDay()+6)%7;d.setDate(d.getDate()-offset);
+  const end=today();
+  let cells='';
+  for(let i=0;i<35;i++){const s=dstr(d);if(s>end&&i%7===0)break;cells+=`<div class="${S.days[s]?'on':''} ${s===end?'today':''}" title="${s}"></div>`;d.setDate(d.getDate()+1)}
+  const ub=UNITS.map(u=>{const n=u.items.filter(([id])=>S.items[id]).length;const p=Math.round(n/u.items.length*100);
+    return `<div class="ubar"><div class="lbl"><span style="color:var(--ink)"><span class="am">${u.am}</span> ${esc(u.title)}</span><span>${n}/${u.items.length}</span></div><div class="bar"><i style="width:${p}%"></i></div></div>`}).join('');
+  const seg=(key,opts)=>`<div class="seg" role="group">${opts.map(([v,l])=>`<button data-act="set" data-key="${key}" data-val="${v}" aria-pressed="${String(S[key])===String(v)}">${l}</button>`).join('')}</div>`;
+  return header()+`<h1 class="page">Progress</h1>
+  <div class="stats">
+    <div class="stat"><strong>${streak()}</strong><span>day streak</span></div>
+    <div class="stat"><strong>${learnedCount()}</strong><span>of ${ALL.length} learned</span></div>
+    <div class="stat"><strong>${masteredCount()}</strong><span>strong</span></div>
+  </div>
+  <h2 class="sec">Last few weeks</h2>
+  <div class="cal-days" aria-hidden="true"><span>M</span><span>T</span><span>W</span><span>T</span><span>F</span><span>S</span><span>S</span></div>
+  <div class="cal">${cells}</div>
+  <h2 class="sec">By topic</h2>${ub}
+  <h2 class="sec">Settings</h2>
+  <div class="setting"><label>New phrases each day</label>${seg('newPerDay',[[3,'3'],[5,'5'],[8,'8']])}</div>
+  <div class="setting"><label>In conversations, people speak to me</label>${addrSeg()}</div>
+  <div class="setting"><label>Pronunciation while learning</label>${seg('display',[['both','Always show'],['fidel','Hide until I tap']])}</div>
+  <h2 class="sec">Backup</h2>
+  <p class="sub" style="margin:0 0 12px">Your progress lives in this browser. Save a backup to move it to another phone or restore it if the browser’s data gets cleared.</p>
+  <button class="btn ghost" data-act="export">Download backup file</button>
+  <button class="btn ghost" data-act="import">Restore from backup file</button>
+  <input type="file" id="importFile" accept=".json,application/json" hidden>
+  <details class="code"><summary>Use a backup code instead</summary>
+    <p class="sub" style="margin:10px 0 0">Copy this code and send it to yourself, or paste a code from another device.</p>
+    <textarea id="codeBox" aria-label="Backup code">${encodeBackup()}</textarea>
+    <div class="actions"><button class="btn ghost" data-act="copy-code">Copy code</button><button class="btn ghost" data-act="paste-code">Restore from this code</button></div>
+  </details>
+  ${backupMsg?`<p class="backup-msg ${backupMsg.err?'err':''}" role="status">${esc(backupMsg.text)}</p>`:''}
+  <h2 class="sec">Start over</h2>
+  <button class="danger ${resetArmed?'armed':''}" data-act="reset">${resetArmed?'Tap again to erase all progress':'Reset progress'}</button>
+  <p class="sync">${synced?'Your progress is saved to your account, so it follows you across devices.':'Your progress is saved in this browser.'}</p>`;
+}
+
+/* ---------- Install & storage ---------- */
+const isIOS=/iphone|ipad|ipod/i.test(navigator.userAgent)||(navigator.platform==='MacIntel'&&navigator.maxTouchPoints>1);
+const isStandalone=()=>window.navigator.standalone===true||matchMedia('(display-mode: standalone)').matches;
+let installEvt=null;
+window.addEventListener('beforeinstallprompt',e=>{e.preventDefault();installEvt=e;if(!sess&&!convo&&view==='today')render()});
+window.addEventListener('appinstalled',()=>{installEvt=null;if(!sess&&!convo)render()});
+function tipDismissed(){try{return localStorage.getItem('tinish-tip')==='1'}catch(e){return false}}
+function installTip(){
+  if(isStandalone()||tipDismissed())return'';
+  if(installEvt)return `<div class="tip"><p>Install Tinish Tinish on your phone so it opens like an app and works offline.</p></div><div class="actions"><button class="btn ghost" data-act="install">Install app</button></div>`;
+  if(isIOS)return `<div class="tip"><p>Add this app to your home screen: tap the Share button, then <b>Add to Home Screen</b>. It works offline and keeps your progress safe.</p><button class="x" data-act="tip-x" aria-label="Dismiss">×</button></div>`;
+  return'';
+}
+try{if(navigator.storage&&navigator.storage.persist)navigator.storage.persisted().then(p=>{if(!p)navigator.storage.persist()})}catch(e){}
+if('serviceWorker' in navigator&&location.protocol==='https:')window.addEventListener('load',()=>navigator.serviceWorker.register('sw.js').catch(()=>{}));
+
+let backupMsg=null;
+function encodeBackup(){return btoa(unescape(encodeURIComponent(JSON.stringify({app:'tinish-tinish',v:1,data:S}))))}
+function restoreFrom(text){
+  let obj;
+  try{obj=JSON.parse(text)}catch(e){try{obj=JSON.parse(decodeURIComponent(escape(atob(text.trim()))))}catch(e2){obj=null}}
+  const d=obj&&obj.app==='tinish-tinish'?obj.data:null;
+  if(!d||typeof d.items!=='object'||typeof d.days!=='object'){backupMsg={err:true,text:'That isn’t a Tinish Tinish backup. Check that you copied the whole code or picked the right file.'};render();return}
+  if(!confirm('Replace your current progress with this backup?'))return;
+  S=Object.assign(blank(),d);commit();
+  backupMsg={err:false,text:'Progress restored: '+Object.keys(S.items).length+' phrases learned.'};render();
+}
+
+/* ---------- Conversation play ---------- */
+let convo=null;
+function g(x){return(x&&typeof x==='object')?x[S.addressAs||'f']:x}
+function smooth(){return matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth'}
+function startConvo(id){
+  const sc=SCENES.find(s=>s.id===id);if(!sc)return;
+  if(!S.addressAs){view='talk';render();window.scrollTo(0,0);return}
+  convo={sc,turn:0,answered:null,score:0,log:[],order:null,showEn:false,done:false};
+  prepTurn();render();window.scrollTo(0,0);
+}
+function prepTurn(){const t=convo.sc.turns[convo.turn];convo.order=shuffle(t.opts.map((_,i)=>i));convo.answered=null;convo.showEn=false}
+function scrollTurn(){const el=document.getElementById('turn');if(el)el.scrollIntoView({block:'start',behavior:smooth()})}
+function convoAnswer(i){
+  if(!convo||convo.answered)return;
+  const t=convo.sc.turns[convo.turn],ok=!!t.opts[i].ok;
+  convo.answered={i,ok};if(ok)convo.score++;
+  const c=t.opts.find(o=>o.ok);if(ok&&c.am)speak(c.am);
+  render();const f=document.getElementById('cont');if(f)f.scrollIntoView({block:'nearest',behavior:smooth()});
+}
+function convoNext(){
+  const t=convo.sc.turns[convo.turn],c=t.opts.find(o=>o.ok);
+  if(t.narr)convo.log.push({k:'narr',text:t.narr});
+  if(t.npc)convo.log.push({k:'them',who:t.who||convo.sc.who,am:g(t.npc.am),tr:g(t.npc.tr),en:t.npc.en});
+  if(t.type==='check')convo.log.push({k:'narr',text:'You understood: '+c.en+'.'});
+  else convo.log.push({k:'me',am:c.am,tr:c.tr,en:c.en});
+  convo.turn++;
+  if(convo.turn>=convo.sc.turns.length){
+    const id=convo.sc.id,prev=S.convos[id];
+    S.convos[id]={best:Math.max(prev?prev.best:0,convo.score)};
+    S.days[today()]=true;commit();
+    convo.done=true;render();window.scrollTo(0,0);
+  }else{prepTurn();render();scrollTurn()}
+}
+function bubble(b,live){
+  if(b.k==='narr')return `<p class="narr">${esc(b.text)}</p>`;
+  if(b.k==='me')return `<div class="bub me"><span class="am" lang="am">${esc(b.am)}</span><div class="tr">${esc(b.tr)}</div><div class="en">${esc(b.en)}</div></div>`;
+  const show=!live||convo.showEn||convo.answered;
+  return `<div class="bub them"><div class="who">${esc(b.who)}</div><span class="am" lang="am">${esc(b.am)}</span>${S.display==='both'||show?`<div class="tr">${esc(b.tr)}</div>`:''}${show?`<div class="en">${esc(b.en)}</div>`:''}<div class="tools">${show?'':`<button class="mini" data-act="show-en">Show English</button>`}${voice?`<button class="mini" data-act="say" data-text="${esc(b.am)}">▶ Listen</button>`:''}</div></div>`;
+}
+function viewConvo(){
+  const sc=convo.sc,n=sc.turns.length;
+  if(convo.done){
+    const used=sc.turns.filter(t=>t.type!=='check').map(t=>t.opts.find(o=>o.ok));
+    return `<div class="done pop">
+      <p class="glyph" lang="am">ጎበዝ!</p>
+      <p class="gloss">gobez. You finished “${esc(sc.title)}.”</p>
+      <div class="done-stats"><div><strong>${convo.score}/${n}</strong>best replies</div><div><strong>${streak()}</strong>day streak</div></div>
+    </div>
+    <h2 class="sec">Replies from this conversation</h2>
+    ${used.map(o=>`<div class="row" style="grid-template-columns:1fr auto"><div><div class="am" lang="am">${esc(o.am)}</div><div class="tr">${esc(o.tr)}</div><div class="en">${esc(o.en)}</div></div>${voice?`<button class="play" data-act="say" data-text="${esc(o.am)}">▶ Listen</button>`:''}</div>`).join('')}
+    <div class="actions"><button class="btn primary" data-act="convo-again">Try it again</button><button class="btn ghost" data-act="convo-exit">Back to conversations</button></div>`;
+  }
+  const t=sc.turns[convo.turn],a=convo.answered;
+  const pct=Math.round(convo.turn/n*100);
+  const top=`<div class="sess-top"><button class="close" data-act="quit" aria-label="Leave conversation">×</button><div class="bar" role="progressbar" aria-valuenow="${pct}" aria-valuemin="0" aria-valuemax="100"><i style="width:${pct}%"></i></div></div>`;
+  const intro=`<div class="scene-intro"><span class="am">${sc.am}</span><b>${esc(sc.title)}</b><br>${esc(sc.setting)}</div>`;
+  let cur='';
+  if(t.narr)cur+=`<p class="narr">${esc(t.narr)}</p>`;
+  if(t.npc)cur+=bubble({k:'them',who:t.who||sc.who,am:g(t.npc.am),tr:g(t.npc.tr),en:t.npc.en},true);
+  const ask=t.type==='check'?t.q:(t.npc?'Your reply':'Your turn to speak');
+  const opts=convo.order.map((oi,k)=>{
+    const o=t.opts[oi];let cls='opt';
+    if(a){if(o.ok)cls+=' right';else if(oi===a.i)cls+=' wrong'}
+    const label=t.type==='check'?esc(o.en):`<span><span class="am" lang="am">${esc(o.am)}</span>${S.display==='both'||a?`<small>${esc(o.tr)}</small>`:''}${a?`<small>${esc(o.en)}</small>`:''}</span>`;
+    return `<button class="${cls}" data-act="reply" data-i="${oi}" ${a?'disabled':''}><span class="k">${k+1}</span>${label}</button>`;
+  }).join('');
+  let fb='';
+  if(a){
+    const c=t.opts.find(o=>o.ok),ch=t.opts[a.i];
+    if(a.ok)fb=`<p class="feedback ok" role="status">Good reply.</p><p class="note">${c.why}</p>`;
+    else fb=`<p class="feedback no" role="status">Not the best reply.</p><p class="note">${ch.why}</p><p class="note">${t.type==='check'?`Answer: ${esc(c.en)}. `:`Best reply: <span class="am">${esc(c.am)}</span> (${esc(c.tr)}), “${esc(c.en)}.” `}${c.why}</p>`;
+    fb+=`<div class="actions"><button class="btn primary" data-act="convo-next" id="cont">${convo.turn===n-1?'Finish':'Continue'}</button></div>`;
+  }
+  return top+`<div class="chat">${intro}${convo.log.map(b=>bubble(b,false)).join('')}<div id="turn" style="display:flex;flex-direction:column;gap:12px">${cur}</div></div>
+    <p class="your-turn">${esc(ask)}</p><div class="opts" style="margin-top:10px">${opts}</div>${fb}`;
+}
+function addrSeg(){return `<div class="seg" role="group" aria-label="How people speak to you">${[['f','As a woman'],['m','As a man']].map(([v,l])=>`<button data-act="set" data-key="addressAs" data-val="${v}" aria-pressed="${S.addressAs===v}">${l}</button>`).join('')}</div>`}
+function viewTalk(){
+  return header()+`<h1 class="page">Conversations</h1>
+  <p class="sub">Everyday situations you’re likely to meet in Ethiopia. Read what people say, then pick the best reply.</p>
+  ${S.addressAs?'':`<div class="addr"><p>Amharic changes the word for “you” for men and women. How should people in these conversations speak to you?</p>${addrSeg()}</div>`}
+  ${SCENES.map(s=>{const r=S.convos[s.id];return `<button class="scene" data-act="convo" data-id="${s.id}" ${S.addressAs?'':'disabled'}>
+    <div class="place"><span class="am">${s.am}</span>${esc(s.place)}</div><h3>${esc(s.title)}</h3><p>${esc(s.setting)}</p>
+    <div class="meta"><span>${s.turns.length} replies</span>${r?`<b>Best so far: ${r.best} of ${s.turns.length}</b>`:''}</div></button>`}).join('')}`;
+}
+
+function render(){
+  const busy=!!(sess||convo);
+  document.body.classList.toggle('in-session',busy);
+  document.getElementById('tabs').hidden=busy;
+  if(sess)app.innerHTML=viewSession();
+  else if(convo)app.innerHTML=viewConvo();
+  else app.innerHTML=view==='phrases'?viewPhrases():view==='progress'?viewProgress():view==='talk'?viewTalk():viewToday();
+  document.querySelectorAll('[data-tab]').forEach(b=>b.setAttribute('aria-current',b.dataset.tab===view?'page':'false'));
+  const c=document.getElementById('cont');if(c)c.focus({preventScroll:true});
+}
+
+/* ---------- Events ---------- */
+document.addEventListener('click',e=>{
+  const tab=e.target.closest('[data-tab]');
+  if(tab){view=tab.dataset.tab;backupMsg=null;try{history.replaceState(null,'','#'+view)}catch(_){}resetArmed=false;render();window.scrollTo(0,0);return}
+  const b=e.target.closest('[data-act]');if(!b)return;
+  const act=b.dataset.act;
+  if(act==='start')startSession(false);
+  else if(act==='extra')startSession(true);
+  else if(act==='speak')speak(BY_ID[b.dataset.id].am);
+  else if(act==='reveal'){sess.revealed=true;render()}
+  else if(act==='learn-next'){sess.revealed=false;if(sess.learnIdx<sess.fresh.length-1)sess.learnIdx++;else sess.phase='quiz';render();window.scrollTo(0,0)}
+  else if(act==='answer')answer(b.dataset.id);
+  else if(act==='next'){nextQ();window.scrollTo(0,0)}
+  else if(act==='quit'||act==='home'){if(convo){convo=null;view='talk'}else{sess=null;view='today'}render();window.scrollTo(0,0)}
+  else if(act==='convo')startConvo(b.dataset.id);
+  else if(act==='install'){if(installEvt){installEvt.prompt();installEvt.userChoice.finally(()=>{installEvt=null;render()})}}
+  else if(act==='tip-x'){try{localStorage.setItem('tinish-tip','1')}catch(_){}render()}
+  else if(act==='export'){
+    const blob=new Blob([JSON.stringify({app:'tinish-tinish',v:1,data:S},null,2)],{type:'application/json'});
+    const a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download='tinish-tinish-backup-'+today()+'.json';
+    document.body.appendChild(a);a.click();setTimeout(()=>{URL.revokeObjectURL(a.href);a.remove()},1000);
+    backupMsg={err:false,text:'Backup downloaded. Keep the file somewhere safe, like your cloud drive.'};render();
+  }
+  else if(act==='import')document.getElementById('importFile').click();
+  else if(act==='copy-code'){const t=document.getElementById('codeBox').value;
+    (navigator.clipboard?navigator.clipboard.writeText(t):Promise.reject()).then(()=>{backupMsg={err:false,text:'Code copied.'};render()})
+      .catch(()=>{const box=document.getElementById('codeBox');box.select();backupMsg={err:false,text:'Code selected. Copy it with your keyboard or long-press.'};render()})}
+  else if(act==='paste-code')restoreFrom(document.getElementById('codeBox').value);
+  else if(act==='go-talk'){view='talk';render();window.scrollTo(0,0)}
+  else if(act==='show-en'){convo.showEn=true;render()}
+  else if(act==='say')speak(b.dataset.text);
+  else if(act==='reply')convoAnswer(Number(b.dataset.i));
+  else if(act==='convo-next')convoNext();
+  else if(act==='convo-again')startConvo(convo.sc.id);
+  else if(act==='convo-exit'){convo=null;view='talk';render();window.scrollTo(0,0)}
+  else if(act==='set'){const k=b.dataset.key;S[k]=k==='newPerDay'?Number(b.dataset.val):b.dataset.val;commit();render()}
+  else if(act==='reset'){
+    if(!resetArmed){resetArmed=true;clearTimeout(resetTimer);resetTimer=setTimeout(()=>{resetArmed=false;if(view==='progress'&&!sess)render()},4000);render()}
+    else{resetArmed=false;const keep={newPerDay:S.newPerDay,display:S.display};S=Object.assign(blank(),keep);commit();render()}
+  }
+});
+document.addEventListener('change',e=>{
+  if(e.target.id==='importFile'&&e.target.files&&e.target.files[0]){const r=new FileReader();r.onload=()=>restoreFrom(String(r.result));r.readAsText(e.target.files[0])}
+});
+document.addEventListener('input',e=>{if(e.target.id==='search'){searchTerm=e.target.value;document.getElementById('rows').innerHTML=phraseRows()}});
+document.addEventListener('keydown',e=>{
+  if(e.target.tagName==='INPUT')return;
+  if(convo&&!convo.done){
+    if(!convo.answered&&/^[1-4]$/.test(e.key)){const oi=convo.order[Number(e.key)-1];if(oi!==undefined)convoAnswer(oi)}
+    else if(convo.answered&&e.key==='Enter'){e.preventDefault();convoNext()}
+    return;
+  }
+  if(!sess)return;
+  if(sess.phase==='quiz'){
+    const q=sess.queue[sess.qIdx];
+    if(!sess.answered&&/^[1-4]$/.test(e.key)&&q.opts){const o=q.opts[Number(e.key)-1];if(o)answer(o.id)}
+    else if(sess.answered&&e.key==='Enter'){e.preventDefault();nextQ()}
+  }else if(sess.phase==='learn'&&(e.key==='Enter'||e.key==='ArrowRight')){
+    const btn=document.querySelector('[data-act="learn-next"]');if(btn&&document.activeElement!==btn){e.preventDefault();btn.click()}
+  }
+});
+
+render();
+connect();
+</script>
+</body>
+</html>

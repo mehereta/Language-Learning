@@ -1,0 +1,1058 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Krok po kroku: daily Polish</title>
+<meta name="description" content="Learn a little Polish every day: short lessons, reviews, and real-life conversations.">
+<meta name="theme-color" content="#2348A6">
+<link rel="manifest" href="manifest.json">
+<link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32.png">
+<link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="apple-mobile-web-app-title" content="Krok po kroku">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600&family=Bricolage+Grotesque:opsz,wght@12..96,500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#F3F4F8;--surface:#FFFFFF;--ink:#191D2B;--muted:#5C6276;--line:#DADDE7;
+  --green:#2348A6;--green-soft:#DFE6F7;--gold:#D99A1B;--gold-soft:#FBEFD3;
+  --red:#C62A3B;--red-soft:#F8DDE0;--on-green:#FFFFFF;
+  --p1:#C62A3B;--p2:#E8862A;--p3:#F2C230;--p4:#2E8B57;--p5:#2348A6;--p6:#A3337D;--p7:#191D2B;
+  --am:'Bricolage Grotesque','Lexend',system-ui,sans-serif;
+  --ui:'Lexend',system-ui,-apple-system,'Segoe UI',sans-serif;
+  color-scheme:light;
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px);
+  padding-bottom:env(safe-area-inset-bottom,0px);
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --bg:#11131C;--surface:#1A1D29;--ink:#E9EBF3;--muted:#9BA1B6;--line:#2C3142;
+    --green:#7F9CF0;--green-soft:#1F2847;--gold:#F0BE4A;--gold-soft:#3A3020;
+    --red:#F07A86;--red-soft:#40222A;--on-green:#0F1324;--p7:#E9EBF3;color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#11131C;--surface:#1A1D29;--ink:#E9EBF3;--muted:#9BA1B6;--line:#2C3142;
+  --green:#7F9CF0;--green-soft:#1F2847;--gold:#F0BE4A;--gold-soft:#3A3020;
+  --red:#F07A86;--red-soft:#40222A;--on-green:#0F1324;--p7:#E9EBF3;color-scheme:dark;
+}
+*,*::before,*::after{box-sizing:inherit}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--ui);font-weight:400;font-size:16px;line-height:1.5;-webkit-font-smoothing:antialiased;padding-bottom:88px}
+body.in-session{padding-bottom:24px}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:10;background:var(--bg)}
+button{font:inherit;color:inherit}
+:focus-visible{outline:3px solid var(--gold);outline-offset:2px;border-radius:6px}
+.am{font-family:var(--am)}
+.wrap{max-width:560px;margin:0 auto;padding:0 20px}
+
+/* Band inspired by Łowicz striped folk fabric (pasiak) */
+.tibeb{height:12px;background:repeating-linear-gradient(90deg,var(--p1) 0 10px,var(--p2) 10px 14px,var(--p3) 14px 20px,var(--p4) 20px 28px,var(--p7) 28px 30px,var(--p5) 30px 38px,var(--p6) 38px 42px,var(--p3) 42px 46px)}
+
+header.top{padding:18px 0 6px;display:flex;align-items:baseline;justify-content:space-between;gap:12px}
+.brand{font-weight:600;font-size:17px;letter-spacing:.01em}
+.brand .am{font-weight:800;font-size:19px;letter-spacing:-.01em;color:var(--green)}
+.streak-chip{font-size:14px;color:var(--muted)}
+.streak-chip b{color:var(--ink);font-weight:600}
+
+/* Today */
+.hero{padding:28px 0 8px}
+.hero .glyph{font-family:var(--am);font-weight:800;font-size:clamp(52px,15vw,92px);line-height:1;letter-spacing:-.02em;color:var(--ink);margin:0}
+.hero .gloss{margin:6px 0 0;color:var(--muted);font-size:17px}
+.hero .gloss b{color:var(--ink);font-weight:500}
+.lesson{margin-top:28px;background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:22px}
+.lesson h2{margin:0 0 4px;font-size:21px;font-weight:600}
+.lesson p{margin:0;color:var(--muted)}
+.counts{display:flex;gap:22px;margin:18px 0 20px}
+.counts div{font-size:14px;color:var(--muted)}
+.counts strong{display:block;font-size:30px;font-weight:500;color:var(--ink);line-height:1.1}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;border:0;border-radius:12px;padding:14px 20px;font-weight:500;font-size:16px;cursor:pointer;min-height:50px}
+.btn.primary{background:var(--green);color:var(--on-green);width:100%}
+.btn.primary:hover{filter:brightness(1.07)}
+.btn.ghost{background:transparent;border:1px solid var(--line);width:100%}
+.btn.ghost:hover{background:var(--green-soft)}
+.btn+.btn{margin-top:10px}
+.upnext{margin-top:22px;color:var(--muted);font-size:15px}
+.upnext .am{color:var(--ink)}
+
+/* Nav */
+nav.tabs{position:fixed;left:0;right:0;bottom:0;z-index:20;background:var(--surface);border-top:1px solid var(--line);padding-bottom:env(safe-area-inset-bottom,0px)}
+nav.tabs .wrap{display:flex}
+nav.tabs button{flex:1;background:none;border:0;padding:12px 4px 14px;font-size:13px;color:var(--muted);cursor:pointer;display:flex;flex-direction:column;align-items:center;gap:2px}
+nav.tabs button .am{font-size:15px;font-weight:600;line-height:1.3}
+nav.tabs button[aria-current="page"]{color:var(--green);font-weight:500}
+
+/* Session */
+.sess-top{display:flex;align-items:center;gap:14px;padding:18px 0 4px}
+.close{background:none;border:0;font-size:26px;line-height:1;padding:4px 8px;color:var(--muted);cursor:pointer}
+.bar{flex:1;height:8px;background:var(--line);border-radius:8px;overflow:hidden}
+.bar i{display:block;height:100%;background:var(--green);border-radius:8px;transition:width .3s ease}
+.stage{padding:26px 0 0}
+.kicker{color:var(--muted);font-size:14px;margin:0 0 14px}
+.kicker .am{color:var(--ink)}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:22px;padding:34px 22px 26px;text-align:center}
+.card .big{font-family:var(--am);font-weight:700;font-size:clamp(34px,9.5vw,50px);letter-spacing:-.01em;line-height:1.25;margin:0;word-break:break-word}
+.card .tr{margin:10px 0 0;font-size:19px;color:var(--green);font-weight:500}
+.card .en{margin:18px 0 0;font-size:20px}
+.reveal{margin-top:10px;background:none;border:1px dashed var(--line);border-radius:10px;padding:8px 14px;color:var(--muted);cursor:pointer;font-size:15px}
+.note{margin:18px 0 0;padding:14px 16px;background:var(--gold-soft);border-radius:12px;text-align:left;font-size:15px;line-height:1.55}
+.note .am{font-size:16px}
+.play{margin-top:16px;background:var(--green-soft);color:var(--green);border:0;border-radius:999px;padding:8px 16px;cursor:pointer;font-size:15px;font-weight:500}
+.actions{margin-top:22px}
+.prompt-q{font-size:15px;color:var(--muted);margin:0 0 6px}
+.opts{display:grid;gap:10px;margin-top:20px}
+.opt{display:flex;align-items:center;gap:14px;text-align:left;background:var(--surface);border:1.5px solid var(--line);border-radius:14px;padding:14px 16px;cursor:pointer;min-height:58px;font-size:17px}
+.opt:hover:not([disabled]){border-color:var(--green)}
+.opt .k{flex:none;width:26px;height:26px;border-radius:7px;border:1px solid var(--line);display:grid;place-items:center;font-size:13px;color:var(--muted)}
+.opt .am{font-weight:600;font-size:19px}
+.opt small{display:block;color:var(--muted);font-size:14px}
+.opt.right{border-color:var(--green);background:var(--green-soft)}
+.opt.wrong{border-color:var(--red);background:var(--red-soft)}
+.opt[disabled]{cursor:default}
+.feedback{margin-top:18px;font-weight:500}
+.feedback.ok{color:var(--green)}
+.feedback.no{color:var(--red)}
+
+.done{text-align:center;padding-top:40px}
+.done .glyph{font-family:var(--am);font-weight:800;font-size:80px;letter-spacing:-.02em;line-height:1.1;margin:0}
+.done .gloss{color:var(--muted);margin:4px 0 26px}
+.done-stats{display:flex;justify-content:center;gap:30px;margin:0 0 30px}
+.done-stats div{font-size:14px;color:var(--muted)}
+.done-stats strong{display:block;font-size:30px;font-weight:500;color:var(--ink)}
+
+/* Phrasebook */
+h1.page{font-size:26px;font-weight:600;margin:22px 0 4px}
+.sub{color:var(--muted);margin:0 0 18px}
+.search{width:100%;padding:13px 16px;border-radius:12px;border:1px solid var(--line);background:var(--surface);color:var(--ink);font:inherit}
+details.sounds{margin:14px 0 6px;background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:12px 16px}
+details.sounds summary{cursor:pointer;font-weight:500}
+details.sounds dl{margin:10px 0 0;display:grid;grid-template-columns:auto 1fr;gap:6px 14px;font-size:15px}
+details.sounds dt{font-weight:600;color:var(--green)}
+details.sounds dd{margin:0;color:var(--muted)}
+.unit{margin-top:30px}
+.unit-h{display:flex;align-items:baseline;justify-content:space-between;gap:12px;border-bottom:1px solid var(--line);padding-bottom:8px}
+.unit-h h3{margin:0;font-size:18px;font-weight:600}
+.unit-h h3 .am{font-weight:600;margin-right:8px;color:var(--green)}
+.unit-h span{font-size:14px;color:var(--muted);white-space:nowrap}
+.row{display:grid;grid-template-columns:12px 1fr auto;align-items:center;gap:12px;padding:12px 0;border-bottom:1px solid var(--line)}
+.row .dot{width:10px;height:10px;border-radius:50%;border:1.5px solid var(--line)}
+.row .dot.s1,.row .dot.s2,.row .dot.s3{background:var(--gold);border-color:var(--gold)}
+.row .dot.s4,.row .dot.s5{background:var(--green);border-color:var(--green)}
+.row .am{font-weight:600;font-size:19px;line-height:1.35}
+.row .tr{color:var(--green);font-size:14px}
+.row .en{color:var(--muted);font-size:15px}
+.row .play{margin:0;padding:6px 12px;font-size:13px}
+.legend{display:flex;gap:16px;flex-wrap:wrap;font-size:13px;color:var(--muted);margin-top:14px}
+.legend span{display:inline-flex;align-items:center;gap:6px}
+.legend i{width:9px;height:9px;border-radius:50%;display:inline-block;border:1.5px solid var(--line)}
+.empty{color:var(--muted);padding:24px 0}
+
+/* Progress */
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:6px}
+.stat{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:14px}
+.stat strong{display:block;font-size:28px;font-weight:500;line-height:1.15}
+.stat span{font-size:13px;color:var(--muted)}
+h2.sec{font-size:17px;font-weight:600;margin:30px 0 12px}
+.cal{display:grid;grid-template-columns:repeat(7,1fr);gap:6px}
+.cal div{aspect-ratio:1;border-radius:7px;background:var(--line);opacity:.55}
+.cal div.on{background:var(--green);opacity:1}
+.cal div.today{outline:2px solid var(--gold);outline-offset:1px}
+.cal-days{display:grid;grid-template-columns:repeat(7,1fr);gap:6px;font-size:12px;color:var(--muted);text-align:center;margin-bottom:6px}
+.ubar{margin-bottom:14px}
+.ubar .lbl{display:flex;justify-content:space-between;font-size:15px;margin-bottom:5px}
+.ubar .lbl span{color:var(--muted);font-size:14px}
+.ubar .bar{height:7px}
+.seg{display:flex;background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:4px;gap:4px}
+.seg button{flex:1;border:0;background:none;border-radius:9px;padding:10px 6px;cursor:pointer;font-size:15px;color:var(--muted)}
+.seg button[aria-pressed="true"]{background:var(--green);color:var(--on-green);font-weight:500}
+.setting{margin-bottom:18px}
+.setting label{display:block;font-size:15px;margin-bottom:8px}
+.danger{background:none;border:1px solid var(--red);color:var(--red);border-radius:12px;padding:12px 16px;cursor:pointer;width:100%;margin-top:8px}
+.danger.armed{background:var(--red);color:var(--surface)}
+.sync{font-size:13px;color:var(--muted);margin-top:22px}
+
+/* Conversations */
+.talk-card{margin-top:16px;background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:20px 22px}
+.talk-card .kick{font-size:14px;color:var(--muted);margin:0}
+.talk-card .kick .am{color:var(--green);font-weight:600;margin-right:6px}
+.talk-card h2{margin:4px 0 4px;font-size:18px;font-weight:600}
+.talk-card p.set{margin:0 0 16px;color:var(--muted)}
+.scene{display:block;width:100%;text-align:left;background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:18px 20px;cursor:pointer;margin-top:12px}
+.scene:hover:not([disabled]){border-color:var(--green)}
+.scene[disabled]{opacity:.55;cursor:not-allowed}
+.scene .place{font-size:14px;color:var(--muted)}
+.scene .place .am{color:var(--green);font-weight:600;margin-right:6px}
+.scene h3{margin:4px 0 6px;font-size:18px;font-weight:600}
+.scene p{margin:0;color:var(--muted);font-size:15px}
+.scene .meta{margin-top:10px;font-size:14px;color:var(--muted);display:flex;gap:16px;flex-wrap:wrap}
+.scene .meta b{color:var(--green);font-weight:500}
+.addr{background:var(--gold-soft);border-radius:14px;padding:16px 18px;margin:6px 0 8px}
+.addr p{margin:0 0 12px}
+.chat{display:flex;flex-direction:column;gap:12px;padding-top:18px}
+.scene-intro{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:14px 16px;font-size:15px}
+.scene-intro .am{color:var(--green);font-weight:600;margin-right:6px}
+.scene-intro b{font-weight:600}
+.narr{font-size:14px;color:var(--muted);font-style:italic;text-align:center;margin:4px 12px}
+.bub{max-width:88%;border-radius:18px;padding:12px 16px}
+.bub.them{align-self:flex-start;background:var(--surface);border:1px solid var(--line);border-bottom-left-radius:6px}
+.bub.me{align-self:flex-end;background:var(--green-soft);border-bottom-right-radius:6px;text-align:right}
+.bub .who{font-size:13px;color:var(--muted);margin-bottom:2px}
+.bub .am{font-weight:600;font-size:21px;line-height:1.4;display:block}
+.bub .tr{color:var(--green);font-size:15px}
+.bub .en{color:var(--muted);font-size:15px;margin-top:4px}
+.bub .tools{display:flex;gap:8px;margin-top:8px;flex-wrap:wrap}
+.bub .tools:empty{display:none}
+.mini{background:none;border:1px solid var(--line);border-radius:999px;padding:4px 12px;font-size:13px;color:var(--muted);cursor:pointer}
+.mini:hover{border-color:var(--green);color:var(--green)}
+.your-turn{font-size:15px;color:var(--muted);margin:22px 0 0;font-weight:500}
+.opt small+small{margin-top:2px}
+
+/* Install tip and backup */
+.tip{margin-top:20px;background:var(--gold-soft);border-radius:14px;padding:14px 16px;font-size:15px;display:flex;gap:12px;align-items:flex-start}
+.tip p{margin:0;flex:1}
+.tip .x{background:none;border:0;font-size:22px;line-height:1;color:var(--muted);cursor:pointer;padding:0 4px}
+.backup-msg{font-size:14px;margin:10px 0 0;color:var(--green)}
+.backup-msg.err{color:var(--red)}
+details.code{margin-top:10px;background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:12px 16px}
+details.code summary{cursor:pointer;font-weight:500}
+details.code textarea{width:100%;min-height:90px;margin-top:10px;border:1px solid var(--line);border-radius:10px;padding:10px;background:var(--bg);color:var(--ink);font:13px/1.4 ui-monospace,Menlo,monospace;resize:vertical}
+
+@media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
+.pop{animation:pop .35s ease}
+@keyframes pop{0%{transform:scale(.96);opacity:.4}100%{transform:none;opacity:1}}
+</style>
+</head>
+<body>
+<div class="tibeb" aria-hidden="true"></div>
+<main id="app" class="wrap"></main>
+<nav class="tabs" id="tabs" aria-label="Sections">
+  <div class="wrap">
+    <button data-tab="today"><span class="am" aria-hidden="true">Dziś</span>Today</button>
+    <button data-tab="talk"><span class="am" aria-hidden="true">Rozmowy</span>Talk</button>
+    <button data-tab="phrases"><span class="am" aria-hidden="true">Słówka</span>Phrasebook</button>
+    <button data-tab="progress"><span class="am" aria-hidden="true">Postępy</span>Progress</button>
+  </div>
+</nav>
+
+<script>
+/* ---------- Content: [id, Polish, pronunciation guide, English, note] ---------- */
+const UNITS = [
+ {id:'greet', am:'Powitania', title:'Greetings', items:[
+  ['g1','Dzień dobry','jen DOB-ri','Hello / good morning','The everyday polite greeting, used from morning until evening with anyone you don’t know well.'],
+  ['g2','Cześć','cheshch','Hi / bye (casual)','For friends and people your age. It also works as goodbye.'],
+  ['g3','Dobry wieczór','DOB-ri VYEH-choor','Good evening','Takes over from <span class="am">dzień dobry</span> in the evening.'],
+  ['g4','Jak się masz?','yak sheh mash','How are you? (casual)','Formal: <span class="am">Jak się pan ma?</span> to a man, <span class="am">Jak się pani ma?</span> to a woman.'],
+  ['g5','Dobrze, dziękuję','DOB-zheh, jen-KOO-yeh','Fine, thank you',''],
+  ['g6','Co słychać?','tso SWIH-hach','How’s it going?','Literally “what’s to be heard?” Very common between friends.'],
+  ['g7','W porządku','f po-ZHOND-koo','Okay / all right',''],
+  ['g8','Do widzenia','do vee-DZEH-nya','Goodbye (polite)','Say it when leaving shops, offices, and anywhere you said <span class="am">dzień dobry</span>.'],
+  ['g9','Na razie','na RA-zheh','See you / bye (casual)','Literally “for now.”'],
+  ['g10','Dobranoc','do-BRA-nots','Good night','Only for late at night or bedtime.']
+ ]},
+ {id:'polite', am:'Grzeczność', title:'Being polite', items:[
+  ['p1','Dziękuję','jen-KOO-yeh','Thank you','Casual: <span class="am">dzięki</span> (JEN-kee).'],
+  ['p2','Proszę','PRO-sheh','Please / here you go / you’re welcome','One of the most useful words in Polish. It covers all three.'],
+  ['p3','Przepraszam','psheh-PRA-sham','Sorry / excuse me','Also how you get someone’s attention.'],
+  ['p4','Tak','tak','Yes',''],
+  ['p5','Nie','nyeh','No',''],
+  ['p6','Nie ma problemu','nyeh ma pro-BLEH-moo','No problem',''],
+  ['p7','Smacznego!','smach-NEH-go','Enjoy your meal!','Said before eating, to everyone at the table.'],
+  ['p8','Na zdrowie!','na ZDRO-vyeh','Cheers! / Bless you!','For toasts, and when someone sneezes.'],
+  ['p9','Witamy','vee-TA-mih','Welcome','What a host or a business says to arriving guests.']
+ ]},
+ {id:'intro', am:'Poznajmy się', title:'Introducing yourself', items:[
+  ['i1','Mam na imię ...','mam na EE-myeh …','My name is …','Or simply <span class="am">Jestem …</span> (YES-tem), “I’m …”'],
+  ['i2','Jak masz na imię?','yak mash na EE-myeh','What’s your name? (casual)','Formal: <span class="am">Jak się pan nazywa?</span> to a man, <span class="am">pani</span> to a woman.'],
+  ['i3','Miło mi','MEE-wo mee','Nice to meet you',''],
+  ['i4','Skąd jesteś?','skont YES-tesh','Where are you from? (casual)','Formal: <span class="am">Skąd pan jest?</span> or <span class="am">Skąd pani jest?</span>'],
+  ['i5','Jestem z ...','YES-tem z …','I’m from …','<span class="am">Jestem z Ameryki</span> (YES-tem z a-MEH-ri-kee) means “I’m from America.” Country names change their ending after <span class="am">z</span>, but people will understand you either way.'],
+  ['i6','Mówię trochę po polsku','MOO-vyeh TRO-heh po POL-skoo','I speak a little Polish','People will be delighted you’re trying.'],
+  ['i7','Nie rozumiem','nyeh ro-ZOO-myem','I don’t understand',''],
+  ['i8','Możesz powtórzyć?','MO-zhesh pof-TOO-zhich','Can you repeat that? (casual)','Formal: <span class="am">Może pan/pani powtórzyć?</span>'],
+  ['i9','Możesz mówić wolniej?','MO-zhesh MOO-veech VOL-nyey','Can you speak more slowly? (casual)','Formal: <span class="am">Proszę mówić wolniej</span> (PRO-sheh MOO-veech VOL-nyey).'],
+  ['i10','Mówisz po angielsku?','MOO-veesh po an-GYEL-skoo','Do you speak English? (casual)','Formal: <span class="am">Mówi pan/pani po angielsku?</span>']
+ ]},
+ {id:'num', am:'Liczby', title:'Numbers and money', items:[
+  ['n1','jeden','YEH-den','One (1)',''],['n2','dwa','dva','Two (2)',''],['n3','trzy','tshih','Three (3)',''],
+  ['n4','cztery','CHTEH-rih','Four (4)',''],['n5','pięć','pyench','Five (5)',''],['n6','sześć','sheshch','Six (6)',''],
+  ['n7','siedem','SHEH-dem','Seven (7)',''],['n8','osiem','O-shem','Eight (8)',''],['n9','dziewięć','JEH-vyench','Nine (9)',''],
+  ['n10','dziesięć','JEH-shench','Ten (10)',''],['n11','dwadzieścia','dva-JESH-cha','Twenty (20)',''],['n12','sto','sto','One hundred (100)',''],
+  ['n13','złoty','ZWO-tih','Złoty (Polish money)','The word changes with the number: 1 <span class="am">złoty</span>, 2–4 <span class="am">złote</span> (ZWO-teh), 5 and up <span class="am">złotych</span> (ZWO-tih).']
+ ]},
+ {id:'food', am:'Jedzenie', title:'Food and drink', items:[
+  ['f1','kawa','KA-va','Coffee',''],
+  ['f2','herbata','her-BA-ta','Tea','Often served with lemon.'],
+  ['f3','woda','VO-da','Water','Still is <span class="am">niegazowana</span>, sparkling is <span class="am">gazowana</span>.'],
+  ['f4','pierogi','pyeh-RO-gee','Pierogi (dumplings)','Ruskie (potato and cheese) are the classic.'],
+  ['f5','chleb','hlep','Bread',''],
+  ['f6','Poproszę ...','po-PRO-sheh …','I’d like …, please','The standard polite way to order: <span class="am">Poproszę wodę</span>, “water, please.”'],
+  ['f7','Jestem głodny / głodna','YES-tem GWOD-nih / GWOD-na','I’m hungry','Men say <span class="am">głodny</span>, women say <span class="am">głodna</span>.'],
+  ['f8','Pyszne!','PISH-neh','Delicious!','For a feminine word like <span class="am">kawa</span>, it becomes <span class="am">pyszna</span>.'],
+  ['f9','Najadłem się / Najadłam się','na-YA-dwem sheh / na-YA-dwam sheh','I’m full','Men say <span class="am">najadłem</span>, women say <span class="am">najadłam</span>. Literally “I’ve eaten my fill.”'],
+  ['f10','Rachunek, proszę','ra-HOO-nek PRO-sheh','The bill, please',''],
+  ['f11','piwo','PEE-vo','Beer',''],
+  ['f12','Na wynos','na VIH-nos','To go / takeaway','To eat in: <span class="am">na miejscu</span> (na MYEY-stsoo).']
+ ]},
+ {id:'shop', am:'Zakupy', title:'Shopping', items:[
+  ['s1','Ile to kosztuje?','EE-leh to kosh-TOO-yeh','How much does it cost?',''],
+  ['s2','To jest drogie','to yest DRO-gyeh','It’s expensive',''],
+  ['s3','to','to','This / it',''],
+  ['s4','Czy jest ...?','chih yest …','Is there …? / Do you have …?','The reply is <span class="am">jest</span>, “there is,” or <span class="am">nie ma</span>, “there isn’t.”'],
+  ['s5','Nie ma','nyeh ma','There isn’t any',''],
+  ['s6','Co to jest?','tso to yest','What is this?',''],
+  ['s7','Kartą czy gotówką?','KAR-tom chih go-TOOF-kom','Card or cash?','You’ll hear this at almost every checkout.'],
+  ['s8','Kartą, proszę','KAR-tom PRO-sheh','By card, please',''],
+  ['s9','Gotówką','go-TOOF-kom','In cash',''],
+  ['s10','reklamówka','re-kla-MOOF-ka','Shopping bag','Cashiers often ask if you want one. They cost extra.']
+ ]},
+ {id:'ask', am:'Pytania', title:'Question words', items:[
+  ['q1','Co?','tso','What?',''],['q2','Kto?','kto','Who?',''],['q3','Gdzie?','gjeh','Where?',''],
+  ['q4','Kiedy?','KYEH-dih','When?',''],['q5','Dlaczego?','dla-CHEH-go','Why?',''],['q6','Jak?','yak','How?',''],
+  ['q7','Ile?','EE-leh','How much? / How many?','']
+ ]},
+ {id:'around', am:'W drodze', title:'Getting around', items:[
+  ['a1','Gdzie jest ...?','gjeh yest …','Where is …?',''],
+  ['a2','Gdzie jest toaleta?','gjeh yest to-a-LEH-ta','Where is the toilet?',''],
+  ['a3','W prawo','f PRA-vo','To the right',''],
+  ['a4','W lewo','v LEH-vo','To the left',''],
+  ['a5','Prosto','PRO-sto','Straight ahead',''],
+  ['a6','Tutaj','TOO-tai','Here',''],
+  ['a7','Tam','tam','There',''],
+  ['a8','Czy to daleko?','chih to da-LEH-ko','Is it far?',''],
+  ['a9','Blisko','BLEE-sko','Close / nearby',''],
+  ['a10','bilet','BEE-let','Ticket','Validate a paper ticket in the little machine (<span class="am">kasownik</span>) when you board.'],
+  ['a11','przystanek','pshih-STA-nek','Stop (bus or tram)','']
+ ]},
+ {id:'family', am:'Rodzina', title:'Family and friends', items:[
+  ['fa1','rodzina','ro-JEE-na','Family',''],
+  ['fa2','mama','MA-ma','Mom','More formal: <span class="am">matka</span>.'],
+  ['fa3','tata','TA-ta','Dad','More formal: <span class="am">ojciec</span> (OY-chets).'],
+  ['fa4','brat','brat','Brother',''],
+  ['fa5','siostra','SHOS-tra','Sister',''],
+  ['fa6','dziecko','JETS-ko','Child',''],
+  ['fa7','przyjaciel','pshih-YA-chel','Friend (a man)','A woman friend is <span class="am">przyjaciółka</span> (pshih-ya-CHOOW-ka).'],
+  ['fa8','mąż','monsh','Husband',''],
+  ['fa9','żona','ZHO-na','Wife','']
+ ]},
+ {id:'daily', am:'Na co dzień', title:'Everyday words', items:[
+  ['e1','dzisiaj','JEE-shai','Today',''],['e2','jutro','YOO-tro','Tomorrow',''],['e3','wczoraj','FCHO-rai','Yesterday',''],
+  ['e4','dobrze','DOB-zheh','Good / well',''],
+  ['e5','bardzo','BAR-dzo','Very','<span class="am">Bardzo dobrze</span> means “very good.”'],
+  ['e6','Jestem zmęczony / zmęczona','YES-tem zmen-CHO-nih / zmen-CHO-na','I’m tired','Men say <span class="am">zmęczony</span>, women say <span class="am">zmęczona</span>.'],
+  ['e7','Podoba mi się','po-DO-ba mee sheh','I like it',''],
+  ['e8','Chwileczkę','hfee-LECH-keh','Just a moment',''],
+  ['e9','Wystarczy','vih-STAR-chih','That’s enough',''],
+  ['e10','Super!','SOO-per','Great!','']
+ ]},
+ {id:'cafe', am:'W kawiarni', title:'At the café', items:[
+  ['c1','Co pijesz?','tso PEE-yesh','What are you drinking? (casual)','Formal: <span class="am">Co pan/pani pije?</span>'],
+  ['c2','Wezmę ...','VEZ-meh …','I’ll have …','<span class="am">Wezmę kawę</span> means “I’ll have a coffee.” <span class="am">Kawa</span> becomes <span class="am">kawę</span> here.'],
+  ['c3','z mlekiem','z MLEH-kyem','With milk',''],
+  ['c4','Coś jeszcze?','tsosh YESH-cheh','Anything else?','Waiters and shop assistants ask this a lot.'],
+  ['c5','To wszystko','to FSHIST-ko','That’s all',''],
+  ['c6','A u ciebie?','a oo CHEH-byeh','And you? / How about you?','The natural reply after someone asks <span class="am">Co słychać?</span>'],
+  ['c7','Jak w pracy?','yak f PRA-tsih','How’s work?',''],
+  ['c8','ale','A-leh','But',''],
+  ['c9','Ja stawiam','ya STA-vyam','It’s on me','Friends often take turns treating each other.'],
+  ['c10','Lecę!','LEH-tseh','I’m off!','Literally “I’m flying.” A casual way to say you have to go.'],
+  ['c11','Do jutra','do YOO-tra','See you tomorrow','']
+ ]},
+ {id:'guest', am:'W gościach', title:'Visiting a home', items:[
+  ['h1','Proszę wejść','PRO-sheh veyshch','Come in, please',''],
+  ['h2','Dziękuję za zaproszenie','jen-KOO-yeh za za-pro-SHEH-nyeh','Thank you for the invitation','A lovely thing to say as you arrive.'],
+  ['h3','Nawzajem','na-VZA-yem','Same to you','The standard reply to <span class="am">Smacznego!</span> and other good wishes.'],
+  ['h4','Smakuje?','sma-KOO-yeh','Do you like it? (food)','Literally “does it taste good?”'],
+  ['h5','Jeszcze trochę?','YESH-cheh TRO-heh','A little more?','Hosts offer more, and then more again.'],
+  ['h6','Chętnie','HENT-nyeh','Gladly / I’d love to',''],
+  ['h7','Częstuj się!','CHEN-stooy sheh','Help yourself!','Formal: <span class="am">Proszę się częstować</span>.'],
+  ['h8','Dziękuję za gościnę','jen-KOO-yeh za gosh-CHEE-neh','Thank you for having me',''],
+  ['h9','Zapraszamy ponownie','za-pra-SHA-mih po-NOV-nyeh','Come again','Literally “we invite you again.” Shops say it too.']
+ ]},
+ {id:'city', am:'Na mieście', title:'Out in the city', items:[
+  ['o1','Słucham?','SWOO-ham','Yes? / Pardon?','Literally “I’m listening.” It’s also how people answer the phone.'],
+  ['o2','Jak dojechać na ...?','yak do-YEH-hach na …','How do I get to …?','Some places take <span class="am">na</span> (<span class="am">na dworzec</span>), others <span class="am">do</span> (<span class="am">do centrum</span>).'],
+  ['o3','Gdzie mogę kupić bilet?','gjeh MO-geh KOO-peech BEE-let','Where can I buy a ticket?',''],
+  ['o4','tramwaj','TRAM-vai','Tram',''],
+  ['o5','Następny przystanek','na-STEMP-nih pshih-STA-nek','Next stop','You’ll hear it announced on trams and buses.'],
+  ['o6','dworzec','DVO-zhets','Train station',''],
+  ['o7','reszta','RESH-ta','Change (money back)','<span class="am">Reszty nie trzeba</span> (RESH-tih nyeh TSHEH-ba) means “keep the change.”'],
+  ['o8','jabłka','YAB-ka','Apples','One apple is <span class="am">jabłko</span>.'],
+  ['o9','pół kilo','poow KEE-lo','Half a kilo','Produce at markets is sold by weight.'],
+  ['o10','minuta','mee-NOO-ta','Minute','Five minutes is <span class="am">pięć minut</span>.'],
+  ['o11','Świetnie!','SHFYET-nyeh','Great! / Excellent!',''],
+  ['o12','Krok po kroku','krok po KRO-koo','Step by step','Also this app’s name.']
+ ]}
+];
+const ALL=[];UNITS.forEach(u=>u.items.forEach(([id,am,tr,en,note])=>ALL.push({id,am,tr,en,note,unit:u})));
+const BY_ID=Object.fromEntries(ALL.map(x=>[x.id,x]));
+const INTERVALS=[0,1,3,7,14,30];
+
+/* ---------- Conversations ---------- */
+const R=(am,tr,en,why)=>({am,tr,en,why,ok:false});
+const Y=(am,tr,en,why)=>({am,tr,en,why,ok:true});
+const L=(f,m)=>({f,m});            // line that changes with how the speaker addresses you
+const C=(en,why,ok)=>({en,why,ok:!!ok});
+const SCENES=[
+ {id:'cafe',am:'Kawiarnia',place:'Café',title:'Coffee with a friend',who:'Kasia',
+  setting:'A café in Kraków’s Old Town. Your friend Kasia suggested meeting for coffee.',
+  turns:[
+   {narr:'Kasia waves as you walk in.',npc:{am:'Cześć! Co słychać?',tr:'cheshch! tso SWIH-hach',en:'Hi! How’s it going?'},
+    opts:[Y('Dobrze, a u ciebie?','DOB-zheh, a oo CHEH-byeh','Good, and you?','<span class="am">A u ciebie?</span> is the natural way to bounce the question back.'),
+          R('Dobranoc','do-BRA-nots','Good night','That’s for bedtime, not for answering “how’s it going?”'),
+          R('Ile to kosztuje?','EE-leh to kosh-TOO-yeh','How much does it cost?','That’s for shopping. She asked how you are.')]},
+   {npc:{am:'Wszystko dobrze. Co pijesz?',tr:'FSHIST-ko DOB-zheh. tso PEE-yesh',en:'All good. What are you drinking?'},
+    opts:[Y('Wezmę kawę z mlekiem','VEZ-meh KA-veh z MLEH-kyem','I’ll have a coffee with milk','<span class="am">Wezmę …</span> is the easy way to say what you’ll have.'),
+          R(L('Najadłam się','Najadłem się'),L('na-YA-dwam sheh','na-YA-dwem sheh'),'I’m full','That turns down food. She asked what you’ll drink.'),
+          R('Jestem z Ameryki','YES-tem z a-MEH-ri-kee','I’m from America','A good sentence, but not an answer to her question.')]},
+   {narr:'The waiter brings your coffees.',who:'Waiter',npc:{am:'Coś jeszcze?',tr:'tsosh YESH-cheh',en:'Anything else?'},
+    opts:[Y('Nie, dziękuję. To wszystko.','nyeh, jen-KOO-yeh. to FSHIST-ko','No, thank you. That’s all.','Polite and complete.'),
+          R('To jest drogie','to yest DRO-gyeh','It’s expensive','He only asked if you want anything else.'),
+          R('Następny przystanek','na-STEMP-nih pshih-STA-nek','Next stop','That’s what the tram announcement says.')]},
+   {npc:{am:'Jak w pracy?',tr:'yak f PRA-tsih',en:'How’s work?'},
+    opts:[Y(L('Dobrze, ale jestem zmęczona','Dobrze, ale jestem zmęczony'),L('DOB-zheh, A-leh YES-tem zmen-CHO-na','DOB-zheh, A-leh YES-tem zmen-CHO-nih'),'Good, but I’m tired','<span class="am">Ale</span> means “but.” Women say <span class="am">zmęczona</span>, men <span class="am">zmęczony</span>.'),
+          R('Do widzenia','do vee-DZEH-nya','Goodbye','You’d be leaving in the middle of your coffee, and too formally for a friend.'),
+          R('Gdzie jest?','gjeh yest','Where is it?','She asked how, not where.')]},
+   {npc:{am:'Jak kawa?',tr:'yak KA-va',en:'How’s the coffee?'},
+    opts:[Y('Pyszna!','PISH-na','Delicious!','<span class="am">Kawa</span> is a feminine word, so it’s <span class="am">pyszna</span>, not <span class="am">pyszne</span>.'),
+          R('Nie ma','nyeh ma','There isn’t any','The coffee is right in front of you.'),
+          R('Jutro','YOO-tro','Tomorrow','That’s a time, not an opinion.')]},
+   {narr:'The bill arrives. Kasia reaches for it.',npc:{am:'Ja stawiam!',tr:'ya STA-vyam',en:'It’s on me!'},
+    opts:[Y('Dzięki! Następnym razem ja stawiam.','JEN-kee! na-STEMP-nim RA-zem ya STA-vyam','Thanks! Next time it’s on me.','Friends take turns treating each other. Accepting and promising the next round is the gracious move.'),
+          R('Kartą czy gotówką?','KAR-tom chih go-TOOF-kom','Card or cash?','That’s the cashier’s line, not yours.'),
+          R('Mam na imię …','mam na EE-myeh …','My name is …','She already knows your name.')]},
+   {npc:{am:'Dobra, lecę. Na razie!',tr:'DOB-ra, LEH-tseh. na RA-zheh',en:'Okay, I’m off. See you!'},
+    opts:[Y('Na razie! Do jutra!','na RA-zheh! do YOO-tra','See you! See you tomorrow!','Casual and warm, just right for a friend.'),
+          R('Dzień dobry','jen DOB-ri','Hello','That’s a greeting for arriving, not leaving.'),
+          R(L('Jestem głodna','Jestem głodny'),L('YES-tem GWOD-na','YES-tem GWOD-nih'),'I’m hungry','Not the moment. She’s heading out.')]}
+  ]},
+ {id:'tram',am:'Tramwaj',place:'Tram',title:'Taking the tram',who:'Woman at the stop',
+  setting:'A tram stop in Warsaw. You want to get to the Old Town (Stare Miasto).',
+  turns:[
+   {narr:'A woman is waiting at the stop. Get her attention.',
+    opts:[Y('Przepraszam','psheh-PRA-sham','Excuse me','<span class="am">Przepraszam</span> is both “sorry” and “excuse me.”'),
+          R('Na zdrowie!','na ZDRO-vyeh','Cheers! / Bless you!','She didn’t sneeze, and nobody is raising a glass.'),
+          R('Smacznego!','smach-NEH-go','Enjoy your meal!','She isn’t eating.')]},
+   {npc:{am:'Tak? Słucham.',tr:'tak? SWOO-ham',en:'Yes? I’m listening.'},
+    opts:[Y('Jak dojechać na Stare Miasto?','yak do-YEH-hach na STA-reh MYAS-to','How do I get to the Old Town?','<span class="am">Jak dojechać na/do …?</span> works for anywhere you need to go.'),
+          R('Co pijesz?','tso PEE-yesh','What are you drinking?','A café question, and too casual for a stranger.'),
+          R('Gdzie jest toaleta?','gjeh yest to-a-LEH-ta','Where is the toilet?','A useful question, but not the one you need right now.')]},
+   {type:'check',q:'Which tram should you take, and for how many stops?',npc:{am:'Tramwajem numer cztery. To trzy przystanki.',tr:'tram-VAI-em NOO-mer CHTEH-rih. to tshih pshih-STAN-kee',en:'Tram number four. It’s three stops.'},
+    opts:[C('Tram 4, three stops','<span class="am">cztery</span> is four and <span class="am">trzy</span> is three.',true),
+          C('Tram 3, four stops','The numbers are swapped. Listen for which one comes after <span class="am">numer</span>.'),
+          C('Tram 14, three stops','Fourteen would be <span class="am">czternaście</span>.')]},
+   {narr:'You don’t have a ticket yet.',
+    opts:[Y('Gdzie mogę kupić bilet?','gjeh MO-geh KOO-peech BEE-let','Where can I buy a ticket?','Riding without a ticket can earn you a hefty fine from inspectors.'),
+          R('Ja stawiam!','ya STA-vyam','It’s on me!','You’d be offering to pay for her.'),
+          R('Czy to daleko?','chih to da-LEH-ko','Is it far?','She already told you: three stops.')]},
+   {npc:{am:'W automacie w tramwaju. Można płacić kartą.',tr:'v au-to-MA-cheh f tram-VAI-oo. MOZH-na PWA-cheech KAR-tom',en:'From the machine on the tram. You can pay by card.'},
+    opts:[Y('Dziękuję bardzo!','jen-KOO-yeh BAR-dzo','Thank you very much!','Always thank people who help.'),
+          R('Smacznego!','smach-NEH-go','Enjoy your meal!','Still no food in sight.'),
+          R('To jest drogie','to yest DRO-gyeh','It’s expensive','She hasn’t mentioned a price.')]},
+   {type:'check',q:'The tram announcement plays. What did it say?',narr:'Three stops later, a recorded voice speaks.',who:'Announcement',npc:{am:'Następny przystanek: Stare Miasto.',tr:'na-STEMP-nih pshih-STA-nek: STA-reh MYAS-to',en:'Next stop: Old Town.'},
+    opts:[C('The next stop is the Old Town','<span class="am">Następny przystanek</span> means “next stop.” Time to get ready.',true),
+          C('This tram doesn’t go to the Old Town','Nothing in the announcement says that.'),
+          C('Change trams at the next stop','There’s no mention of changing.')]}
+  ]},
+ {id:'home',am:'Obiad',place:'Family home',title:'Sunday lunch at a friend’s home',who:'Tomek’s mother',
+  setting:'Your friend Tomek invited you to Sunday lunch (obiad) with his family. His mother opens the door.',
+  turns:[
+   {narr:'You hand her flowers. Bring an odd number: even bunches are for funerals.',npc:{am:'Dzień dobry! Witamy, proszę wejść.',tr:'jen DOB-ri! vee-TA-mih, PRO-sheh veyshch',en:'Hello! Welcome, please come in.'},
+    opts:[Y('Dzień dobry! Dziękuję za zaproszenie.','jen DOB-ri! jen-KOO-yeh za za-pro-SHEH-nyeh','Hello! Thank you for the invitation.','Warm and polite, just right for a friend’s parent.'),
+          R('Cześć!','cheshch','Hi!','Too casual for a friend’s mother. Use <span class="am">dzień dobry</span>.'),
+          R('Dobranoc','do-BRA-nots','Good night','You just arrived, and it’s lunchtime.')]},
+   {npc:{am:L('Proszę, niech pani siada.','Proszę, niech pan siada.'),tr:L('PRO-sheh, nyeh PA-nee SHA-da','PRO-sheh, nyeh pan SHA-da'),en:'Please, have a seat.'},
+    opts:[Y('Dziękuję bardzo','jen-KOO-yeh BAR-dzo','Thank you very much','Simple and gracious.'),
+          R('Chwileczkę','hfee-LECH-keh','Just a moment','A bit abrupt when your host offers you a seat.'),
+          R('Czy to daleko?','chih to da-LEH-ko','Is it far?','The chair is right there.')]},
+   {narr:'She serves the soup and sits down.',npc:{am:'Smacznego!',tr:'smach-NEH-go',en:'Enjoy your meal!'},
+    opts:[Y('Dziękuję, nawzajem!','jen-KOO-yeh, na-VZA-yem','Thank you, same to you!','<span class="am">Nawzajem</span> is the standard reply. Everyone says it.'),
+          R('Na zdrowie!','na ZDRO-vyeh','Cheers!','That’s for raising a glass, not for starting a meal.'),
+          R('Ile to kosztuje?','EE-leh to kosh-TOO-yeh','How much does it cost?','Never ask the price of a meal in someone’s home.')]},
+   {npc:{am:'Smakuje?',tr:'sma-KOO-yeh',en:'Do you like it?'},
+    opts:[Y('Bardzo! Pyszne.','BAR-dzo! PISH-neh','Very much! It’s delicious.','Complimenting the food is the best thing a guest can say.'),
+          R('Rachunek, proszę','ra-HOO-nek PRO-sheh','The bill, please','You’re in her home, not a restaurant.'),
+          R('Nie ma','nyeh ma','There isn’t any','There’s plenty on the table.')]},
+   {narr:'You’ve had two helpings, and she’s already reaching for the pot.',npc:{am:'Jeszcze trochę?',tr:'YESH-cheh TRO-heh',en:'A little more?'},
+    opts:[Y(L('Dziękuję, najadłam się','Dziękuję, najadłem się'),L('jen-KOO-yeh, na-YA-dwam sheh','jen-KOO-yeh, na-YA-dwem sheh'),'Thank you, I’m full','Hosts offer more than once. A warm thank-you plus “I’m full” is the polite way out.'),
+          R('Nie!','nyeh','No!','On its own it sounds blunt. Thank her and say you’re full.'),
+          R(L('Jestem głodna','Jestem głodny'),L('YES-tem GWOD-na','YES-tem GWOD-nih'),'I’m hungry','She’ll happily fill your plate again.')]},
+   {npc:{am:'Kawy? Herbaty? Mam też sernik.',tr:'KA-vih? her-BA-tih? mam tesh SER-neek',en:'Coffee? Tea? I also have cheesecake.'},
+    opts:[Y('Chętnie! Poproszę herbatę.','HENT-nyeh! po-PRO-sheh her-BA-teh','I’d love to! Tea, please.','<span class="am">Chętnie</span> shows real enthusiasm. Saying yes to cake is part of being a good guest.'),
+          R('Nie ma problemu','nyeh ma pro-BLEH-moo','No problem','She offered you something; she didn’t apologize.'),
+          R('Gdzie jest przystanek?','gjeh yest pshih-STA-nek','Where is the stop?','Leaving before cake would disappoint her.')]},
+   {narr:'Later, it’s time to go.',npc:{am:'Zapraszamy ponownie!',tr:'za-pra-SHA-mih po-NOV-nyeh',en:'Come again!'},
+    opts:[Y('Dziękuję za gościnę. Do widzenia!','jen-KOO-yeh za gosh-CHEE-neh. do vee-DZEH-nya','Thank you for having me. Goodbye!','Thanking your host for their hospitality is the perfect goodbye.'),
+          R('Na razie!','na RA-zheh','See you!','Fine with friends, but too casual for her.'),
+          R('Witamy','vee-TA-mih','Welcome','That’s what a host says when guests arrive.')]}
+  ]},
+ {id:'market',am:'Targ',place:'Market',title:'Buying apples',who:'Stall owner',
+  setting:'A Saturday farmers’ market in Kraków. You want some apples. The stall owner is a man.',
+  turns:[
+   {npc:{am:L('Dzień dobry, co dla pani?','Dzień dobry, co dla pana?'),tr:L('jen DOB-ri, tso dla PA-nee','jen DOB-ri, tso dla PA-na'),en:'Hello, what can I get you?'},
+    opts:[Y('Dzień dobry. Poproszę jabłka.','jen DOB-ri. po-PRO-sheh YAB-ka','Hello. Apples, please.','Greet him back, then <span class="am">Poproszę …</span>'),
+          R('Co pijesz?','tso PEE-yesh','What are you drinking?','Too casual, and he’s selling fruit.'),
+          R(L('Najadłam się','Najadłem się'),L('na-YA-dwam sheh','na-YA-dwem sheh'),'I’m full','You came to buy food.')]},
+   {npc:{am:'Ile?',tr:'EE-leh',en:'How much?'},
+    opts:[Y('Kilo, proszę','KEE-lo, PRO-sheh','A kilo, please','Weight + <span class="am">proszę</span>.'),
+          R('Pięć minut','pyench MEE-noot','Five minutes','That’s time, not weight.'),
+          R('Dlaczego?','dla-CHEH-go','Why?','He’s just asking how much you want.')]},
+   {narr:'He weighs the apples and bags them.',npc:{am:'Proszę bardzo.',tr:'PRO-sheh BAR-dzo',en:'Here you go.'},
+    opts:[Y('Ile to kosztuje?','EE-leh to kosh-TOO-yeh','How much is it?','Always good to check the total.'),
+          R('Dobranoc','do-BRA-nots','Good night','It’s a Saturday morning market.'),
+          R('Prosto','PRO-sto','Straight ahead','That’s a direction.')]},
+   {type:'check',q:'How much does he want?',npc:{am:'Sześć złotych.',tr:'sheshch ZWO-tih',en:'Six złoty.'},
+    opts:[C('6 złoty','<span class="am">Sześć</span> is six.',true),
+          C('7 złoty','Seven is <span class="am">siedem</span>.'),
+          C('16 złoty','Sixteen is <span class="am">szesnaście</span>.')]},
+   {npc:{am:'Kartą czy gotówką?',tr:'KAR-tom chih go-TOOF-kom',en:'Card or cash?'},narr:'You only have cash on you.',
+    opts:[Y('Gotówką','go-TOOF-kom','In cash','Answer either-or questions with the option, not “yes.”'),
+          R('Tak','tak','Yes','It’s an either-or question, so “yes” doesn’t answer it.'),
+          R('Pyszne!','PISH-neh','Delicious!','You haven’t tasted them yet.')]},
+   {narr:'You hand him a 10 złoty note.',npc:{am:'Cztery złote reszty. Dziękuję!',tr:'CHTEH-rih ZWO-teh RESH-tih. jen-KOO-yeh',en:'Four złoty change. Thank you!'},
+    opts:[Y('Dziękuję, do widzenia!','jen-KOO-yeh, do vee-DZEH-nya','Thank you, goodbye!','The standard polite exit from any shop or stall.'),
+          R('Na zdrowie!','na ZDRO-vyeh','Cheers!','No toasting at the fruit stall.'),
+          R('Smacznego!','smach-NEH-go','Enjoy your meal!','He isn’t eating. You might be, later.')]}
+  ]},
+ {id:'party',am:'Imieniny',place:'Party',title:'Meeting someone at a name-day party',who:'Marek',
+  setting:'A friend’s name-day party (imieniny), which Poles celebrate like a birthday. A guy you don’t know sits down next to you.',
+  turns:[
+   {npc:{am:'Cześć! Jestem Marek. A ty?',tr:'cheshch! YES-tem MA-rek. a tih',en:'Hi! I’m Marek. And you?'},
+    opts:[Y('Cześć! Mam na imię … Miło mi.','cheshch! mam na EE-myeh … MEE-wo mee','Hi! My name is … Nice to meet you.','Your name, then <span class="am">miło mi</span>.'),
+          R('Do widzenia','do vee-DZEH-nya','Goodbye','You just met.'),
+          R('Kartą, proszę','KAR-tom PRO-sheh','By card, please','That’s for paying.')]},
+   {npc:{am:'Skąd jesteś?',tr:'skont YES-tesh',en:'Where are you from?'},
+    opts:[Y('Jestem z Ameryki','YES-tem z a-MEH-ri-kee','I’m from America','Swap in your own country after <span class="am">Jestem z</span>.'),
+          R('W lewo','v LEH-vo','To the left','That’s a direction.'),
+          R('Jutro','YOO-tro','Tomorrow','He asked where, not when.')]},
+   {npc:{am:'Mówisz po polsku?',tr:'MOO-veesh po POL-skoo',en:'Do you speak Polish?'},
+    opts:[Y('Mówię trochę po polsku','MOO-vyeh TRO-heh po POL-skoo','I speak a little Polish','Honest, and it invites people to keep going slowly.'),
+          R('Trzy','tshih','Three','A number doesn’t answer the question.'),
+          R('Rachunek, proszę','ra-HOO-nek PRO-sheh','The bill, please','You’re at a party, not a restaurant.')]},
+   {narr:'Marek gets excited and talks fast.',npc:{am:L('Super! Długo jesteś w Polsce? Byłaś już w Zakopanem? Musisz spróbować pierogów mojej babci!','Super! Długo jesteś w Polsce? Byłeś już w Zakopanem? Musisz spróbować pierogów mojej babci!'),tr:L('SOO-per! DWOO-go YES-tesh f POL-stseh? BIH-wash yoosh v za-ko-PA-nem? MOO-sheesh spro-BO-vach pyeh-RO-goof MO-yey BAB-chee','SOO-per! DWOO-go YES-tesh f POL-stseh? BIH-wesh yoosh v za-ko-PA-nem? MOO-sheesh spro-BO-vach pyeh-RO-goof MO-yey BAB-chee'),en:'Great! Have you been in Poland long? Have you been to Zakopane yet? You have to try my grandma’s pierogi!'},
+    opts:[Y('Przepraszam, nie rozumiem. Możesz mówić wolniej?','psheh-PRA-sham, nyeh ro-ZOO-myem. MO-zhesh MOO-veech VOL-nyey','Sorry, I don’t understand. Can you speak more slowly?','Your most useful phrase as a learner. People are happy to slow down.'),
+          R('Tak, trzy','tak, tshih','Yes, three','Guessing rarely works out.'),
+          R('Na razie!','na RA-zheh','See you!','Escaping works, but he’ll feel bad.')]},
+   {npc:{am:'Sorry! Podoba… ci… się… Polska?',tr:'SO-ri! po-DO-ba… chee… sheh… POL-ska',en:'Sorry! Do… you… like… Poland?'},
+    opts:[Y('Tak, bardzo mi się podoba!','tak, BAR-dzo mee sheh po-DO-ba','Yes, I like it a lot!','<span class="am">Podoba mi się</span> is how you say you like something.'),
+          R(L('Nie, jestem głodna','Nie, jestem głodny'),L('nyeh, YES-tem GWOD-na','nyeh, YES-tem GWOD-nih'),'No, I’m hungry','Probably not the impression you want.'),
+          R('Tak, na wynos','tak, na VIH-nos','Yes, to go','That’s for ordering takeaway.')]},
+   {narr:'Someone hands you a drink, and Marek raises his glass toward the host.',npc:{am:'Na zdrowie!',tr:'na ZDRO-vyeh',en:'Cheers!'},
+    opts:[Y('Na zdrowie!','na ZDRO-vyeh','Cheers!','Echo the toast and make eye contact as you clink.'),
+          R('Smacznego!','smach-NEH-go','Enjoy your meal!','That’s for food, not drinks.'),
+          R('Dobranoc','do-BRA-nots','Good night','The party has only just started.')]},
+   {npc:{am:'Świetnie mówisz po polsku!',tr:'SHFYET-nyeh MOO-veesh po POL-skoo',en:'You speak Polish really well!'},
+    opts:[Y('Dzięki! Krok po kroku.','JEN-kee! krok po KRO-koo','Thanks! Step by step.','Take the compliment. And now you know where this app’s name comes from.'),
+          R('Ile to kosztuje?','EE-leh to kosh-TOO-yeh','How much does it cost?','Compliments are free.'),
+          R('W prawo','f PRA-vo','To the right','That’s a direction.')]}
+  ]},
+ {id:'directions',am:'Dworzec',place:'Street',title:'Finding the train station',who:'Passerby',
+  setting:'You’re in central Kraków with a suitcase, looking for the main train station.',
+  turns:[
+   {narr:'A man is walking past. Get his attention.',
+    opts:[Y('Przepraszam!','psheh-PRA-sham','Excuse me!','Works for apologizing and for getting attention.'),
+          R('Wystarczy!','vih-STAR-chih','That’s enough!','He’d wonder what he did.'),
+          R('Smacznego!','smach-NEH-go','Enjoy your meal!','He isn’t eating.')]},
+   {npc:{am:'Tak?',tr:'tak',en:'Yes?'},
+    opts:[Y('Gdzie jest dworzec?','gjeh yest DVO-zhets','Where is the train station?','<span class="am">Gdzie jest …?</span> works for anywhere.'),
+          R('Dobranoc','do-BRA-nots','Good night','You still need directions.'),
+          R('Coś jeszcze?','tsosh YESH-cheh','Anything else?','You haven’t asked anything yet.')]},
+   {type:'check',q:'Which way did he send you?',npc:{am:L('Niech pani idzie prosto, potem w prawo.','Niech pan idzie prosto, potem w prawo.'),tr:L('nyeh PA-nee EE-djeh PRO-sto, PO-tem f PRA-vo','nyeh pan EE-djeh PRO-sto, PO-tem f PRA-vo'),en:'Go straight, then to the right.'},
+    opts:[C('Straight, then right','<span class="am">Prosto</span> is straight and <span class="am">w prawo</span> is right.',true),
+          C('Straight, then left','Left would be <span class="am">w lewo</span>.'),
+          C('Right, then straight','Listen for the order: <span class="am">potem</span> means “then.”')]},
+   {narr:'You want to know if you can walk there with your suitcase.',
+    opts:[Y('Czy to daleko?','chih to da-LEH-ko','Is it far?','A quick way to decide between walking and a taxi.'),
+          R('Ile to kosztuje?','EE-leh to kosh-TOO-yeh','How much does it cost?','Directions are free.'),
+          R('Blisko','BLEE-sko','Close','That’s a statement. You need the question.')]},
+   {npc:{am:'Nie, blisko. Jakieś pięć minut.',tr:'nyeh, BLEE-sko. YA-kyesh pyench MEE-noot',en:'No, it’s close. About five minutes.'},
+    opts:[Y('Dziękuję bardzo!','jen-KOO-yeh BAR-dzo','Thank you very much!','Always thank people who help.'),
+          R('Pięć złotych','pyench ZWO-tih','Five złoty','Minutes, not money.'),
+          R('Na razie!','na RA-zheh','See you!','Too casual for a stranger.')]}
+  ]}
+];
+
+/* ---------- State ---------- */
+const KEY='krok-progress-v1';
+function blank(){return{v:1,items:{},days:{},newPerDay:5,display:'both',newDate:'',newCount:0,convos:{},addressAs:'',updatedAt:0}}
+function load(){try{const r=localStorage.getItem(KEY);if(r)return Object.assign(blank(),JSON.parse(r))}catch(e){}return blank()}
+let S=load();
+let remoteRef=null,chain=Promise.resolve(),synced=false;
+function saveLocal(){try{localStorage.setItem(KEY,JSON.stringify(S))}catch(e){}}
+function saveRemote(){
+  if(!remoteRef)return;
+  const body=JSON.parse(JSON.stringify(S));
+  const r=remoteRef;
+  chain=chain.then(()=>r.set(body)).then(()=>{if(!synced){synced=true;if(view==='progress'&&!sess&&!convo)render()}}).catch(e=>{if(e&&(e.code==='invalid_argument'||e.code==='revoked')){remoteRef=null;if(synced){synced=false;if(view==='progress'&&!sess&&!convo)render()}}});
+}
+function commit(){S.updatedAt=Date.now();saveLocal();saveRemote()}
+async function connect(){
+  try{
+    if(!window.claude||typeof window.claude.use!=='function')return;
+    const [user,db]=await Promise.all([window.claude.use('user'),window.claude.use('db')]);
+    if(!user||!db)return;
+    const uid=await user.id();
+    if(!uid)return;
+    const ref=db.doc('data/users/'+uid+'/progress');
+    const snap=await ref.get();
+    remoteRef=ref;
+    if(snap.exists){
+      synced=true;
+      const r=snap.data()||{};
+      if((r.updatedAt||0)>(S.updatedAt||0)){
+        S=Object.assign(blank(),JSON.parse(JSON.stringify(r)));saveLocal();
+        if(!sess&&!convo)render();
+      }else if((S.updatedAt||0)>(r.updatedAt||0))saveRemote();
+    }else if(S.updatedAt)saveRemote();
+    if((view==='progress'||view==='talk')&&!sess&&!convo)render();
+  }catch(e){remoteRef=null}
+}
+
+/* ---------- Dates & scheduling ---------- */
+function dstr(d){return d.getFullYear()+'-'+String(d.getMonth()+1).padStart(2,'0')+'-'+String(d.getDate()).padStart(2,'0')}
+function today(){return dstr(new Date())}
+function addDays(n){const d=new Date();d.setDate(d.getDate()+n);return dstr(d)}
+function streak(){let n=0;const d=new Date();if(!S.days[dstr(d)])d.setDate(d.getDate()-1);while(S.days[dstr(d)]){n++;d.setDate(d.getDate()-1)}return n}
+function newLeft(){return S.newDate===today()?Math.max(0,S.newPerDay-S.newCount):S.newPerDay}
+function nextNew(){return ALL.filter(x=>!S.items[x.id]).slice(0,newLeft())}
+function dueItems(){const t=today();return ALL.filter(x=>S.items[x.id]&&S.items[x.id].due<=t)}
+function learnedCount(){return Object.keys(S.items).length}
+function masteredCount(){return Object.values(S.items).filter(i=>i.box>=4).length}
+function shuffle(a){a=a.slice();for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]]}return a}
+function esc(s){return String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]))}
+
+/* ---------- Voice (uses the device’s Polish voice) ---------- */
+let voice=null;
+function pickVoice(){try{voice=speechSynthesis.getVoices().find(v=>/^pl(-|_|$)/i.test(v.lang))||null}catch(e){voice=null}}
+if('speechSynthesis' in window){pickVoice();speechSynthesis.onvoiceschanged=()=>{const had=!!voice;pickVoice();if(!!voice!==had)render()}}
+function speak(t){if(!voice)return;try{const u=new SpeechSynthesisUtterance(t.replace(/\.\.\./g,' '));u.voice=voice;u.lang=voice.lang;u.rate=.8;speechSynthesis.cancel();speechSynthesis.speak(u)}catch(e){}}
+function playBtn(id,cls='play'){return voice?`<button class="${cls}" data-act="speak" data-id="${id}">▶ Listen</button>`:''}
+
+/* ---------- Session ---------- */
+let sess=null;
+let view=['today','talk','phrases','progress'].includes(location.hash.slice(1))?location.hash.slice(1):'today';
+
+function startSession(extra){
+  const fresh=extra?[]:nextNew();
+  const review=extra?shuffle(ALL.filter(x=>S.items[x.id])).slice(0,8):shuffle(dueItems()).slice(0,20);
+  if(!fresh.length&&!review.length)return;
+  const first=[...fresh.map(x=>({item:x,dir:'am'})),...review.map(x=>({item:x,dir:Math.random()<.5?'am':'en'}))];
+  const queue=[...shuffle(first),...shuffle(fresh).map(x=>({item:x,dir:'en'}))];
+  sess={fresh,learnIdx:0,queue,qIdx:0,wrong:new Set(),requeued:new Set(),correct:0,total:0,extra:!!extra,phase:fresh.length?'learn':'quiz',answered:null,revealed:false};
+  render();
+}
+function optionsFor(q){
+  const pool=q.item.unit.items.length>=4?ALL.filter(x=>x.unit===q.item.unit):ALL;
+  const others=shuffle(pool.filter(x=>x.id!==q.item.id&&x.en!==q.item.en)).slice(0,3);
+  return shuffle([q.item,...others]);
+}
+function answer(id){
+  const q=sess.queue[sess.qIdx];if(sess.answered)return;
+  const ok=id===q.item.id;
+  sess.answered={choice:id,ok};sess.total++;
+  if(ok)sess.correct++;
+  else{
+    sess.wrong.add(q.item.id);
+    const k=q.item.id+q.dir;
+    if(!sess.requeued.has(k)){sess.requeued.add(k);sess.queue.push({item:q.item,dir:q.dir})}
+  }
+  if(ok&&q.dir==='en')speak(q.item.am);
+  render();
+}
+function nextQ(){sess.qIdx++;sess.answered=null;if(sess.qIdx>=sess.queue.length)finish();else render()}
+function finish(){
+  const t=today();
+  if(!sess.extra){
+    const ids=new Set(sess.queue.map(q=>q.item.id));
+    ids.forEach(id=>{
+      const cur=S.items[id]||{box:0};
+      const box=sess.wrong.has(id)?1:Math.min(5,(cur.box||0)+1);
+      S.items[id]={box,due:addDays(INTERVALS[box])};
+    });
+    if(S.newDate!==t){S.newDate=t;S.newCount=0}
+    S.newCount+=sess.fresh.length;
+  }
+  S.days[t]=true;
+  commit();
+  sess.phase='done';render();
+}
+
+/* ---------- Views ---------- */
+const app=document.getElementById('app');
+function header(){const s=streak();return `<header class="top"><div class="brand"><span class="am">Krok po kroku</span></div><div class="streak-chip">${s?`<b>${s}</b>-day streak`:'Start your streak today'}</div></header>`}
+
+function greeting(){
+  const hr=new Date().getHours();
+  if(hr>=18)return{am:'Dobry wieczór',tr:'DOB-ri VYEH-choor',en:'Good evening. One short lesson before the day ends.'};
+  if(hr<12)return{am:'Dzień dobry',tr:'jen DOB-ri',en:'Good morning. A little Polish, step by step.'};
+  return{am:'Dzień dobry',tr:'jen DOB-ri',en:'Hello. A few minutes this afternoon is enough.'};
+}
+
+function viewToday(){
+  const g=greeting();
+  const fresh=nextNew(),due=dueItems(),doneToday=!!S.days[today()];
+  const learned=learnedCount();
+  let box;
+  if(fresh.length||due.length){
+    box=`<section class="lesson" aria-labelledby="lh">
+      <h2 id="lh">${doneToday?'There’s a little more for today':'Today’s lesson'}</h2>
+      <p>About ${Math.max(3,Math.round((fresh.length*2+due.length)*.25))} minutes.</p>
+      <div class="counts"><div><strong>${fresh.length}</strong>new phrases</div><div><strong>${due.length}</strong>to review</div></div>
+      <button class="btn primary" data-act="start">${learned?'Start today’s lesson':'Start your first lesson'}</button>
+    </section>`;
+  }else{
+    const all=learned===ALL.length;
+    box=`<section class="lesson">
+      <h2><span class="am">Brawo!</span> ${all?'You’ve learned every phrase':'You’re done for today'}</h2>
+      <p>${all?'Keep reviewing to lock them in. New reviews appear as phrases come due.':'Come back tomorrow for new phrases and reviews. Short and daily beats long and rare.'}</p>
+      <div class="actions">${learned?'<button class="btn ghost" data-act="extra">Practice a few more</button>':''}</div>
+    </section>`;
+  }
+  const nxt=ALL.find(x=>!S.items[x.id]);
+  const sc=SCENES.find(s=>!S.convos[s.id]);
+  const talk=sc?`<section class="talk-card">
+      <p class="kick"><span class="am">${sc.am}</span>Try a conversation</p>
+      <h2>${esc(sc.title)}</h2>
+      <p class="set">${esc(sc.setting)}</p>
+      <button class="btn ghost" data-act="convo" data-id="${sc.id}">Start conversation</button>
+    </section>`:`<section class="talk-card"><h2>Every conversation done</h2><p class="set">Replay them to make the replies come faster.</p><button class="btn ghost" data-act="go-talk">See conversations</button></section>`;
+  return header()+`<section class="hero">
+    <p class="glyph" lang="pl">${g.am}</p>
+    <p class="gloss"><b>${g.tr}</b>. ${g.en}</p>
+  </section>${installTip()}${box}${talk}
+  ${nxt?`<p class="upnext">Up next: <span class="am">${nxt.unit.am}</span> ${esc(nxt.unit.title)}</p>`:''}`;
+}
+
+function viewSession(){
+  const steps=sess.fresh.length+sess.queue.length;
+  const pos=(sess.phase==='learn'?sess.learnIdx:sess.fresh.length+sess.qIdx);
+  const pct=sess.phase==='done'?100:Math.round(pos/steps*100);
+  const top=`<div class="sess-top"><button class="close" data-act="quit" aria-label="Leave lesson">×</button><div class="bar" role="progressbar" aria-valuenow="${pct}" aria-valuemin="0" aria-valuemax="100"><i style="width:${pct}%"></i></div></div>`;
+
+  if(sess.phase==='learn'){
+    const x=sess.fresh[sess.learnIdx];
+    const last=sess.learnIdx===sess.fresh.length-1;
+    const showTr=S.display==='both'||sess.revealed;
+    return top+`<div class="stage">
+      <p class="kicker">New phrase ${sess.learnIdx+1} of ${sess.fresh.length}: <span class="am">${x.unit.am}</span> ${esc(x.unit.title)}</p>
+      <div class="card pop">
+        <p class="big" lang="pl">${esc(x.am)}</p>
+        ${showTr?`<p class="tr">${esc(x.tr)}</p>`:`<button class="reveal" data-act="reveal">Show pronunciation</button>`}
+        <p class="en">${esc(x.en)}</p>
+        ${playBtn(x.id)}
+        ${x.note?`<p class="note">${x.note}</p>`:''}
+      </div>
+      <div class="actions"><button class="btn primary" data-act="learn-next">${last?'Start practice':'Next phrase'}</button></div>
+    </div>`;
+  }
+
+  if(sess.phase==='quiz'){
+    const q=sess.queue[sess.qIdx];
+    if(!q.opts)q.opts=optionsFor(q);
+    const a=sess.answered;
+    const prompt=q.dir==='am'
+      ?`<p class="prompt-q">What does this mean?</p><p class="big" lang="pl">${esc(q.item.am)}</p>${S.display==='both'?`<p class="tr">${esc(q.item.tr)}</p>`:''}${playBtn(q.item.id)}`
+      :`<p class="prompt-q">How do you say this?</p><p class="en" style="margin-top:6px;font-size:24px;font-weight:500">${esc(q.item.en)}</p>`;
+    const opts=q.opts.map((o,i)=>{
+      let cls='opt';
+      if(a){if(o.id===q.item.id)cls+=' right';else if(o.id===a.choice)cls+=' wrong'}
+      const label=q.dir==='am'?esc(o.en):`<span><span class="am" lang="pl">${esc(o.am)}</span>${S.display==='both'?`<small>${esc(o.tr)}</small>`:''}</span>`;
+      return `<button class="${cls}" data-act="answer" data-id="${o.id}" ${a?'disabled':''}><span class="k">${i+1}</span>${label}</button>`;
+    }).join('');
+    let fb='';
+    if(a){
+      fb=a.ok
+        ?`<p class="feedback ok" role="status">Correct. <span class="am">${esc(q.item.am)}</span> (${esc(q.item.tr)})</p>`
+        :`<p class="feedback no" role="status">Not quite. It’s <span class="am">${esc(q.item.am)}</span> (${esc(q.item.tr)}), “${esc(q.item.en)}.” You’ll see it again.</p>`;
+      if(q.item.note)fb+=`<p class="note">${q.item.note}</p>`;
+      fb+=`<div class="actions"><button class="btn primary" data-act="next" id="cont">Continue</button></div>`;
+    }
+    return top+`<div class="stage"><div class="card">${prompt}</div><div class="opts">${opts}</div>${fb}</div>`;
+  }
+
+  // done
+  return `<div class="done pop">
+    <p class="glyph" lang="pl">Brawo!</p>
+    <p class="gloss">BRA-vo. Well done.</p>
+    <div class="done-stats">
+      <div><strong>${sess.correct}/${sess.total}</strong>correct</div>
+      <div><strong>${streak()}</strong>day streak</div>
+      <div><strong>${learnedCount()}</strong>phrases learned</div>
+    </div>
+    <button class="btn primary" data-act="home">Back to today</button>
+  </div><div class="tibeb" style="margin-top:40px" aria-hidden="true"></div>`;
+}
+
+let searchTerm='';
+function phraseRows(){
+  const t=searchTerm.trim().toLowerCase();
+  const out=UNITS.map(u=>{
+    const items=u.items.map(([id])=>BY_ID[id]).filter(x=>!t||x.en.toLowerCase().includes(t)||x.tr.toLowerCase().includes(t)||x.am.toLowerCase().includes(t));
+    if(!items.length)return'';
+    const done=u.items.filter(([id])=>S.items[id]).length;
+    return `<section class="unit"><div class="unit-h"><h3><span class="am">${u.am}</span>${esc(u.title)}</h3><span>${done} of ${u.items.length} learned</span></div>
+      ${items.map(x=>{const it=S.items[x.id];return `<div class="row"><span class="dot ${it?'s'+it.box:''}" aria-label="${it?(it.box>=4?'Strong':'Learning'):'Not learned yet'}"></span>
+        <div><div class="am" lang="pl">${esc(x.am)}</div><div class="tr">${esc(x.tr)}</div><div class="en">${esc(x.en)}</div></div>
+        ${playBtn(x.id)}</div>`}).join('')}</section>`;
+  }).join('');
+  return out||`<p class="empty">No phrases match “${esc(searchTerm)}.” Try an English word like “water” or “thank.”</p>`;
+}
+function viewPhrases(){
+  return header()+`<h1 class="page">Phrasebook</h1>
+  <p class="sub">Every phrase in the course. Lessons introduce them in this order.</p>
+  <input class="search" id="search" type="search" placeholder="Search in English or Polish" value="${esc(searchTerm)}" aria-label="Search phrases">
+  <details class="sounds"><summary>How to read the pronunciation</summary>
+    <dl>
+      <dt>Stress</dt><dd>Almost always on the second-to-last syllable. The guide shows it in capitals: jen-KOO-yeh.</dd>
+      <dt>w</dt><dd>Sounds like English v: <span class="am">woda</span> is VO-da.</dd>
+      <dt>ł</dt><dd>Sounds like English w: <span class="am">złoty</span> is ZWO-tih.</dd>
+      <dt>sz, cz</dt><dd>Like sh and ch in “shop” and “chip.”</dd>
+      <dt>ś, ć, si, ci</dt><dd>Softer sh and ch, made with the tongue pressed higher.</dd>
+      <dt>rz, ż</dt><dd>Like the s in “measure.”</dd>
+      <dt>ą, ę</dt><dd>Nasal vowels, roughly “on” and “en.” At the end of a word, ę is often just “eh.”</dd>
+      <dt>c</dt><dd>Like ts in “cats.”</dd>
+      <dt>ch, h</dt><dd>A breathy h, like the ch in Scottish “loch.”</dd>
+      <dt>y</dt><dd>As a vowel, like the i in “bit” (shown as ih).</dd>
+    </dl>
+  </details>
+  <div class="legend"><span><i></i>Not learned</span><span><i style="background:var(--gold);border-color:var(--gold)"></i>Learning</span><span><i style="background:var(--green);border-color:var(--green)"></i>Strong</span></div>
+  <div id="rows">${phraseRows()}</div>`;
+}
+
+let resetArmed=false,resetTimer=null;
+function viewProgress(){
+  const days=[];const d=new Date();d.setDate(d.getDate()-27);
+  // align so the grid starts on Monday
+  const offset=(d.getDay()+6)%7;d.setDate(d.getDate()-offset);
+  const end=today();
+  let cells='';
+  for(let i=0;i<35;i++){const s=dstr(d);if(s>end&&i%7===0)break;cells+=`<div class="${S.days[s]?'on':''} ${s===end?'today':''}" title="${s}"></div>`;d.setDate(d.getDate()+1)}
+  const ub=UNITS.map(u=>{const n=u.items.filter(([id])=>S.items[id]).length;const p=Math.round(n/u.items.length*100);
+    return `<div class="ubar"><div class="lbl"><span style="color:var(--ink)"><span class="am">${u.am}</span> ${esc(u.title)}</span><span>${n}/${u.items.length}</span></div><div class="bar"><i style="width:${p}%"></i></div></div>`}).join('');
+  const seg=(key,opts)=>`<div class="seg" role="group">${opts.map(([v,l])=>`<button data-act="set" data-key="${key}" data-val="${v}" aria-pressed="${String(S[key])===String(v)}">${l}</button>`).join('')}</div>`;
+  return header()+`<h1 class="page">Progress</h1>
+  <div class="stats">
+    <div class="stat"><strong>${streak()}</strong><span>day streak</span></div>
+    <div class="stat"><strong>${learnedCount()}</strong><span>of ${ALL.length} learned</span></div>
+    <div class="stat"><strong>${masteredCount()}</strong><span>strong</span></div>
+  </div>
+  <h2 class="sec">Last few weeks</h2>
+  <div class="cal-days" aria-hidden="true"><span>M</span><span>T</span><span>W</span><span>T</span><span>F</span><span>S</span><span>S</span></div>
+  <div class="cal">${cells}</div>
+  <h2 class="sec">By topic</h2>${ub}
+  <h2 class="sec">Settings</h2>
+  <div class="setting"><label>New phrases each day</label>${seg('newPerDay',[[3,'3'],[5,'5'],[8,'8']])}</div>
+  <div class="setting"><label>Use word forms for</label>${addrSeg()}</div>
+  <div class="setting"><label>Pronunciation while learning</label>${seg('display',[['both','Always show'],['fidel','Hide until I tap']])}</div>
+  <h2 class="sec">Backup</h2>
+  <p class="sub" style="margin:0 0 12px">Your progress lives in this browser. Save a backup to move it to another phone or restore it if the browser’s data gets cleared.</p>
+  <button class="btn ghost" data-act="export">Download backup file</button>
+  <button class="btn ghost" data-act="import">Restore from backup file</button>
+  <input type="file" id="importFile" accept=".json,application/json" hidden>
+  <details class="code"><summary>Use a backup code instead</summary>
+    <p class="sub" style="margin:10px 0 0">Copy this code and send it to yourself, or paste a code from another device.</p>
+    <textarea id="codeBox" aria-label="Backup code">${encodeBackup()}</textarea>
+    <div class="actions"><button class="btn ghost" data-act="copy-code">Copy code</button><button class="btn ghost" data-act="paste-code">Restore from this code</button></div>
+  </details>
+  ${backupMsg?`<p class="backup-msg ${backupMsg.err?'err':''}" role="status">${esc(backupMsg.text)}</p>`:''}
+  <h2 class="sec">Start over</h2>
+  <button class="danger ${resetArmed?'armed':''}" data-act="reset">${resetArmed?'Tap again to erase all progress':'Reset progress'}</button>
+  <p class="sync">${synced?'Your progress is saved to your account, so it follows you across devices.':'Your progress is saved in this browser.'}</p>`;
+}
+
+/* ---------- Install & storage ---------- */
+const isIOS=/iphone|ipad|ipod/i.test(navigator.userAgent)||(navigator.platform==='MacIntel'&&navigator.maxTouchPoints>1);
+const isStandalone=()=>window.navigator.standalone===true||matchMedia('(display-mode: standalone)').matches;
+let installEvt=null;
+window.addEventListener('beforeinstallprompt',e=>{e.preventDefault();installEvt=e;if(!sess&&!convo&&view==='today')render()});
+window.addEventListener('appinstalled',()=>{installEvt=null;if(!sess&&!convo)render()});
+function tipDismissed(){try{return localStorage.getItem('krok-tip')==='1'}catch(e){return false}}
+function installTip(){
+  if(isStandalone()||tipDismissed())return'';
+  if(installEvt)return `<div class="tip"><p>Install Krok po kroku on your phone so it opens like an app and works offline.</p></div><div class="actions"><button class="btn ghost" data-act="install">Install app</button></div>`;
+  if(isIOS)return `<div class="tip"><p>Add this app to your home screen: tap the Share button, then <b>Add to Home Screen</b>. It works offline and keeps your progress safe.</p><button class="x" data-act="tip-x" aria-label="Dismiss">×</button></div>`;
+  return'';
+}
+try{if(navigator.storage&&navigator.storage.persist)navigator.storage.persisted().then(p=>{if(!p)navigator.storage.persist()})}catch(e){}
+if('serviceWorker' in navigator&&location.protocol==='https:')window.addEventListener('load',()=>navigator.serviceWorker.register('sw.js').catch(()=>{}));
+
+let backupMsg=null;
+function encodeBackup(){return btoa(unescape(encodeURIComponent(JSON.stringify({app:'krok-po-kroku',v:1,data:S}))))}
+function restoreFrom(text){
+  let obj;
+  try{obj=JSON.parse(text)}catch(e){try{obj=JSON.parse(decodeURIComponent(escape(atob(text.trim()))))}catch(e2){obj=null}}
+  const d=obj&&obj.app==='krok-po-kroku'?obj.data:null;
+  if(!d||typeof d.items!=='object'||typeof d.days!=='object'){backupMsg={err:true,text:'That isn’t a Krok po kroku backup. Check that you copied the whole code or picked the right file.'};render();return}
+  if(!confirm('Replace your current progress with this backup?'))return;
+  S=Object.assign(blank(),d);commit();
+  backupMsg={err:false,text:'Progress restored: '+Object.keys(S.items).length+' phrases learned.'};render();
+}
+
+/* ---------- Conversation play ---------- */
+let convo=null;
+function g(x){return(x&&typeof x==='object')?x[S.addressAs||'f']:x}
+function smooth(){return matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth'}
+function startConvo(id){
+  const sc=SCENES.find(s=>s.id===id);if(!sc)return;
+  if(!S.addressAs){view='talk';render();window.scrollTo(0,0);return}
+  convo={sc,turn:0,answered:null,score:0,log:[],order:null,showEn:false,done:false};
+  prepTurn();render();window.scrollTo(0,0);
+}
+function prepTurn(){const t=convo.sc.turns[convo.turn];convo.order=shuffle(t.opts.map((_,i)=>i));convo.answered=null;convo.showEn=false}
+function scrollTurn(){const el=document.getElementById('turn');if(el)el.scrollIntoView({block:'start',behavior:smooth()})}
+function convoAnswer(i){
+  if(!convo||convo.answered)return;
+  const t=convo.sc.turns[convo.turn],ok=!!t.opts[i].ok;
+  convo.answered={i,ok};if(ok)convo.score++;
+  const c=t.opts.find(o=>o.ok);if(ok&&c.am)speak(g(c.am));
+  render();const f=document.getElementById('cont');if(f)f.scrollIntoView({block:'nearest',behavior:smooth()});
+}
+function convoNext(){
+  const t=convo.sc.turns[convo.turn],c=t.opts.find(o=>o.ok);
+  if(t.narr)convo.log.push({k:'narr',text:t.narr});
+  if(t.npc)convo.log.push({k:'them',who:t.who||convo.sc.who,am:g(t.npc.am),tr:g(t.npc.tr),en:t.npc.en});
+  if(t.type==='check')convo.log.push({k:'narr',text:'You understood: '+c.en+'.'});
+  else convo.log.push({k:'me',am:g(c.am),tr:g(c.tr),en:c.en});
+  convo.turn++;
+  if(convo.turn>=convo.sc.turns.length){
+    const id=convo.sc.id,prev=S.convos[id];
+    S.convos[id]={best:Math.max(prev?prev.best:0,convo.score)};
+    S.days[today()]=true;commit();
+    convo.done=true;render();window.scrollTo(0,0);
+  }else{prepTurn();render();scrollTurn()}
+}
+function bubble(b,live){
+  if(b.k==='narr')return `<p class="narr">${esc(b.text)}</p>`;
+  if(b.k==='me')return `<div class="bub me"><span class="am" lang="pl">${esc(b.am)}</span><div class="tr">${esc(b.tr)}</div><div class="en">${esc(b.en)}</div></div>`;
+  const show=!live||convo.showEn||convo.answered;
+  return `<div class="bub them"><div class="who">${esc(b.who)}</div><span class="am" lang="pl">${esc(b.am)}</span>${S.display==='both'||show?`<div class="tr">${esc(b.tr)}</div>`:''}${show?`<div class="en">${esc(b.en)}</div>`:''}<div class="tools">${show?'':`<button class="mini" data-act="show-en">Show English</button>`}${voice?`<button class="mini" data-act="say" data-text="${esc(b.am)}">▶ Listen</button>`:''}</div></div>`;
+}
+function viewConvo(){
+  const sc=convo.sc,n=sc.turns.length;
+  if(convo.done){
+    const used=sc.turns.filter(t=>t.type!=='check').map(t=>t.opts.find(o=>o.ok));
+    return `<div class="done pop">
+      <p class="glyph" lang="pl">Brawo!</p>
+      <p class="gloss">BRA-vo. You finished “${esc(sc.title)}.”</p>
+      <div class="done-stats"><div><strong>${convo.score}/${n}</strong>best replies</div><div><strong>${streak()}</strong>day streak</div></div>
+    </div>
+    <h2 class="sec">Replies from this conversation</h2>
+    ${used.map(o=>`<div class="row" style="grid-template-columns:1fr auto"><div><div class="am" lang="pl">${esc(g(o.am))}</div><div class="tr">${esc(g(o.tr))}</div><div class="en">${esc(o.en)}</div></div>${voice?`<button class="play" data-act="say" data-text="${esc(g(o.am))}">▶ Listen</button>`:''}</div>`).join('')}
+    <div class="actions"><button class="btn primary" data-act="convo-again">Try it again</button><button class="btn ghost" data-act="convo-exit">Back to conversations</button></div>`;
+  }
+  const t=sc.turns[convo.turn],a=convo.answered;
+  const pct=Math.round(convo.turn/n*100);
+  const top=`<div class="sess-top"><button class="close" data-act="quit" aria-label="Leave conversation">×</button><div class="bar" role="progressbar" aria-valuenow="${pct}" aria-valuemin="0" aria-valuemax="100"><i style="width:${pct}%"></i></div></div>`;
+  const intro=`<div class="scene-intro"><span class="am">${sc.am}</span><b>${esc(sc.title)}</b><br>${esc(sc.setting)}</div>`;
+  let cur='';
+  if(t.narr)cur+=`<p class="narr">${esc(t.narr)}</p>`;
+  if(t.npc)cur+=bubble({k:'them',who:t.who||sc.who,am:g(t.npc.am),tr:g(t.npc.tr),en:t.npc.en},true);
+  const ask=t.type==='check'?t.q:(t.npc?'Your reply':'Your turn to speak');
+  const opts=convo.order.map((oi,k)=>{
+    const o=t.opts[oi];let cls='opt';
+    if(a){if(o.ok)cls+=' right';else if(oi===a.i)cls+=' wrong'}
+    const label=t.type==='check'?esc(o.en):`<span><span class="am" lang="pl">${esc(g(o.am))}</span>${S.display==='both'||a?`<small>${esc(g(o.tr))}</small>`:''}${a?`<small>${esc(o.en)}</small>`:''}</span>`;
+    return `<button class="${cls}" data-act="reply" data-i="${oi}" ${a?'disabled':''}><span class="k">${k+1}</span>${label}</button>`;
+  }).join('');
+  let fb='';
+  if(a){
+    const c=t.opts.find(o=>o.ok),ch=t.opts[a.i];
+    if(a.ok)fb=`<p class="feedback ok" role="status">Good reply.</p><p class="note">${c.why}</p>`;
+    else fb=`<p class="feedback no" role="status">Not the best reply.</p><p class="note">${ch.why}</p><p class="note">${t.type==='check'?`Answer: ${esc(c.en)}. `:`Best reply: <span class="am">${esc(g(c.am))}</span> (${esc(g(c.tr))}), “${esc(c.en)}.” `}${c.why}</p>`;
+    fb+=`<div class="actions"><button class="btn primary" data-act="convo-next" id="cont">${convo.turn===n-1?'Finish':'Continue'}</button></div>`;
+  }
+  return top+`<div class="chat">${intro}${convo.log.map(b=>bubble(b,false)).join('')}<div id="turn" style="display:flex;flex-direction:column;gap:12px">${cur}</div></div>
+    <p class="your-turn">${esc(ask)}</p><div class="opts" style="margin-top:10px">${opts}</div>${fb}`;
+}
+function addrSeg(){return `<div class="seg" role="group" aria-label="Which forms to use for you">${[['f','A woman'],['m','A man']].map(([v,l])=>`<button data-act="set" data-key="addressAs" data-val="${v}" aria-pressed="${S.addressAs===v}">${l}</button>`).join('')}</div>`}
+function viewTalk(){
+  return header()+`<h1 class="page">Conversations</h1>
+  <p class="sub">Everyday situations you’re likely to meet in Poland. Read what people say, then pick the best reply.</p>
+  ${S.addressAs?'':`<div class="addr"><p>Polish changes some words for men and women: how people address you (<span class="am">pan</span> or <span class="am">pani</span>) and how you describe yourself (<span class="am">zmęczony</span> or <span class="am">zmęczona</span>). Which forms should the app use for you?</p>${addrSeg()}</div>`}
+  ${SCENES.map(s=>{const r=S.convos[s.id];return `<button class="scene" data-act="convo" data-id="${s.id}" ${S.addressAs?'':'disabled'}>
+    <div class="place"><span class="am">${s.am}</span>${esc(s.place)}</div><h3>${esc(s.title)}</h3><p>${esc(s.setting)}</p>
+    <div class="meta"><span>${s.turns.length} replies</span>${r?`<b>Best so far: ${r.best} of ${s.turns.length}</b>`:''}</div></button>`}).join('')}`;
+}
+
+function render(){
+  const busy=!!(sess||convo);
+  document.body.classList.toggle('in-session',busy);
+  document.getElementById('tabs').hidden=busy;
+  if(sess)app.innerHTML=viewSession();
+  else if(convo)app.innerHTML=viewConvo();
+  else app.innerHTML=view==='phrases'?viewPhrases():view==='progress'?viewProgress():view==='talk'?viewTalk():viewToday();
+  document.querySelectorAll('[data-tab]').forEach(b=>b.setAttribute('aria-current',b.dataset.tab===view?'page':'false'));
+  const c=document.getElementById('cont');if(c)c.focus({preventScroll:true});
+}
+
+/* ---------- Events ---------- */
+document.addEventListener('click',e=>{
+  const tab=e.target.closest('[data-tab]');
+  if(tab){view=tab.dataset.tab;backupMsg=null;try{history.replaceState(null,'','#'+view)}catch(_){}resetArmed=false;render();window.scrollTo(0,0);return}
+  const b=e.target.closest('[data-act]');if(!b)return;
+  const act=b.dataset.act;
+  if(act==='start')startSession(false);
+  else if(act==='extra')startSession(true);
+  else if(act==='speak')speak(BY_ID[b.dataset.id].am);
+  else if(act==='reveal'){sess.revealed=true;render()}
+  else if(act==='learn-next'){sess.revealed=false;if(sess.learnIdx<sess.fresh.length-1)sess.learnIdx++;else sess.phase='quiz';render();window.scrollTo(0,0)}
+  else if(act==='answer')answer(b.dataset.id);
+  else if(act==='next'){nextQ();window.scrollTo(0,0)}
+  else if(act==='quit'||act==='home'){if(convo){convo=null;view='talk'}else{sess=null;view='today'}render();window.scrollTo(0,0)}
+  else if(act==='convo')startConvo(b.dataset.id);
+  else if(act==='install'){if(installEvt){installEvt.prompt();installEvt.userChoice.finally(()=>{installEvt=null;render()})}}
+  else if(act==='tip-x'){try{localStorage.setItem('krok-tip','1')}catch(_){}render()}
+  else if(act==='export'){
+    const blob=new Blob([JSON.stringify({app:'krok-po-kroku',v:1,data:S},null,2)],{type:'application/json'});
+    const a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download='krok-po-kroku-backup-'+today()+'.json';
+    document.body.appendChild(a);a.click();setTimeout(()=>{URL.revokeObjectURL(a.href);a.remove()},1000);
+    backupMsg={err:false,text:'Backup downloaded. Keep the file somewhere safe, like your cloud drive.'};render();
+  }
+  else if(act==='import')document.getElementById('importFile').click();
+  else if(act==='copy-code'){const t=document.getElementById('codeBox').value;
+    (navigator.clipboard?navigator.clipboard.writeText(t):Promise.reject()).then(()=>{backupMsg={err:false,text:'Code copied.'};render()})
+      .catch(()=>{const box=document.getElementById('codeBox');box.select();backupMsg={err:false,text:'Code selected. Copy it with your keyboard or long-press.'};render()})}
+  else if(act==='paste-code')restoreFrom(document.getElementById('codeBox').value);
+  else if(act==='go-talk'){view='talk';render();window.scrollTo(0,0)}
+  else if(act==='show-en'){convo.showEn=true;render()}
+  else if(act==='say')speak(b.dataset.text);
+  else if(act==='reply')convoAnswer(Number(b.dataset.i));
+  else if(act==='convo-next')convoNext();
+  else if(act==='convo-again')startConvo(convo.sc.id);
+  else if(act==='convo-exit'){convo=null;view='talk';render();window.scrollTo(0,0)}
+  else if(act==='set'){const k=b.dataset.key;S[k]=k==='newPerDay'?Number(b.dataset.val):b.dataset.val;commit();render()}
+  else if(act==='reset'){
+    if(!resetArmed){resetArmed=true;clearTimeout(resetTimer);resetTimer=setTimeout(()=>{resetArmed=false;if(view==='progress'&&!sess)render()},4000);render()}
+    else{resetArmed=false;const keep={newPerDay:S.newPerDay,display:S.display};S=Object.assign(blank(),keep);commit();render()}
+  }
+});
+document.addEventListener('change',e=>{
+  if(e.target.id==='importFile'&&e.target.files&&e.target.files[0]){const r=new FileReader();r.onload=()=>restoreFrom(String(r.result));r.readAsText(e.target.files[0])}
+});
+document.addEventListener('input',e=>{if(e.target.id==='search'){searchTerm=e.target.value;document.getElementById('rows').innerHTML=phraseRows()}});
+document.addEventListener('keydown',e=>{
+  if(e.target.tagName==='INPUT')return;
+  if(convo&&!convo.done){
+    if(!convo.answered&&/^[1-4]$/.test(e.key)){const oi=convo.order[Number(e.key)-1];if(oi!==undefined)convoAnswer(oi)}
+    else if(convo.answered&&e.key==='Enter'){e.preventDefault();convoNext()}
+    return;
+  }
+  if(!sess)return;
+  if(sess.phase==='quiz'){
+    const q=sess.queue[sess.qIdx];
+    if(!sess.answered&&/^[1-4]$/.test(e.key)&&q.opts){const o=q.opts[Number(e.key)-1];if(o)answer(o.id)}
+    else if(sess.answered&&e.key==='Enter'){e.preventDefault();nextQ()}
+  }else if(sess.phase==='learn'&&(e.key==='Enter'||e.key==='ArrowRight')){
+    const btn=document.querySelector('[data-act="learn-next"]');if(btn&&document.activeElement!==btn){e.preventDefault();btn.click()}
+  }
+});
+
+render();
+connect();
+</script>
+</body>
+</html>
