@@ -60,11 +60,11 @@ button{font:inherit;color:inherit}
 
 header.top{padding:18px 0 6px;display:flex;align-items:baseline;justify-content:space-between;gap:12px}
 .brand{font-weight:600;font-size:17px;letter-spacing:.01em}
-.brand .am{font-weight:600;margin-right:6px;color:var(--green)}
+.brand .am{font-weight:600;color:var(--green)}
 .streak-chip{font-size:14px;color:var(--muted)}
 .home-link{display:inline-flex;align-items:center;gap:4px;font-size:14px;color:var(--muted);text-decoration:none;padding:6px 10px 6px 6px;margin-left:-6px;border-radius:8px}
 .home-link:hover{color:var(--ink);background:var(--line)}
-.top-left{display:flex;align-items:baseline;gap:10px;min-width:0}
+.top-left{display:flex;flex-direction:column;align-items:flex-start;gap:2px;min-width:0}
 .streak-chip b{color:var(--ink);font-weight:600}
 
 /* Today */
@@ -665,7 +665,7 @@ function finish(){
 
 /* ---------- Views ---------- */
 const app=document.getElementById('app');
-function header(){const s=streak();return `<header class="top"><div class="top-left"><a class="home-link" href="../" aria-label="Back to all languages"><span aria-hidden="true">&larr;</span>Home</a><div class="brand"><span class="am">ትንሽ ትንሽ</span>Tinish Tinish</div></div><div class="streak-chip">${s?`<b>${s}</b>-day streak`:'Start your streak today'}</div></header>`}
+function header(){const s=streak();return `<header class="top"><div class="top-left"><div class="brand"><span class="am">ትንሽ ትንሽ</span></div><a class="home-link" href="../" aria-label="Back to all languages"><span aria-hidden="true">&larr;</span>Home</a></div><div class="streak-chip">${s?`<b>${s}</b>-day streak`:'Start your streak today'}</div></header>`}
 
 function greeting(){
   const h=new Date().getHours();

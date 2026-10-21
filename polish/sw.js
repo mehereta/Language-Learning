@@ -1,5 +1,5 @@
 // Bump VERSION with every release so installed phones pick up new files.
-const VERSION = 'v2';
+const VERSION = 'v3';
 const CACHE = 'krok-' + VERSION;
 const SHELL = ['./', './index.html', './manifest.json',
   './icons/icon-192.png', './icons/icon-512.png', './icons/icon-maskable-512.png',
