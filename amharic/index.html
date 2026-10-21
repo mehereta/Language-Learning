@@ -89,8 +89,8 @@ header.top{padding:18px 0 6px;display:flex;align-items:baseline;justify-content:
 
 /* Nav */
 nav.tabs{position:fixed;left:0;right:0;bottom:0;z-index:20;background:var(--surface);border-top:1px solid var(--line);padding-bottom:env(safe-area-inset-bottom,0px)}
-nav.tabs .wrap{display:flex}
-nav.tabs button{flex:1;background:none;border:0;padding:12px 4px 14px;font-size:13px;color:var(--muted);cursor:pointer;display:flex;flex-direction:column;align-items:center;gap:2px}
+nav.tabs .wrap{display:flex;padding:0 4px}
+nav.tabs button{flex:1;min-width:0;background:none;border:0;padding:12px 0 14px;font-size:12px;color:var(--muted);cursor:pointer;display:flex;flex-direction:column;align-items:center;gap:2px}
 nav.tabs button .am{font-size:19px;line-height:1.2}
 nav.tabs button[aria-current="page"]{color:var(--green);font-weight:500}
 
@@ -158,6 +158,14 @@ details.sounds dd{margin:0;color:var(--muted)}
 .legend span{display:inline-flex;align-items:center;gap:6px}
 .legend i{width:9px;height:9px;border-radius:50%;display:inline-block;border:1.5px solid var(--line)}
 .empty{color:var(--muted);padding:24px 0}
+
+/* Grammar */
+details.rule{margin-top:12px;background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:14px 18px}
+details.rule summary{cursor:pointer;font-weight:600;font-size:17px}
+details.rule summary .am{color:var(--green);margin-right:8px}
+details.rule>p:first-of-type{margin:12px 0 4px}
+details.rule .row{grid-template-columns:1fr auto}
+details.rule .row:last-of-type{border-bottom:0}
 
 /* Progress */
 .stats{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:6px}
@@ -242,6 +250,7 @@ details.code textarea{width:100%;min-height:90px;margin-top:10px;border:1px soli
     <button data-tab="today"><span class="am" aria-hidden="true">ዛሬ</span>Today</button>
     <button data-tab="talk"><span class="am" aria-hidden="true">ውይይት</span>Talk</button>
     <button data-tab="phrases"><span class="am" aria-hidden="true">ቃላት</span>Phrasebook</button>
+    <button data-tab="grammar"><span class="am" aria-hidden="true">ሰዋስው</span>Grammar</button>
     <button data-tab="progress"><span class="am" aria-hidden="true">እድገት</span>Progress</button>
   </div>
 </nav>
@@ -385,6 +394,52 @@ const UNITS = [
 const ALL=[];UNITS.forEach(u=>u.items.forEach(([id,am,tr,en,note])=>ALL.push({id,am,tr,en,note,unit:u})));
 const BY_ID=Object.fromEntries(ALL.map(x=>[x.id,x]));
 const INTERVALS=[0,1,3,7,14,30];
+
+/* ---------- Grammar: rows are [Amharic, transliteration, English] ---------- */
+const GRAMMAR=[
+ {id:'order', am:'ቅደም ተከተል', title:'Word order',
+  intro:'The verb comes last. Amharic sentences run subject, object, verb, so “I drink coffee” becomes “I coffee drink.”',
+  rows:[['እኔ ቡና እጠጣለሁ','iné buna itetalehu','I drink coffee.'],['ልጁ ውሃ ይፈልጋል','liju wiha yifeligal','The boy wants water.'],['ስምህ ማን ነው?','simih man new?','What’s your name? (literally “your name who is?”)']],
+  tip:'You can usually leave out “I,” “you” and so on, because the verb already shows who is doing it. <span class="am">ቡና እጠጣለሁ</span> (buna itetalehu) alone means “I drink coffee.”'},
+ {id:'pron', am:'ተውላጠ ስም', title:'I, you, he, she',
+  intro:'Amharic has separate words for “you” when speaking to a man, a woman, a group, or someone you respect.',
+  rows:[['እኔ','iné','I'],['አንተ','ante','you (to a man)'],['አንቺ','anchi','you (to a woman)'],['እርስዎ','irswo','you (respectful)'],['እሱ','isu','he'],['እሷ','iswa','she'],['እሳቸው','isachew','he or she (respectful)'],['እኛ','igna','we'],['እናንተ','inante','you (more than one person)'],['እነሱ','inesu','they']],
+  tip:'Use <span class="am">እርስዎ</span> (irswo) and <span class="am">እሳቸው</span> (isachew) for elders, officials and people you don’t know well.'},
+ {id:'be', am:'ነው', title:'Saying “am,” “is” and “are”',
+  intro:'The word for “is” goes at the end of the sentence and changes to match who you’re talking about.',
+  rows:[['ደህና ነኝ','dehna negn','I’m fine.'],['ደህና ነህ','dehna neh','You’re fine. (to a man)'],['ደህና ነሽ','dehna nesh','You’re fine. (to a woman)'],['ደህና ነዎት','dehna newot','You’re fine. (respectful)'],['ደህና ነው','dehna new','He’s fine. / It’s fine.'],['ደህና ናት','dehna nat','She’s fine.'],['ደህና ነን','dehna nen','We’re fine.'],['ደህና ናችሁ','dehna nachihu','You’re fine. (more than one person)'],['ደህና ናቸው','dehna nachew','They’re fine. / He or she is fine. (respectful)']],
+  tip:'The opposite of <span class="am">ነው</span> (new) is <span class="am">አይደለም</span> (aydelem): <span class="am">ቡና አይደለም</span> (buna aydelem), “it isn’t coffee.”'},
+ {id:'gender', am:'ወንድ እና ሴት', title:'Talking to a man or a woman',
+  intro:'Many words change depending on whether you speak to a man or a woman. Forms for women often end in -sh or -i.',
+  rows:[['እንዴት ነህ?','indet neh?','How are you? (to a man)'],['እንዴት ነሽ?','indet nesh?','How are you? (to a woman)'],['እባክህ','ibakih','Please (to a man)'],['እባክሽ','ibakish','Please (to a woman)'],['ና','na','Come! (to a man)'],['ነይ','ney','Come! (to a woman)']],
+  tip:'Not sure which to use? The respectful form, such as <span class="am">እንዴት ነዎት?</span> (indet newot?), is the same for men and women and is always polite.'},
+ {id:'plural', am:'ብዙ ቁጥር', title:'More than one',
+  intro:'Add -och (<span class="am">-ኦች</span>) to make most nouns plural.',
+  rows:[['ቤት → ቤቶች','bet → betoch','house → houses'],['ልጅ → ልጆች','lij → lijoch','child → children'],['ሰው → ሰዎች','sew → sewoch','person → people'],['መኪና → መኪኖች','mekina → mekinoch','car → cars']],
+  tip:'After a number the plural ending is optional: <span class="am">ሁለት ልጅ</span> (hulet lij), “two children,” is fine.'},
+ {id:'the', am:'ቤቱ', title:'Saying “the”',
+  intro:'There is no separate word for “the.” Add -u to the end of the noun, or -wa for something female. After a vowel, -u becomes -w.',
+  rows:[['ቤቱ','betu','the house'],['ልጁ','liju','the boy'],['ልጅቷ','lijitwa','the girl'],['ቡናው','bunaw','the coffee']],
+  tip:'For “a,” use the plain noun: <span class="am">ቤት</span> (bet) is “a house” or just “house.”'},
+ {id:'mine', am:'የኔ', title:'My, your, his, her',
+  intro:'“My,” “your” and the rest are endings on the noun. You already know one: <span class="am">ስሜ</span> (simé), “my name.”',
+  rows:[['ስሜ','simé','my name'],['ስምህ','simih','your name (to a man)'],['ስምሽ','simish','your name (to a woman)'],['ስሙ','simu','his name'],['ስሟ','simwa','her name'],['ስማችን','simachin','our name'],['ቤቴ','beté','my house']],
+  tip:'In everyday speech you can also put <span class="am">የኔ</span> (yené), “mine,” in front: <span class="am">የኔ ቤት</span> (yené bet), “my house.”'},
+ {id:'verb', am:'ግሥ', title:'Verbs: I go, you go',
+  intro:'The verb shows who is doing the action, using a beginning and an ending. Here is “to go.” The same form also means “will go.”',
+  rows:[['እሄዳለሁ','ihedalehu','I go'],['ትሄዳለህ','tihedaleh','you go (to a man)'],['ትሄጃለሽ','tihejalesh','you go (to a woman)'],['ይሄዳል','yihedal','he goes'],['ትሄዳለች','tihedalech','she goes'],['እንሄዳለን','inhedalen','we go'],['ትሄዳላችሁ','tihedalachihu','you go (more than one person)'],['ይሄዳሉ','yihedalu','they go']],
+  tip:'The ending -alehu always means “I.” You’ve seen it in <span class="am">አመሰግናለሁ</span> (ameseginalehu), “I thank (you),” and <span class="am">እፈልጋለሁ</span> (ifeligalehu), “I want.”'},
+ {id:'not', am:'አሉታ', title:'Saying “not”',
+  intro:'To make a verb negative, put al- or a- (<span class="am">አል-</span> or <span class="am">አ-</span>) in front and -m (<span class="am">-ም</span>) at the end. The ending -alehu drops off.',
+  rows:[['እፈልጋለሁ → አልፈልግም','ifeligalehu → alfeligim','I want → I don’t want'],['አውቃለሁ → አላውቅም','awqalehu → alawqim','I know → I don’t know'],['ይገባኛል → አይገባኝም','yigebagnal → aygebagnim','I understand → I don’t understand'],['ነው → አይደለም','new → aydelem','it is → it isn’t']],
+  tip:'Two you’ll use all the time: <span class="am">አላውቅም</span> (alawqim), “I don’t know,” and <span class="am">አልገባኝም</span> (algebagnim), “I didn’t understand.”'},
+ {id:'ask', am:'ጥያቄ', title:'Asking questions',
+  intro:'Question words go just before the verb, not at the start. For yes-or-no questions, keep the normal word order and raise your voice at the end.',
+  rows:[['ምን','min','what'],['ማን','man','who'],['የት','yet','where'],['መቼ','meché','when'],['ለምን','lemin','why'],['እንዴት','indet','how'],['ስንት','sint','how many, how much'],['ሽንት ቤት የት ነው?','shint bet yet new?','Where is the toilet?'],['ስንት ነው?','sint new?','How much is it?']]},
+ {id:'prep', am:'ከ በ ለ', title:'From, in, for',
+  intro:'Small words like “from,” “in” and “for” join onto the front of the next word.',
+  rows:[['ከአሜሪካ ነኝ','ke-Amerika negn','I’m from America. (ke- means “from”)'],['በመኪና','be-mekina','by car (be- means “in, at, by”)'],['ለእናቴ','le-inaté','for my mother (le- means “for, to”)'],['ወደ ቤት','wede bet','(going) home (wede means “toward”)']]}
+];
 
 /* ---------- Conversations ---------- */
 const R=(am,tr,en,why)=>({am,tr,en,why,ok:false});
@@ -616,7 +671,7 @@ function playBtn(id,cls='play'){return voice?`<button class="${cls}" data-act="s
 
 /* ---------- Session ---------- */
 let sess=null;
-let view=['today','talk','phrases','progress'].includes(location.hash.slice(1))?location.hash.slice(1):'today';
+let view=['today','talk','phrases','grammar','progress'].includes(location.hash.slice(1))?location.hash.slice(1):'today';
 
 function startSession(extra){
   const fresh=extra?[]:nextNew();
@@ -800,6 +855,16 @@ function viewPhrases(){
   <div id="rows">${phraseRows()}</div>`;
 }
 
+function viewGrammar(){
+  return header()+`<h1 class="page">Grammar</h1>
+  <p class="sub">The patterns behind the phrases. Open one at a time, alongside your lessons.</p>
+  ${GRAMMAR.map(r=>`<details class="rule"><summary><span class="am">${r.am}</span>${esc(r.title)}</summary>
+    <p>${r.intro}</p>
+    ${r.rows.map(([am,tr,en])=>`<div class="row"><div><div class="am" lang="am">${esc(am)}</div><div class="tr">${esc(tr)}</div><div class="en">${esc(en)}</div></div>${voice&&!am.includes('→')?`<button class="play" data-act="say" data-text="${esc(am)}">▶ Listen</button>`:''}</div>`).join('')}
+    ${r.tip?`<p class="note">${r.tip}</p>`:''}
+  </details>`).join('')}`;
+}
+
 let resetArmed=false,resetTimer=null;
 function viewProgress(){
   const days=[];const d=new Date();d.setDate(d.getDate()-27);
@@ -961,7 +1026,7 @@ function render(){
   document.getElementById('tabs').hidden=busy;
   if(sess)app.innerHTML=viewSession();
   else if(convo)app.innerHTML=viewConvo();
-  else app.innerHTML=view==='phrases'?viewPhrases():view==='progress'?viewProgress():view==='talk'?viewTalk():viewToday();
+  else app.innerHTML=view==='phrases'?viewPhrases():view==='grammar'?viewGrammar():view==='progress'?viewProgress():view==='talk'?viewTalk():viewToday();
   document.querySelectorAll('[data-tab]').forEach(b=>b.setAttribute('aria-current',b.dataset.tab===view?'page':'false'));
   const c=document.getElementById('cont');if(c)c.focus({preventScroll:true});
 }
