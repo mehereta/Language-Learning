@@ -630,9 +630,10 @@ function esc(s){return String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','
 
 /* ---------- Voice (uses the device’s Polish voice) ---------- */
 let voice=null;
-function pickVoice(){try{voice=speechSynthesis.getVoices().find(v=>/^pl(-|_|$)/i.test(v.lang))||null}catch(e){voice=null}}
+function pickVoice(){try{const vs=speechSynthesis.getVoices().filter(v=>/^pl(-|_|$)/i.test(v.lang));voice=vs.find(v=>v.localService)||vs[0]||null}catch(e){voice=null}}
 if('speechSynthesis' in window){pickVoice();speechSynthesis.onvoiceschanged=()=>{const had=!!voice;pickVoice();if(!!voice!==had)render()}}
-function speak(t){if(!voice)return;try{const u=new SpeechSynthesisUtterance(t.replace(/\.\.\./g,' '));u.voice=voice;u.lang=voice.lang;u.rate=.8;speechSynthesis.cancel();speechSynthesis.speak(u)}catch(e){}}
+// Phones can leave speech paused or drop a line said right after cancel(); if the chosen voice fails, retry with the system default for the language.
+function speak(t,plain){if(!voice)return;try{const ss=speechSynthesis,u=new SpeechSynthesisUtterance(t.replace(/\.\.\./g,' '));if(!plain)u.voice=voice;u.lang=voice.lang;u.rate=.8;u.onerror=e=>{if(!plain&&e.error!=='interrupted'&&e.error!=='canceled')speak(t,true)};const go=()=>{ss.resume();ss.speak(u)};if(ss.speaking||ss.pending){ss.cancel();setTimeout(go,60)}else go()}catch(e){}}
 function playBtn(id,cls='play'){return voice?`<button class="${cls}" data-act="speak" data-id="${id}">▶ Listen</button>`:''}
 
 /* ---------- Session ---------- */
