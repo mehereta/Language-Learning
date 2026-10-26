@@ -1,0 +1,1736 @@
+[
+ [
+  {
+   "am": "ሰላም",
+   "tr": "selam",
+   "en": "Hello",
+   "where": "Phrases",
+   "file": "cd7b7fb0d1.m4a"
+  },
+  {
+   "am": "ጤና ይስጥልኝ",
+   "tr": "tena yistilign",
+   "en": "Hello (respectful)",
+   "where": "Phrases",
+   "file": "11e46666bc.m4a"
+  },
+  {
+   "am": "እንደምን አደርክ?",
+   "tr": "indemin aderk?",
+   "en": "Good morning (to a man)",
+   "where": "Phrases",
+   "file": "491e4f9c4e.m4a"
+  },
+  {
+   "am": "እንዴት ነህ?",
+   "tr": "indet neh?",
+   "en": "How are you? (to a man)",
+   "where": "Phrases",
+   "file": "fb9e52f667.m4a"
+  },
+  {
+   "am": "ደህና ነኝ",
+   "tr": "dehna negn",
+   "en": "I’m fine",
+   "where": "Phrases",
+   "file": "ed3c358a04.m4a"
+  },
+  {
+   "am": "እግዚአብሔር ይመስገን",
+   "tr": "igziabher yimesgen",
+   "en": "Thank God (I’m well)",
+   "where": "Phrases",
+   "file": "1df1a6a969.m4a"
+  },
+  {
+   "am": "እንደምን ዋልክ?",
+   "tr": "indemin walk?",
+   "en": "Good afternoon (to a man)",
+   "where": "Phrases",
+   "file": "98823125c4.m4a"
+  },
+  {
+   "am": "ደህና እደር",
+   "tr": "dehna eder",
+   "en": "Good night (to a man)",
+   "where": "Phrases",
+   "file": "b7212e8f24.m4a"
+  },
+  {
+   "am": "ደህና ሁን",
+   "tr": "dehna hun",
+   "en": "Goodbye (to a man)",
+   "where": "Phrases",
+   "file": "b762e358ea.m4a"
+  },
+  {
+   "am": "ቻው",
+   "tr": "chaw",
+   "en": "Bye",
+   "where": "Phrases",
+   "file": "10e62642cd.m4a"
+  },
+  {
+   "am": "አመሰግናለሁ",
+   "tr": "ameseginalehu",
+   "en": "Thank you",
+   "where": "Phrases",
+   "file": "d82aa03cf8.m4a"
+  },
+  {
+   "am": "እባክህ",
+   "tr": "ibakih",
+   "en": "Please (to a man)",
+   "where": "Phrases",
+   "file": "bd1ffb138a.m4a"
+  },
+  {
+   "am": "ይቅርታ",
+   "tr": "yiqirta",
+   "en": "Sorry / excuse me",
+   "where": "Phrases",
+   "file": "b8e38004ec.m4a"
+  },
+  {
+   "am": "አዎ",
+   "tr": "awo",
+   "en": "Yes",
+   "where": "Phrases",
+   "file": "6151c56d01.m4a"
+  },
+  {
+   "am": "አይደለም",
+   "tr": "aydelem",
+   "en": "No, it isn’t",
+   "where": "Phrases",
+   "file": "1e716efc26.m4a"
+  },
+  {
+   "am": "እሺ",
+   "tr": "ishi",
+   "en": "Okay",
+   "where": "Phrases",
+   "file": "0caf5dda55.m4a"
+  },
+  {
+   "am": "ምንም አይደለም",
+   "tr": "minim aydelem",
+   "en": "No problem / it’s nothing",
+   "where": "Phrases",
+   "file": "bc370e4bba.m4a"
+  },
+  {
+   "am": "እንኳን ደህና መጣህ",
+   "tr": "inkwan dehna metah",
+   "en": "Welcome (to a man)",
+   "where": "Phrases",
+   "file": "a5e417068f.m4a"
+  },
+  {
+   "am": "ስሜ ... ነው",
+   "tr": "simé ... new",
+   "en": "My name is …",
+   "where": "Phrases",
+   "file": "de76fa4139.m4a"
+  },
+  {
+   "am": "ስምህ ማን ነው?",
+   "tr": "simih man new?",
+   "en": "What’s your name? (to a man)",
+   "where": "Phrases",
+   "file": "5445955e77.m4a"
+  }
+ ],
+ [
+  {
+   "am": "ከየት ነህ?",
+   "tr": "keyet neh?",
+   "en": "Where are you from? (to a man)",
+   "where": "Phrases",
+   "file": "3cffb961f5.m4a"
+  },
+  {
+   "am": "ከ... ነኝ",
+   "tr": "ke … negn",
+   "en": "I’m from …",
+   "where": "Phrases",
+   "file": "0670e2dbcf.m4a"
+  },
+  {
+   "am": "በመተዋወቃችን ደስ ብሎኛል",
+   "tr": "bemetewawoqachin des bilognal",
+   "en": "Nice to meet you",
+   "where": "Phrases",
+   "file": "4929589648.m4a"
+  },
+  {
+   "am": "ትንሽ አማርኛ እናገራለሁ",
+   "tr": "tinish amarigna inageralehu",
+   "en": "I speak a little Amharic",
+   "where": "Phrases",
+   "file": "d2e93ace0b.m4a"
+  },
+  {
+   "am": "አልገባኝም",
+   "tr": "algebagnim",
+   "en": "I don’t understand",
+   "where": "Phrases",
+   "file": "1e7afafeff.m4a"
+  },
+  {
+   "am": "እንደገና በል",
+   "tr": "indegena bel",
+   "en": "Say it again (to a man)",
+   "where": "Phrases",
+   "file": "2ae0463d1f.m4a"
+  },
+  {
+   "am": "ቀስ ብለህ ተናገር",
+   "tr": "qes bileh tenager",
+   "en": "Speak slowly (to a man)",
+   "where": "Phrases",
+   "file": "3b2445b38b.m4a"
+  },
+  {
+   "am": "እንግሊዝኛ ትችላለህ?",
+   "tr": "inglizigna tichilaleh?",
+   "en": "Do you speak English? (to a man)",
+   "where": "Phrases",
+   "file": "83758a8f1b.m4a"
+  },
+  {
+   "am": "አንድ",
+   "tr": "and",
+   "en": "One (1)",
+   "where": "Phrases",
+   "file": "f33542d9a6.m4a"
+  },
+  {
+   "am": "ሁለት",
+   "tr": "hulet",
+   "en": "Two (2)",
+   "where": "Phrases",
+   "file": "be688483cb.m4a"
+  },
+  {
+   "am": "ሶስት",
+   "tr": "sost",
+   "en": "Three (3)",
+   "where": "Phrases",
+   "file": "6069affb65.m4a"
+  },
+  {
+   "am": "አራት",
+   "tr": "arat",
+   "en": "Four (4)",
+   "where": "Phrases",
+   "file": "716f210483.m4a"
+  },
+  {
+   "am": "አምስት",
+   "tr": "amist",
+   "en": "Five (5)",
+   "where": "Phrases",
+   "file": "362bab3042.m4a"
+  },
+  {
+   "am": "ስድስት",
+   "tr": "sidist",
+   "en": "Six (6)",
+   "where": "Phrases",
+   "file": "6564249782.m4a"
+  },
+  {
+   "am": "ሰባት",
+   "tr": "sebat",
+   "en": "Seven (7)",
+   "where": "Phrases",
+   "file": "6f564c66c8.m4a"
+  },
+  {
+   "am": "ስምንት",
+   "tr": "simint",
+   "en": "Eight (8)",
+   "where": "Phrases",
+   "file": "9e3018d60e.m4a"
+  },
+  {
+   "am": "ዘጠኝ",
+   "tr": "zetegn",
+   "en": "Nine (9)",
+   "where": "Phrases",
+   "file": "8a0de9d6aa.m4a"
+  },
+  {
+   "am": "አስር",
+   "tr": "asir",
+   "en": "Ten (10)",
+   "where": "Phrases",
+   "file": "98ac64d55c.m4a"
+  },
+  {
+   "am": "ሃያ",
+   "tr": "haya",
+   "en": "Twenty (20)",
+   "where": "Phrases",
+   "file": "e1af42c60a.m4a"
+  },
+  {
+   "am": "መቶ",
+   "tr": "meto",
+   "en": "One hundred (100)",
+   "where": "Phrases",
+   "file": "94829faa79.m4a"
+  }
+ ],
+ [
+  {
+   "am": "ብር",
+   "tr": "birr",
+   "en": "Birr (Ethiopian money)",
+   "where": "Phrases",
+   "file": "61be01c393.m4a"
+  },
+  {
+   "am": "ቡና",
+   "tr": "buna",
+   "en": "Coffee",
+   "where": "Phrases",
+   "file": "0ea8fea8cf.m4a"
+  },
+  {
+   "am": "ሻይ",
+   "tr": "shai",
+   "en": "Tea",
+   "where": "Phrases",
+   "file": "e3de74bac6.m4a"
+  },
+  {
+   "am": "ውሃ",
+   "tr": "wiha",
+   "en": "Water",
+   "where": "Phrases",
+   "file": "2c320c0953.m4a"
+  },
+  {
+   "am": "እንጀራ",
+   "tr": "injera",
+   "en": "Injera",
+   "where": "Phrases",
+   "file": "cf62739233.m4a"
+  },
+  {
+   "am": "ዳቦ",
+   "tr": "dabo",
+   "en": "Bread",
+   "where": "Phrases",
+   "file": "32d29ecd4d.m4a"
+  },
+  {
+   "am": "... እፈልጋለሁ",
+   "tr": "… ifeligalehu",
+   "en": "I want …",
+   "where": "Phrases",
+   "file": "23d9ba3e00.m4a"
+  },
+  {
+   "am": "ርቦኛል",
+   "tr": "rabognal",
+   "en": "I’m hungry",
+   "where": "Phrases",
+   "file": "4b614f5e35.m4a"
+  },
+  {
+   "am": "ጠምቶኛል",
+   "tr": "temtognal",
+   "en": "I’m thirsty",
+   "where": "Phrases",
+   "file": "cd05f1cca8.m4a"
+  },
+  {
+   "am": "በጣም ጣፋጭ ነው",
+   "tr": "betam tafach new",
+   "en": "It’s really delicious",
+   "where": "Phrases",
+   "file": "8e934ac7c8.m4a"
+  },
+  {
+   "am": "ጠግቤያለሁ",
+   "tr": "tegbiyalehu",
+   "en": "I’m full",
+   "where": "Phrases",
+   "file": "7c004c4d9c.m4a"
+  },
+  {
+   "am": "ሂሳብ",
+   "tr": "hisab",
+   "en": "The bill",
+   "where": "Phrases",
+   "file": "63846415d6.m4a"
+  },
+  {
+   "am": "ስንት ነው?",
+   "tr": "sint new?",
+   "en": "How much is it?",
+   "where": "Phrases",
+   "file": "86249acf30.m4a"
+  },
+  {
+   "am": "ውድ ነው",
+   "tr": "wid new",
+   "en": "It’s expensive",
+   "where": "Phrases",
+   "file": "d667b18f86.m4a"
+  },
+  {
+   "am": "ይሄ",
+   "tr": "yihe",
+   "en": "This",
+   "where": "Phrases",
+   "file": "bb74e0df57.m4a"
+  },
+  {
+   "am": "ያ",
+   "tr": "ya",
+   "en": "That",
+   "where": "Phrases",
+   "file": "3bd33e1a59.m4a"
+  },
+  {
+   "am": "ይሄ ምንድን ነው?",
+   "tr": "yihe mindin new?",
+   "en": "What is this?",
+   "where": "Phrases",
+   "file": "814db36ae2.m4a"
+  },
+  {
+   "am": "አለ?",
+   "tr": "ale?",
+   "en": "Do you have …? / Is there …?",
+   "where": "Phrases",
+   "file": "a39b40872b.m4a"
+  },
+  {
+   "am": "የለም",
+   "tr": "yelem",
+   "en": "There isn’t any",
+   "where": "Phrases",
+   "file": "f3d6c8400b.m4a"
+  },
+  {
+   "am": "ቀንስልኝ",
+   "tr": "qenisilign",
+   "en": "Lower the price for me (to a man)",
+   "where": "Phrases",
+   "file": "1b236b1d7d.m4a"
+  }
+ ],
+ [
+  {
+   "am": "ምን?",
+   "tr": "min?",
+   "en": "What?",
+   "where": "Phrases",
+   "file": "517fa7b0c5.m4a"
+  },
+  {
+   "am": "ማን?",
+   "tr": "man?",
+   "en": "Who?",
+   "where": "Phrases",
+   "file": "ebe631258b.m4a"
+  },
+  {
+   "am": "የት?",
+   "tr": "yet?",
+   "en": "Where?",
+   "where": "Phrases",
+   "file": "81f158722d.m4a"
+  },
+  {
+   "am": "መቼ?",
+   "tr": "meche?",
+   "en": "When?",
+   "where": "Phrases",
+   "file": "69c77fe910.m4a"
+  },
+  {
+   "am": "ለምን?",
+   "tr": "lemin?",
+   "en": "Why?",
+   "where": "Phrases",
+   "file": "9d64f0557d.m4a"
+  },
+  {
+   "am": "እንዴት?",
+   "tr": "indet?",
+   "en": "How?",
+   "where": "Phrases",
+   "file": "06e804ade9.m4a"
+  },
+  {
+   "am": "... የት ነው?",
+   "tr": "… yet new?",
+   "en": "Where is …?",
+   "where": "Phrases",
+   "file": "8f58eb0a11.m4a"
+  },
+  {
+   "am": "ሽንት ቤት የት ነው?",
+   "tr": "shint bet yet new?",
+   "en": "Where is the toilet?",
+   "where": "Phrases",
+   "file": "d4f5055435.m4a"
+  },
+  {
+   "am": "ቀኝ",
+   "tr": "qegn",
+   "en": "Right",
+   "where": "Phrases",
+   "file": "6314d1cfe4.m4a"
+  },
+  {
+   "am": "ግራ",
+   "tr": "gira",
+   "en": "Left",
+   "where": "Phrases",
+   "file": "cc5bd822fb.m4a"
+  },
+  {
+   "am": "ቀጥታ",
+   "tr": "qetita",
+   "en": "Straight ahead",
+   "where": "Phrases",
+   "file": "62579e4d70.m4a"
+  },
+  {
+   "am": "እዚህ",
+   "tr": "izih",
+   "en": "Here",
+   "where": "Phrases",
+   "file": "1120a646d8.m4a"
+  },
+  {
+   "am": "እዚያ",
+   "tr": "iziya",
+   "en": "There",
+   "where": "Phrases",
+   "file": "3d1bc3d4a3.m4a"
+  },
+  {
+   "am": "ሩቅ ነው?",
+   "tr": "ruq new?",
+   "en": "Is it far?",
+   "where": "Phrases",
+   "file": "f9cd6df5ab.m4a"
+  },
+  {
+   "am": "ቅርብ ነው",
+   "tr": "qirb new",
+   "en": "It’s close",
+   "where": "Phrases",
+   "file": "d80415e266.m4a"
+  },
+  {
+   "am": "ወራጅ አለ",
+   "tr": "werraj ale",
+   "en": "Stop here, please (on a minibus)",
+   "where": "Phrases",
+   "file": "1071f56a65.m4a"
+  },
+  {
+   "am": "ቤተሰብ",
+   "tr": "beteseb",
+   "en": "Family",
+   "where": "Phrases",
+   "file": "2b8d85612c.m4a"
+  },
+  {
+   "am": "እናት",
+   "tr": "inat",
+   "en": "Mother",
+   "where": "Phrases",
+   "file": "67fbb07d6e.m4a"
+  },
+  {
+   "am": "አባት",
+   "tr": "abat",
+   "en": "Father",
+   "where": "Phrases",
+   "file": "4fc11bb2e0.m4a"
+  },
+  {
+   "am": "ወንድም",
+   "tr": "wendim",
+   "en": "Brother",
+   "where": "Phrases",
+   "file": "faf90ab13f.m4a"
+  }
+ ],
+ [
+  {
+   "am": "እህት",
+   "tr": "ihit",
+   "en": "Sister",
+   "where": "Phrases",
+   "file": "60fcc65f66.m4a"
+  },
+  {
+   "am": "ልጅ",
+   "tr": "lij",
+   "en": "Child",
+   "where": "Phrases",
+   "file": "29c382edb6.m4a"
+  },
+  {
+   "am": "ጓደኛ",
+   "tr": "gwadegna",
+   "en": "Friend",
+   "where": "Phrases",
+   "file": "3134f66bb4.m4a"
+  },
+  {
+   "am": "ባል",
+   "tr": "bal",
+   "en": "Husband",
+   "where": "Phrases",
+   "file": "840f129ab8.m4a"
+  },
+  {
+   "am": "ሚስት",
+   "tr": "mist",
+   "en": "Wife",
+   "where": "Phrases",
+   "file": "d77e4a6f2e.m4a"
+  },
+  {
+   "am": "ዛሬ",
+   "tr": "zaré",
+   "en": "Today",
+   "where": "Phrases",
+   "file": "e5d848b7de.m4a"
+  },
+  {
+   "am": "ነገ",
+   "tr": "nege",
+   "en": "Tomorrow",
+   "where": "Phrases",
+   "file": "24baaba164.m4a"
+  },
+  {
+   "am": "ትናንት",
+   "tr": "tinant",
+   "en": "Yesterday",
+   "where": "Phrases",
+   "file": "397cf31317.m4a"
+  },
+  {
+   "am": "ጥሩ",
+   "tr": "tiru",
+   "en": "Good",
+   "where": "Phrases",
+   "file": "788cca7be2.m4a"
+  },
+  {
+   "am": "በጣም",
+   "tr": "betam",
+   "en": "Very",
+   "where": "Phrases",
+   "file": "5360949f1d.m4a"
+  },
+  {
+   "am": "ደስ ብሎኛል",
+   "tr": "des bilognal",
+   "en": "I’m happy / I’m pleased",
+   "where": "Phrases",
+   "file": "2029760bd8.m4a"
+  },
+  {
+   "am": "ደክሞኛል",
+   "tr": "dekmognal",
+   "en": "I’m tired",
+   "where": "Phrases",
+   "file": "e8f81d7d62.m4a"
+  },
+  {
+   "am": "ወድጄዋለሁ",
+   "tr": "wedijewalehu",
+   "en": "I like it",
+   "where": "Phrases",
+   "file": "2527515a0e.m4a"
+  },
+  {
+   "am": "ቆይ",
+   "tr": "qoy",
+   "en": "Wait (to a man)",
+   "where": "Phrases",
+   "file": "7b0fc35ace.m4a"
+  },
+  {
+   "am": "በቃ",
+   "tr": "beqa",
+   "en": "That’s enough / that’s it",
+   "where": "Phrases",
+   "file": "a626de84c3.m4a"
+  },
+  {
+   "am": "ማኪያቶ",
+   "tr": "makiyato",
+   "en": "Macchiato",
+   "where": "Phrases",
+   "file": "12db80c485.m4a"
+  },
+  {
+   "am": "ምን ትጠጣለህ?",
+   "tr": "min titetaleh?",
+   "en": "What will you drink? (to a man)",
+   "where": "Phrases",
+   "file": "29db064333.m4a"
+  },
+  {
+   "am": "ሌላ ነገር?",
+   "tr": "lela neger?",
+   "en": "Anything else?",
+   "where": "Phrases",
+   "file": "2904826666.m4a"
+  },
+  {
+   "am": "አንተስ?",
+   "tr": "antes?",
+   "en": "And you? (to a man)",
+   "where": "Phrases",
+   "file": "866a0579d5.m4a"
+  },
+  {
+   "am": "ስራ እንዴት ነው?",
+   "tr": "sira indet new?",
+   "en": "How’s work?",
+   "where": "Phrases",
+   "file": "e1046e3335.m4a"
+  }
+ ],
+ [
+  {
+   "am": "ግን",
+   "tr": "gin",
+   "en": "But",
+   "where": "Phrases",
+   "file": "03d4d519d9.m4a"
+  },
+  {
+   "am": "ልክፈል",
+   "tr": "likfel",
+   "en": "Let me pay",
+   "where": "Phrases",
+   "file": "9f9d8a00fc.m4a"
+  },
+  {
+   "am": "ነገ እንገናኝ",
+   "tr": "nege ingenagn",
+   "en": "See you tomorrow",
+   "where": "Phrases",
+   "file": "d8b5821e46.m4a"
+  },
+  {
+   "am": "ግባ",
+   "tr": "giba",
+   "en": "Come in (to a man)",
+   "where": "Phrases",
+   "file": "128949ad1d.m4a"
+  },
+  {
+   "am": "ተቀመጥ",
+   "tr": "teqemet",
+   "en": "Sit down (to a man)",
+   "where": "Phrases",
+   "file": "87cc7d413d.m4a"
+  },
+  {
+   "am": "ብላ",
+   "tr": "bila",
+   "en": "Eat! (to a man)",
+   "where": "Phrases",
+   "file": "9f05bbe1a8.m4a"
+  },
+  {
+   "am": "ደስ ይለኛል",
+   "tr": "des yilenyal",
+   "en": "I’d like that / I like it",
+   "where": "Phrases",
+   "file": "81de312696.m4a"
+  },
+  {
+   "am": "ደህና ይሁኑ",
+   "tr": "dehna yihunu",
+   "en": "Goodbye (respectful)",
+   "where": "Phrases",
+   "file": "d213cce720.m4a"
+  },
+  {
+   "am": "እንደገና ና",
+   "tr": "indegena na",
+   "en": "Come again (to a man)",
+   "where": "Phrases",
+   "file": "48362b731f.m4a"
+  },
+  {
+   "am": "ይኸው",
+   "tr": "yihew",
+   "en": "Here you go",
+   "where": "Phrases",
+   "file": "b35bcb8fc5.m4a"
+  },
+  {
+   "am": "መልስ",
+   "tr": "mels",
+   "en": "Change (money back)",
+   "where": "Phrases",
+   "file": "a6d523410c.m4a"
+  },
+  {
+   "am": "አቤት?",
+   "tr": "abet?",
+   "en": "Yes? (when someone calls you)",
+   "where": "Phrases",
+   "file": "2e36a5ad76.m4a"
+  },
+  {
+   "am": "ሂድ",
+   "tr": "hid",
+   "en": "Go (to a man)",
+   "where": "Phrases",
+   "file": "abfdc1d942.m4a"
+  },
+  {
+   "am": "ወደ ግራ",
+   "tr": "wede gira",
+   "en": "To the left",
+   "where": "Phrases",
+   "file": "c8084f73dd.m4a"
+  },
+  {
+   "am": "ደቂቃ",
+   "tr": "deqiqa",
+   "en": "Minute",
+   "where": "Phrases",
+   "file": "4d10b5c21f.m4a"
+  },
+  {
+   "am": "ኪሎ",
+   "tr": "kilo",
+   "en": "Kilo",
+   "where": "Phrases",
+   "file": "3a1d2044df.m4a"
+  },
+  {
+   "am": "ሙዝ",
+   "tr": "muz",
+   "en": "Banana",
+   "where": "Phrases",
+   "file": "54324336de.m4a"
+  },
+  {
+   "am": "ሰባ",
+   "tr": "seba",
+   "en": "Seventy (70)",
+   "where": "Phrases",
+   "file": "1d36e1d8d2.m4a"
+  },
+  {
+   "am": "ሰማንያ",
+   "tr": "semanya",
+   "en": "Eighty (80)",
+   "where": "Phrases",
+   "file": "20ab3a28c5.m4a"
+  },
+  {
+   "am": "ትንሽ ትንሽ",
+   "tr": "tinish tinish",
+   "en": "A little bit",
+   "where": "Phrases",
+   "file": "d97c5eaefa.m4a"
+  }
+ ],
+ [
+  {
+   "am": "እኔ ቡና እጠጣለሁ",
+   "tr": "iné buna itetalehu",
+   "en": "I drink coffee.",
+   "where": "Grammar: Word order",
+   "file": "2b74f92920.m4a"
+  },
+  {
+   "am": "ልጁ ውሃ ይፈልጋል",
+   "tr": "liju wiha yifeligal",
+   "en": "The boy wants water.",
+   "where": "Grammar: Word order",
+   "file": "6e070baed5.m4a"
+  },
+  {
+   "am": "እኔ",
+   "tr": "iné",
+   "en": "I",
+   "where": "Grammar: I, you, he, she",
+   "file": "ca942d4c9c.m4a"
+  },
+  {
+   "am": "አንተ",
+   "tr": "ante",
+   "en": "you (to a man)",
+   "where": "Grammar: I, you, he, she",
+   "file": "7357c8c58c.m4a"
+  },
+  {
+   "am": "አንቺ",
+   "tr": "anchi",
+   "en": "you (to a woman)",
+   "where": "Grammar: I, you, he, she",
+   "file": "b2a87ec261.m4a"
+  },
+  {
+   "am": "እርስዎ",
+   "tr": "irswo",
+   "en": "you (respectful)",
+   "where": "Grammar: I, you, he, she",
+   "file": "071c5f2e1f.m4a"
+  },
+  {
+   "am": "እሱ",
+   "tr": "isu",
+   "en": "he",
+   "where": "Grammar: I, you, he, she",
+   "file": "34a8fb10e4.m4a"
+  },
+  {
+   "am": "እሷ",
+   "tr": "iswa",
+   "en": "she",
+   "where": "Grammar: I, you, he, she",
+   "file": "cc9cf7dbfc.m4a"
+  },
+  {
+   "am": "እሳቸው",
+   "tr": "isachew",
+   "en": "he or she (respectful)",
+   "where": "Grammar: I, you, he, she",
+   "file": "2af7aba894.m4a"
+  },
+  {
+   "am": "እኛ",
+   "tr": "igna",
+   "en": "we",
+   "where": "Grammar: I, you, he, she",
+   "file": "54b4c65b7f.m4a"
+  },
+  {
+   "am": "እናንተ",
+   "tr": "inante",
+   "en": "you (more than one person)",
+   "where": "Grammar: I, you, he, she",
+   "file": "62073be123.m4a"
+  },
+  {
+   "am": "እነሱ",
+   "tr": "inesu",
+   "en": "they",
+   "where": "Grammar: I, you, he, she",
+   "file": "1bd411d38f.m4a"
+  },
+  {
+   "am": "ደህና ነህ",
+   "tr": "dehna neh",
+   "en": "You’re fine. (to a man)",
+   "where": "Grammar: Saying “am,” “is” and “are”",
+   "file": "c0b51d05fb.m4a"
+  },
+  {
+   "am": "ደህና ነሽ",
+   "tr": "dehna nesh",
+   "en": "You’re fine. (to a woman)",
+   "where": "Grammar: Saying “am,” “is” and “are”",
+   "file": "cf307afa51.m4a"
+  },
+  {
+   "am": "ደህና ነዎት",
+   "tr": "dehna newot",
+   "en": "You’re fine. (respectful)",
+   "where": "Grammar: Saying “am,” “is” and “are”",
+   "file": "78e2e93a1b.m4a"
+  },
+  {
+   "am": "ደህና ነው",
+   "tr": "dehna new",
+   "en": "He’s fine. / It’s fine.",
+   "where": "Grammar: Saying “am,” “is” and “are”",
+   "file": "1716ed557f.m4a"
+  },
+  {
+   "am": "ደህና ናት",
+   "tr": "dehna nat",
+   "en": "She’s fine.",
+   "where": "Grammar: Saying “am,” “is” and “are”",
+   "file": "d6e7474260.m4a"
+  },
+  {
+   "am": "ደህና ነን",
+   "tr": "dehna nen",
+   "en": "We’re fine.",
+   "where": "Grammar: Saying “am,” “is” and “are”",
+   "file": "10e78fe81e.m4a"
+  },
+  {
+   "am": "ደህና ናችሁ",
+   "tr": "dehna nachihu",
+   "en": "You’re fine. (more than one person)",
+   "where": "Grammar: Saying “am,” “is” and “are”",
+   "file": "2a94d43084.m4a"
+  },
+  {
+   "am": "ደህና ናቸው",
+   "tr": "dehna nachew",
+   "en": "They’re fine. / He or she is fine. (respectful)",
+   "where": "Grammar: Saying “am,” “is” and “are”",
+   "file": "0a2587be0c.m4a"
+  }
+ ],
+ [
+  {
+   "am": "እንዴት ነሽ?",
+   "tr": "indet nesh?",
+   "en": "How are you? (to a woman)",
+   "where": "Grammar: Talking to a man or a woman",
+   "file": "b680b52960.m4a"
+  },
+  {
+   "am": "እባክሽ",
+   "tr": "ibakish",
+   "en": "Please (to a woman)",
+   "where": "Grammar: Talking to a man or a woman",
+   "file": "9063d4fccf.m4a"
+  },
+  {
+   "am": "ና",
+   "tr": "na",
+   "en": "Come! (to a man)",
+   "where": "Grammar: Talking to a man or a woman",
+   "file": "ddf2b458fe.m4a"
+  },
+  {
+   "am": "ነይ",
+   "tr": "ney",
+   "en": "Come! (to a woman)",
+   "where": "Grammar: Talking to a man or a woman",
+   "file": "08ecc175df.m4a"
+  },
+  {
+   "am": "ቤቱ",
+   "tr": "betu",
+   "en": "the house",
+   "where": "Grammar: Saying “the”",
+   "file": "7fbd463482.m4a"
+  },
+  {
+   "am": "ልጁ",
+   "tr": "liju",
+   "en": "the boy",
+   "where": "Grammar: Saying “the”",
+   "file": "3d67b9d522.m4a"
+  },
+  {
+   "am": "ልጅቷ",
+   "tr": "lijitwa",
+   "en": "the girl",
+   "where": "Grammar: Saying “the”",
+   "file": "619f26bf84.m4a"
+  },
+  {
+   "am": "ቡናው",
+   "tr": "bunaw",
+   "en": "the coffee",
+   "where": "Grammar: Saying “the”",
+   "file": "0b16d1f3e9.m4a"
+  },
+  {
+   "am": "ስሜ",
+   "tr": "simé",
+   "en": "my name",
+   "where": "Grammar: My, your, his, her",
+   "file": "f7d91a60c5.m4a"
+  },
+  {
+   "am": "ስምህ",
+   "tr": "simih",
+   "en": "your name (to a man)",
+   "where": "Grammar: My, your, his, her",
+   "file": "044c2606e1.m4a"
+  },
+  {
+   "am": "ስምሽ",
+   "tr": "simish",
+   "en": "your name (to a woman)",
+   "where": "Grammar: My, your, his, her",
+   "file": "5d95a98f9d.m4a"
+  },
+  {
+   "am": "ስሙ",
+   "tr": "simu",
+   "en": "his name",
+   "where": "Grammar: My, your, his, her",
+   "file": "27dce29084.m4a"
+  },
+  {
+   "am": "ስሟ",
+   "tr": "simwa",
+   "en": "her name",
+   "where": "Grammar: My, your, his, her",
+   "file": "99727ce84d.m4a"
+  },
+  {
+   "am": "ስማችን",
+   "tr": "simachin",
+   "en": "our name",
+   "where": "Grammar: My, your, his, her",
+   "file": "15284784b1.m4a"
+  },
+  {
+   "am": "ቤቴ",
+   "tr": "beté",
+   "en": "my house",
+   "where": "Grammar: My, your, his, her",
+   "file": "5067cafc81.m4a"
+  },
+  {
+   "am": "እሄዳለሁ",
+   "tr": "ihedalehu",
+   "en": "I go",
+   "where": "Grammar: Verbs: I go, you go",
+   "file": "7a65776e83.m4a"
+  },
+  {
+   "am": "ትሄዳለህ",
+   "tr": "tihedaleh",
+   "en": "you go (to a man)",
+   "where": "Grammar: Verbs: I go, you go",
+   "file": "c59d8efb2a.m4a"
+  },
+  {
+   "am": "ትሄጃለሽ",
+   "tr": "tihejalesh",
+   "en": "you go (to a woman)",
+   "where": "Grammar: Verbs: I go, you go",
+   "file": "f6af37b5cd.m4a"
+  },
+  {
+   "am": "ይሄዳል",
+   "tr": "yihedal",
+   "en": "he goes",
+   "where": "Grammar: Verbs: I go, you go",
+   "file": "30de77ddc3.m4a"
+  },
+  {
+   "am": "ትሄዳለች",
+   "tr": "tihedalech",
+   "en": "she goes",
+   "where": "Grammar: Verbs: I go, you go",
+   "file": "d84db842fb.m4a"
+  }
+ ],
+ [
+  {
+   "am": "እንሄዳለን",
+   "tr": "inhedalen",
+   "en": "we go",
+   "where": "Grammar: Verbs: I go, you go",
+   "file": "3a5dad7dff.m4a"
+  },
+  {
+   "am": "ትሄዳላችሁ",
+   "tr": "tihedalachihu",
+   "en": "you go (more than one person)",
+   "where": "Grammar: Verbs: I go, you go",
+   "file": "296d0b6532.m4a"
+  },
+  {
+   "am": "ይሄዳሉ",
+   "tr": "yihedalu",
+   "en": "they go",
+   "where": "Grammar: Verbs: I go, you go",
+   "file": "42324e44a0.m4a"
+  },
+  {
+   "am": "ምን",
+   "tr": "min",
+   "en": "what",
+   "where": "Grammar: Asking questions",
+   "file": "8ea1b2bb4c.m4a"
+  },
+  {
+   "am": "ማን",
+   "tr": "man",
+   "en": "who",
+   "where": "Grammar: Asking questions",
+   "file": "9e73cad82f.m4a"
+  },
+  {
+   "am": "የት",
+   "tr": "yet",
+   "en": "where",
+   "where": "Grammar: Asking questions",
+   "file": "b45b123e12.m4a"
+  },
+  {
+   "am": "መቼ",
+   "tr": "meché",
+   "en": "when",
+   "where": "Grammar: Asking questions",
+   "file": "7c0f03f1e5.m4a"
+  },
+  {
+   "am": "ለምን",
+   "tr": "lemin",
+   "en": "why",
+   "where": "Grammar: Asking questions",
+   "file": "5e36a6bb2a.m4a"
+  },
+  {
+   "am": "እንዴት",
+   "tr": "indet",
+   "en": "how",
+   "where": "Grammar: Asking questions",
+   "file": "7081379be3.m4a"
+  },
+  {
+   "am": "ስንት",
+   "tr": "sint",
+   "en": "how many, how much",
+   "where": "Grammar: Asking questions",
+   "file": "48a653522b.m4a"
+  },
+  {
+   "am": "ከአሜሪካ ነኝ",
+   "tr": "ke-Amerika negn",
+   "en": "I’m from America. (ke- means “from”)",
+   "where": "Grammar: From, in, for",
+   "file": "e95db701df.m4a"
+  },
+  {
+   "am": "በመኪና",
+   "tr": "be-mekina",
+   "en": "by car (be- means “in, at, by”)",
+   "where": "Grammar: From, in, for",
+   "file": "dd15eff0a3.m4a"
+  },
+  {
+   "am": "ለእናቴ",
+   "tr": "le-inaté",
+   "en": "for my mother (le- means “for, to”)",
+   "where": "Grammar: From, in, for",
+   "file": "0065e5099a.m4a"
+  },
+  {
+   "am": "ወደ ቤት",
+   "tr": "wede bet",
+   "en": "(going) home (wede means “toward”)",
+   "where": "Grammar: From, in, for",
+   "file": "391b43da0b.m4a"
+  },
+  {
+   "am": "ሰላም! እንዴት ነሽ?",
+   "tr": "selam! indet nesh?",
+   "en": "Hi! How are you? (said to a woman)",
+   "where": "Conversation: Coffee with a friend",
+   "file": "c0de55483d.m4a"
+  },
+  {
+   "am": "ሰላም! እንዴት ነህ?",
+   "tr": "selam! indet neh?",
+   "en": "Hi! How are you? (said to a man)",
+   "where": "Conversation: Coffee with a friend",
+   "file": "c2b655fafb.m4a"
+  },
+  {
+   "am": "ደህና ነኝ፣ አንቺስ?",
+   "tr": "dehna negn, anchis?",
+   "en": "I’m fine, and you?",
+   "where": "Conversation: Coffee with a friend",
+   "file": "236ef3714e.m4a"
+  },
+  {
+   "am": "ደህና ነኝ፣ እግዚአብሔር ይመስገን። ምን ትጠጫለሽ?",
+   "tr": "dehna negn, igziabher yimesgen. min titechalesh?",
+   "en": "I’m fine, thank God. What will you drink? (said to a woman)",
+   "where": "Conversation: Coffee with a friend",
+   "file": "6fc49f2185.m4a"
+  },
+  {
+   "am": "ደህና ነኝ፣ እግዚአብሔር ይመስገን። ምን ትጠጣለህ?",
+   "tr": "dehna negn, igziabher yimesgen. min titetaleh?",
+   "en": "I’m fine, thank God. What will you drink? (said to a man)",
+   "where": "Conversation: Coffee with a friend",
+   "file": "3e5c53b20b.m4a"
+  },
+  {
+   "am": "ማኪያቶ እፈልጋለሁ",
+   "tr": "makiyato ifeligalehu",
+   "en": "I’d like a macchiato",
+   "where": "Conversation: Coffee with a friend",
+   "file": "a2c8bceff1.m4a"
+  }
+ ],
+ [
+  {
+   "am": "አይ፣ በቃ። አመሰግናለሁ",
+   "tr": "ay, beqa. ameseginalehu",
+   "en": "No, that’s all. Thank you.",
+   "where": "Conversation: Coffee with a friend",
+   "file": "9366fad138.m4a"
+  },
+  {
+   "am": "ጥሩ ነው፣ ግን ደክሞኛል",
+   "tr": "tiru new, gin dekmognal",
+   "en": "It’s good, but I’m tired",
+   "where": "Conversation: Coffee with a friend",
+   "file": "dfc2b296c3.m4a"
+  },
+  {
+   "am": "ቡናው እንዴት ነው?",
+   "tr": "bunaw indet new?",
+   "en": "How’s the coffee?",
+   "where": "Conversation: Coffee with a friend",
+   "file": "23052e6114.m4a"
+  },
+  {
+   "am": "እኔ ልክፈል",
+   "tr": "ine likfel",
+   "en": "Let me pay.",
+   "where": "Conversation: Coffee with a friend",
+   "file": "2676a982e1.m4a"
+  },
+  {
+   "am": "እሺ፣ አመሰግናለሁ! በሚቀጥለው እኔ",
+   "tr": "ishi, ameseginalehu! bemiqetilew ine",
+   "en": "Okay, thanks! Next time it’s me.",
+   "where": "Conversation: Coffee with a friend",
+   "file": "8291455c2f.m4a"
+  },
+  {
+   "am": "በይ፣ ቻው! ነገ እንገናኝ",
+   "tr": "bey, chaw! nege ingenagn",
+   "en": "Alright, bye! See you tomorrow. (said to a woman)",
+   "where": "Conversation: Coffee with a friend",
+   "file": "7846a51d9f.m4a"
+  },
+  {
+   "am": "በል፣ ቻው! ነገ እንገናኝ",
+   "tr": "bel, chaw! nege ingenagn",
+   "en": "Alright, bye! See you tomorrow. (said to a man)",
+   "where": "Conversation: Coffee with a friend",
+   "file": "df8d57bdc6.m4a"
+  },
+  {
+   "am": "እሺ፣ ቻው! ነገ እንገናኝ",
+   "tr": "ishi, chaw! nege ingenagn",
+   "en": "Okay, bye! See you tomorrow.",
+   "where": "Conversation: Coffee with a friend",
+   "file": "b3bb645e9a.m4a"
+  },
+  {
+   "am": "ፒያሳ! ፒያሳ!",
+   "tr": "piyassa! piyassa!",
+   "en": "Piassa! Piassa!",
+   "where": "Conversation: Catching a minibus",
+   "file": "327b65faff.m4a"
+  },
+  {
+   "am": "ፒያሳ ነው?",
+   "tr": "piyassa new?",
+   "en": "Going to Piassa?",
+   "where": "Conversation: Catching a minibus",
+   "file": "8cf1f16bd4.m4a"
+  },
+  {
+   "am": "አዎ፣ ግቢ!",
+   "tr": "awo, gibi!",
+   "en": "Yes, get in! (said to a woman)",
+   "where": "Conversation: Catching a minibus",
+   "file": "4e2e32b756.m4a"
+  },
+  {
+   "am": "አዎ፣ ግባ!",
+   "tr": "awo, giba!",
+   "en": "Yes, get in! (said to a man)",
+   "where": "Conversation: Catching a minibus",
+   "file": "a5f2eddb10.m4a"
+  },
+  {
+   "am": "አስር ብር",
+   "tr": "asir birr",
+   "en": "Ten birr.",
+   "where": "Conversation: Catching a minibus",
+   "file": "8a3b9f60a6.m4a"
+  },
+  {
+   "am": "እሺ፣ ይኸው",
+   "tr": "ishi, yihew",
+   "en": "Okay, here you go",
+   "where": "Conversation: Catching a minibus",
+   "file": "2e8f7659cc.m4a"
+  },
+  {
+   "am": "ወራጅ አለ!",
+   "tr": "werraj ale!",
+   "en": "Getting off here!",
+   "where": "Conversation: Catching a minibus",
+   "file": "a5948249a1.m4a"
+  },
+  {
+   "am": "መልስ ይኸው",
+   "tr": "mels yihew",
+   "en": "Here’s your change.",
+   "where": "Conversation: Catching a minibus",
+   "file": "b7fd5049cd.m4a"
+  },
+  {
+   "am": "እንኳን ደህና መጣሽ! ግቢ",
+   "tr": "inkwan dehna metash! gibi",
+   "en": "Welcome! Come in. (said to a woman)",
+   "where": "Conversation: Lunch at a friend’s home",
+   "file": "8144443a73.m4a"
+  },
+  {
+   "am": "እንኳን ደህና መጣህ! ግባ",
+   "tr": "inkwan dehna metah! giba",
+   "en": "Welcome! Come in. (said to a man)",
+   "where": "Conversation: Lunch at a friend’s home",
+   "file": "feac8296e8.m4a"
+  },
+  {
+   "am": "አመሰግናለሁ። እንዴት ነዎት?",
+   "tr": "ameseginalehu. indet newot?",
+   "en": "Thank you. How are you?",
+   "where": "Conversation: Lunch at a friend’s home",
+   "file": "99b72111b0.m4a"
+  },
+  {
+   "am": "ደህና ነኝ፣ እግዚአብሔር ይመስገን። ተቀመጪ",
+   "tr": "dehna negn, igziabher yimesgen. teqemechi",
+   "en": "I’m well, thank God. Sit down. (said to a woman)",
+   "where": "Conversation: Lunch at a friend’s home",
+   "file": "9610a842ec.m4a"
+  }
+ ],
+ [
+  {
+   "am": "ደህና ነኝ፣ እግዚአብሔር ይመስገን። ተቀመጥ",
+   "tr": "dehna negn, igziabher yimesgen. teqemet",
+   "en": "I’m well, thank God. Sit down. (said to a man)",
+   "where": "Conversation: Lunch at a friend’s home",
+   "file": "87bf6d9cc3.m4a"
+  },
+  {
+   "am": "እሺ፣ አመሰግናለሁ",
+   "tr": "ishi, ameseginalehu",
+   "en": "Okay, thank you",
+   "where": "Conversation: Lunch at a friend’s home",
+   "file": "ba15f9a2b2.m4a"
+  },
+  {
+   "am": "ብዪ! ብዪ!",
+   "tr": "biyi! biyi!",
+   "en": "Eat! Eat! (said to a woman)",
+   "where": "Conversation: Lunch at a friend’s home",
+   "file": "0cc77140c6.m4a"
+  },
+  {
+   "am": "ብላ! ብላ!",
+   "tr": "bila! bila!",
+   "en": "Eat! Eat! (said to a man)",
+   "where": "Conversation: Lunch at a friend’s home",
+   "file": "d2e7508460.m4a"
+  },
+  {
+   "am": "ብዪ እንጂ! ገና ነው",
+   "tr": "biyi inji! gena new",
+   "en": "Come on, eat! You’ve barely started. (said to a woman)",
+   "where": "Conversation: Lunch at a friend’s home",
+   "file": "ea48787b5e.m4a"
+  },
+  {
+   "am": "ብላ እንጂ! ገና ነው",
+   "tr": "bila inji! gena new",
+   "en": "Come on, eat! You’ve barely started. (said to a man)",
+   "where": "Conversation: Lunch at a friend’s home",
+   "file": "09a63ee385.m4a"
+  },
+  {
+   "am": "ጠግቤያለሁ፣ አመሰግናለሁ",
+   "tr": "tegbiyalehu, ameseginalehu",
+   "en": "I’m full, thank you",
+   "where": "Conversation: Lunch at a friend’s home",
+   "file": "9d16c45397.m4a"
+  },
+  {
+   "am": "ቡና ትጠጫለሽ?",
+   "tr": "buna titechalesh?",
+   "en": "Will you have coffee? (said to a woman)",
+   "where": "Conversation: Lunch at a friend’s home",
+   "file": "5d97efdac0.m4a"
+  },
+  {
+   "am": "ቡና ትጠጣለህ?",
+   "tr": "buna titetaleh?",
+   "en": "Will you have coffee? (said to a man)",
+   "where": "Conversation: Lunch at a friend’s home",
+   "file": "1b8f2acab4.m4a"
+  },
+  {
+   "am": "አዎ፣ ደስ ይለኛል",
+   "tr": "awo, des yilenyal",
+   "en": "Yes, I’d love to",
+   "where": "Conversation: Lunch at a friend’s home",
+   "file": "1e21a4c0a2.m4a"
+  },
+  {
+   "am": "በይ፣ እንደገና ነይ!",
+   "tr": "bey, indegena neyi!",
+   "en": "Alright, come again! (said to a woman)",
+   "where": "Conversation: Lunch at a friend’s home",
+   "file": "e2c0145f59.m4a"
+  },
+  {
+   "am": "በል፣ እንደገና ና!",
+   "tr": "bel, indegena na!",
+   "en": "Alright, come again! (said to a man)",
+   "where": "Conversation: Lunch at a friend’s home",
+   "file": "73d2949541.m4a"
+  },
+  {
+   "am": "እሺ፣ ደህና ይሁኑ",
+   "tr": "ishi, dehna yihunu",
+   "en": "I will. Goodbye.",
+   "where": "Conversation: Lunch at a friend’s home",
+   "file": "8ff464ff07.m4a"
+  },
+  {
+   "am": "ምን ልስጥሽ?",
+   "tr": "min listish?",
+   "en": "What can I get you? (said to a woman)",
+   "where": "Conversation: Buying bananas",
+   "file": "2a55b1fa8c.m4a"
+  },
+  {
+   "am": "ምን ልስጥህ?",
+   "tr": "min listih?",
+   "en": "What can I get you? (said to a man)",
+   "where": "Conversation: Buying bananas",
+   "file": "76ec6c6043.m4a"
+  },
+  {
+   "am": "ሙዝ አለ?",
+   "tr": "muz ale?",
+   "en": "Do you have bananas?",
+   "where": "Conversation: Buying bananas",
+   "file": "42c49d4220.m4a"
+  },
+  {
+   "am": "አዎ፣ አለ። ስንት ኪሎ?",
+   "tr": "awo, ale. sint kilo?",
+   "en": "Yes, I do. How many kilos?",
+   "where": "Conversation: Buying bananas",
+   "file": "051d9a781c.m4a"
+  },
+  {
+   "am": "አንድ ኪሎ",
+   "tr": "and kilo",
+   "en": "One kilo",
+   "where": "Conversation: Buying bananas",
+   "file": "b824823993.m4a"
+  },
+  {
+   "am": "ሰማንያ ብር",
+   "tr": "semanya birr",
+   "en": "Eighty birr.",
+   "where": "Conversation: Buying bananas",
+   "file": "36d79a74ac.m4a"
+  },
+  {
+   "am": "ውድ ነው! ቀንሺልኝ",
+   "tr": "wid new! qenshilign",
+   "en": "That’s expensive! Lower it for me.",
+   "where": "Conversation: Buying bananas",
+   "file": "3b577b0813.m4a"
+  }
+ ],
+ [
+  {
+   "am": "እሺ፣ ሰባ ብር",
+   "tr": "ishi, seba birr",
+   "en": "Okay, seventy birr.",
+   "where": "Conversation: Buying bananas",
+   "file": "cd09bc0c85.m4a"
+  },
+  {
+   "am": "አመሰግናለሁ። ደህና ሁኚ",
+   "tr": "ameseginalehu. dehna hunyi",
+   "en": "Thank you. Goodbye. (said to a woman)",
+   "where": "Conversation: Buying bananas",
+   "file": "cc4cc9fff0.m4a"
+  },
+  {
+   "am": "አመሰግናለሁ። ደህና ሁን",
+   "tr": "ameseginalehu. dehna hun",
+   "en": "Thank you. Goodbye. (said to a man)",
+   "where": "Conversation: Buying bananas",
+   "file": "ae20e013a3.m4a"
+  },
+  {
+   "am": "ደህና ሁኚ",
+   "tr": "dehna hunyi",
+   "en": "Goodbye (to a woman)",
+   "where": "Conversation: Buying bananas",
+   "file": "271952a12b.m4a"
+  },
+  {
+   "am": "ሰላም፣ ስሜ ዳዊት ነው። ስምሽ ማን ነው?",
+   "tr": "selam, simé Dawit new. simish man new?",
+   "en": "Hi, I’m Dawit. What’s your name? (said to a woman)",
+   "where": "Conversation: Meeting someone new",
+   "file": "e91d9658ce.m4a"
+  },
+  {
+   "am": "ሰላም፣ ስሜ ዳዊት ነው። ስምህ ማን ነው?",
+   "tr": "selam, simé Dawit new. simih man new?",
+   "en": "Hi, I’m Dawit. What’s your name? (said to a man)",
+   "where": "Conversation: Meeting someone new",
+   "file": "6ac1456bc2.m4a"
+  },
+  {
+   "am": "ስሜ ... ነው። በመተዋወቃችን ደስ ብሎኛል",
+   "tr": "simé … new. bemetewawoqachin des bilognal",
+   "en": "My name is … Nice to meet you.",
+   "where": "Conversation: Meeting someone new",
+   "file": "eafcf65132.m4a"
+  },
+  {
+   "am": "ከየት ነሽ?",
+   "tr": "keyet nesh?",
+   "en": "Where are you from? (said to a woman)",
+   "where": "Conversation: Meeting someone new",
+   "file": "cf36f91ca1.m4a"
+  },
+  {
+   "am": "አማርኛ ትችያለሽ?",
+   "tr": "amarigna tichiyalesh?",
+   "en": "Can you speak Amharic? (said to a woman)",
+   "where": "Conversation: Meeting someone new",
+   "file": "2be7441d47.m4a"
+  },
+  {
+   "am": "አማርኛ ትችላለህ?",
+   "tr": "amarigna tichilaleh?",
+   "en": "Can you speak Amharic? (said to a man)",
+   "where": "Conversation: Meeting someone new",
+   "file": "28035b2f15.m4a"
+  },
+  {
+   "am": "ኢትዮጵያ ደስ ይልሻል? አዲስ አበባን አይተሻል? ምግቡስ?",
+   "tr": "Ityopiya des yilishal? Addis Abeban ayteshal? migbus?",
+   "en": "Do you like Ethiopia? Have you seen Addis Ababa? And the food? (said to a woman)",
+   "where": "Conversation: Meeting someone new",
+   "file": "9a30074817.m4a"
+  },
+  {
+   "am": "ኢትዮጵያ ደስ ይልሃል? አዲስ አበባን አይተሃል? ምግቡስ?",
+   "tr": "Ityopiya des yilihal? Addis Abeban aytehal? migbus?",
+   "en": "Do you like Ethiopia? Have you seen Addis Ababa? And the food? (said to a man)",
+   "where": "Conversation: Meeting someone new",
+   "file": "6d70bd8649.m4a"
+  },
+  {
+   "am": "አልገባኝም። እባክህ ቀስ ብለህ ተናገር",
+   "tr": "algebagnim. ibakih qes bileh tenager",
+   "en": "I didn’t understand. Please speak slowly.",
+   "where": "Conversation: Meeting someone new",
+   "file": "7f9ef1dfd8.m4a"
+  },
+  {
+   "am": "ይቅርታ! ኢትዮጵያ… ደስ… ይልሻል?",
+   "tr": "yiqirta! Ityopiya… des… yilishal?",
+   "en": "Sorry! Do… you… like… Ethiopia? (said to a woman)",
+   "where": "Conversation: Meeting someone new",
+   "file": "34df715ad7.m4a"
+  },
+  {
+   "am": "ይቅርታ! ኢትዮጵያ… ደስ… ይልሃል?",
+   "tr": "yiqirta! Ityopiya… des… yilihal?",
+   "en": "Sorry! Do… you… like… Ethiopia? (said to a man)",
+   "where": "Conversation: Meeting someone new",
+   "file": "cd1b426ce8.m4a"
+  },
+  {
+   "am": "አዎ፣ በጣም ደስ ይለኛል",
+   "tr": "awo, betam des yilenyal",
+   "en": "Yes, I like it a lot",
+   "where": "Conversation: Meeting someone new",
+   "file": "5e7cdae568.m4a"
+  },
+  {
+   "am": "ጎበዝ! አማርኛሽ ጥሩ ነው",
+   "tr": "gobez! amarignash tiru new",
+   "en": "Great! Your Amharic is good. (said to a woman)",
+   "where": "Conversation: Meeting someone new",
+   "file": "0dd73508b5.m4a"
+  },
+  {
+   "am": "ጎበዝ! አማርኛህ ጥሩ ነው",
+   "tr": "gobez! amarignah tiru new",
+   "en": "Great! Your Amharic is good. (said to a man)",
+   "where": "Conversation: Meeting someone new",
+   "file": "32e14c3199.m4a"
+  },
+  {
+   "am": "አመሰግናለሁ!",
+   "tr": "ameseginalehu!",
+   "en": "Thank you!",
+   "where": "Conversation: Meeting someone new",
+   "file": "708ef8f83c.m4a"
+  },
+  {
+   "am": "ይቅርታ!",
+   "tr": "yiqirta!",
+   "en": "Excuse me!",
+   "where": "Conversation: Finding the bank",
+   "file": "eefe2051c4.m4a"
+  }
+ ],
+ [
+  {
+   "am": "ባንክ የት ነው?",
+   "tr": "bank yet new?",
+   "en": "Where’s the bank?",
+   "where": "Conversation: Finding the bank",
+   "file": "3b894e565e.m4a"
+  },
+  {
+   "am": "ቀጥታ ሂጂ፣ ከዚያ ወደ ግራ",
+   "tr": "qetita hiji, keziya wede gira",
+   "en": "Go straight, then to the left. (said to a woman)",
+   "where": "Conversation: Finding the bank",
+   "file": "1484ce33d7.m4a"
+  },
+  {
+   "am": "ቀጥታ ሂድ፣ ከዚያ ወደ ግራ",
+   "tr": "qetita hid, keziya wede gira",
+   "en": "Go straight, then to the left. (said to a man)",
+   "where": "Conversation: Finding the bank",
+   "file": "6d398f7e08.m4a"
+  },
+  {
+   "am": "አይ፣ ቅርብ ነው። አምስት ደቂቃ",
+   "tr": "ay, qirb new. amist deqiqa",
+   "en": "No, it’s close. Five minutes.",
+   "where": "Conversation: Finding the bank",
+   "file": "396135e261.m4a"
+  }
+ ]
+]
