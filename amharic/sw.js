@@ -1,13 +1,20 @@
 // Bump VERSION with every release so installed phones pick up new files.
-const VERSION = 'v5';
+const VERSION = 'v6';
 const CACHE = 'tinish-' + VERSION;
 const SHELL = ['./', './index.html', './manifest.json',
   './icons/icon-192.png', './icons/icon-512.png', './icons/icon-maskable-512.png',
   './icons/apple-touch-icon.png', './icons/favicon-32.png'];
 
 self.addEventListener('install', e => {
-  e.waitUntil(caches.open(CACHE).then(c => c.addAll(SHELL)).then(() => self.skipWaiting()));
+  e.waitUntil(caches.open(CACHE).then(c => c.addAll(SHELL).then(() => cacheAudio(c))).then(() => self.skipWaiting()));
 });
+
+// Save every recorded clip up front so Listen works offline. Missing audio never blocks the install.
+function cacheAudio(c) {
+  return fetch('./audio/clips.json').then(r => r.ok ? r.json() : {})
+    .then(m => c.addAll(['./audio/clips.json', ...Object.values(m).map(f => './audio/' + f)]))
+    .catch(() => {});
+}
 
 self.addEventListener('activate', e => {
   e.waitUntil(caches.keys()

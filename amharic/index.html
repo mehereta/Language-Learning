@@ -662,12 +662,15 @@ function masteredCount(){return Object.values(S.items).filter(i=>i.box>=4).lengt
 function shuffle(a){a=a.slice();for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]]}return a}
 function esc(s){return String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]))}
 
-/* ---------- Voice (only if the device has an Amharic voice) ---------- */
-let voice=null;
-function pickVoice(){try{voice=speechSynthesis.getVoices().find(v=>/^am(-|_|$)/i.test(v.lang))||null}catch(e){voice=null}}
+/* ---------- Voice: recorded clips first, then the device’s Amharic voice if it has one ---------- */
+let voice=null,clips={},player=null;
+fetch('audio/clips.json').then(r=>r.ok?r.json():{}).then(c=>{clips=c;if(Object.keys(c).length)render()}).catch(()=>{});
+function pickVoice(){try{const vs=speechSynthesis.getVoices().filter(v=>/^am(-|_|$)/i.test(v.lang));voice=vs.find(v=>v.localService)||vs[0]||null}catch(e){voice=null}}
 if('speechSynthesis' in window){pickVoice();speechSynthesis.onvoiceschanged=()=>{const had=!!voice;pickVoice();if(!!voice!==had)render()}}
-function speak(t){if(!voice)return;try{const u=new SpeechSynthesisUtterance(t.replace(/\.\.\./g,' '));u.voice=voice;u.lang=voice.lang;u.rate=.8;speechSynthesis.cancel();speechSynthesis.speak(u)}catch(e){}}
-function playBtn(id,cls='play'){return voice?`<button class="${cls}" data-act="speak" data-id="${id}">▶ Listen</button>`:''}
+// Phones can leave speech paused or drop a line said right after cancel(); if the chosen voice fails, retry with the system default for the language.
+function canSay(t){return!!(clips[t]||voice)}
+function speak(t,plain){if(clips[t]){try{if(player)player.pause();player=new Audio('audio/'+clips[t]);player.play().catch(()=>{})}catch(e){}return}if(!voice)return;try{const ss=speechSynthesis,u=new SpeechSynthesisUtterance(t.replace(/\.\.\./g,' '));if(!plain)u.voice=voice;u.lang=voice.lang;u.rate=.8;u.onerror=e=>{if(!plain&&e.error!=='interrupted'&&e.error!=='canceled')speak(t,true)};const go=()=>{ss.resume();ss.speak(u)};if(ss.speaking||ss.pending){ss.cancel();setTimeout(go,60)}else go()}catch(e){}}
+function playBtn(id,cls='play'){return canSay(BY_ID[id].am)?`<button class="${cls}" data-act="speak" data-id="${id}">▶ Listen</button>`:''}
 
 /* ---------- Session ---------- */
 let sess=null;
@@ -860,7 +863,7 @@ function viewGrammar(){
   <p class="sub">The patterns behind the phrases. Open one at a time, alongside your lessons.</p>
   ${GRAMMAR.map(r=>`<details class="rule"><summary><span class="am">${r.am}</span>${esc(r.title)}</summary>
     <p>${r.intro}</p>
-    ${r.rows.map(([am,tr,en])=>`<div class="row"><div><div class="am" lang="am">${esc(am)}</div><div class="tr">${esc(tr)}</div><div class="en">${esc(en)}</div></div>${voice&&!am.includes('→')?`<button class="play" data-act="say" data-text="${esc(am)}">▶ Listen</button>`:''}</div>`).join('')}
+    ${r.rows.map(([am,tr,en])=>`<div class="row"><div><div class="am" lang="am">${esc(am)}</div><div class="tr">${esc(tr)}</div><div class="en">${esc(en)}</div></div>${canSay(am)&&!am.includes('→')?`<button class="play" data-act="say" data-text="${esc(am)}">▶ Listen</button>`:''}</div>`).join('')}
     ${r.tip?`<p class="note">${r.tip}</p>`:''}
   </details>`).join('')}`;
 }
@@ -971,7 +974,7 @@ function bubble(b,live){
   if(b.k==='narr')return `<p class="narr">${esc(b.text)}</p>`;
   if(b.k==='me')return `<div class="bub me"><span class="am" lang="am">${esc(b.am)}</span><div class="tr">${esc(b.tr)}</div><div class="en">${esc(b.en)}</div></div>`;
   const show=!live||convo.showEn||convo.answered;
-  return `<div class="bub them"><div class="who">${esc(b.who)}</div><span class="am" lang="am">${esc(b.am)}</span>${S.display==='both'||show?`<div class="tr">${esc(b.tr)}</div>`:''}${show?`<div class="en">${esc(b.en)}</div>`:''}<div class="tools">${show?'':`<button class="mini" data-act="show-en">Show English</button>`}${voice?`<button class="mini" data-act="say" data-text="${esc(b.am)}">▶ Listen</button>`:''}</div></div>`;
+  return `<div class="bub them"><div class="who">${esc(b.who)}</div><span class="am" lang="am">${esc(b.am)}</span>${S.display==='both'||show?`<div class="tr">${esc(b.tr)}</div>`:''}${show?`<div class="en">${esc(b.en)}</div>`:''}<div class="tools">${show?'':`<button class="mini" data-act="show-en">Show English</button>`}${canSay(b.am)?`<button class="mini" data-act="say" data-text="${esc(b.am)}">▶ Listen</button>`:''}</div></div>`;
 }
 function viewConvo(){
   const sc=convo.sc,n=sc.turns.length;
@@ -983,7 +986,7 @@ function viewConvo(){
       <div class="done-stats"><div><strong>${convo.score}/${n}</strong>best replies</div><div><strong>${streak()}</strong>day streak</div></div>
     </div>
     <h2 class="sec">Replies from this conversation</h2>
-    ${used.map(o=>`<div class="row" style="grid-template-columns:1fr auto"><div><div class="am" lang="am">${esc(o.am)}</div><div class="tr">${esc(o.tr)}</div><div class="en">${esc(o.en)}</div></div>${voice?`<button class="play" data-act="say" data-text="${esc(o.am)}">▶ Listen</button>`:''}</div>`).join('')}
+    ${used.map(o=>`<div class="row" style="grid-template-columns:1fr auto"><div><div class="am" lang="am">${esc(o.am)}</div><div class="tr">${esc(o.tr)}</div><div class="en">${esc(o.en)}</div></div>${canSay(o.am)?`<button class="play" data-act="say" data-text="${esc(o.am)}">▶ Listen</button>`:''}</div>`).join('')}
     <div class="actions"><button class="btn primary" data-act="convo-again">Try it again</button><button class="btn ghost" data-act="convo-exit">Back to conversations</button></div>`;
   }
   const t=sc.turns[convo.turn],a=convo.answered;

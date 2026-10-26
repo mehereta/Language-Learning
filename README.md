@@ -15,3 +15,10 @@ The top-level `index.html` is the home page that links to both apps.
 
 ## Adding another language
 Copy one app folder, give it a new name, and change the storage key (`KEY`), backup id, and cache prefix in its `sw.js` so it doesn't share data with the others. Then add a card to the top-level `index.html`.
+
+## Amharic audio (recorded voice)
+The Amharic app plays recorded clips from `amharic/audio/` and falls back to the device's voice for lines without one.
+1. `node tools/amharic-audio/build_script.js` writes the recording script to `tools/amharic-audio/script.md`. Run it again after adding or changing Amharic lines.
+2. Record each take in the script as its own file, with about 2 seconds of silence between lines. Keep the raw takes in `recordings/` (not committed).
+3. `python3 tools/amharic-audio/split.py 1 recordings/take-01.m4a` cuts a take into clips and updates `amharic/audio/clips.json`. Use `1:7` to replace only line 7 of take 1. Needs ffmpeg (`brew install ffmpeg`).
+4. Bump `VERSION` in `amharic/sw.js` so installed phones download the new audio.
